@@ -1,0 +1,1 @@
+Bacheloroppgåve frå gjengen.
