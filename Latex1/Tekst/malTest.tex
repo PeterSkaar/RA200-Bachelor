@@ -1,0 +1,47 @@
+% Definer sidemargene
+\newgeometry{top=2.5cm,bottom=2.5cm,right=3cm,left=5cm}
+
+% Definer seksjonstitler
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+% Definer header og footer
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=2cm]{mango.jpg}} % Bytt ut 'logo.png' med filnavnet til din logo
+\fancyhead[R]{\thepage\~av~\pageref{LastPage}}
+\fancyfoot[L]{SPEC}
+\fancyfoot[C]{CONFIDENTIAL}
+\fancyfoot[R]{Peter Søreide Skaar \\ Student engineer/Operator \\ p.skaar@gmail.com}
+\renewcommand{\headrulewidth}{0pt} % Ingen linje i header
+\renewcommand{\footrulewidth}{0pt} % Ingen linje i footer
+\pagestyle{fancy}
+
+
+% Tittelområde
+\begin{center}
+  \Large \textbf{Oppdatering PLS-program} \\
+  \large RA100 Førde \\
+  Enkel funksjonsbeskrivelse for sampling \\
+\end{center}
+
+% Systeminformasjon-seksjon
+\section{systeminformasjon}
+Volumetrisk prøvetaking for \textit{etc.}
+
+% Systembeskrivelse-seksjon
+\section{Systembeskrivelse}
+For å kunne starte prøvetaking remote er \textit{etc.}
+
+% Tabell
+\begin{tabularx}{\textwidth}{|X|X|X|}
+  \hline
+  Start: & Pulser: & Sample: \\
+  \hline
+  \textit{etc.} & \textit{etc.} & \textit{etc.} \\
+  \hline
+\end{tabularx}
+
+% Resten av dokumentet følger her...
+

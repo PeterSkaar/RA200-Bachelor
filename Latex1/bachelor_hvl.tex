@@ -1,0 +1,246 @@
+\documentclass[11pt, a4paper]{report}
+%-----------NORSK LaTeX--------------
+
+% Denne pakken inkluderer skandinaviske bokstaver( æ, ø og å)
+\usepackage[utf8]{inputenc}
+
+% Denne pakken bruker norsk typesetting (innholdsliste osv.)
+\usepackage[nynorsk]{babel}
+
+%--------DOKUMENTOPPSETT------------
+
+% Lar deg tilpasse layouten i prosjektet
+\usepackage{fancyhdr}
+
+% Definere egne farger 
+\usepackage[usenames, dvipsnames]{color}
+
+% Avstand på marger til sidene på arket
+%\usepackage{geometry}
+
+% Linker i dokumentet (figurer, seksjoner osv)
+\usepackage[hidelinks]{hyperref}
+
+% Kildeliste-setup
+\usepackage[natbibapa]{apacite}
+
+% Spacing mellom bokstaver
+\usepackage{microtype}
+
+% Laster inn forskjellige skrifttyper
+\usepackage{uarial} % Arial
+\usepackage[scaled]{helvet} % Helvetica
+%\usepackage{tgbonum} % Usikker
+%\usepackage{mathptmx} % Times New Roman
+%\usepackage{lmodern} % Latin Modern
+%\usepackage[charter]{mathdesign} % Charters
+\usepackage[T1]{fontenc}
+
+% Avsnitt mellom paragrafer
+\usepackage{parskip}
+
+% Linjeavstand i dokumentet
+\usepackage{setspace}
+\setlength{\parskip}{1em}
+
+% Fet skrift på alle figurnr
+\usepackage[labelfont=bf]{caption}
+\usepackage{capt-of}
+\usepackage{caption}
+
+% ------------------------------------- KOMMENTERT UT FOR TEST
+% Nummererer figurer og tabeller etter kapittel, delkapittel osv.
+%\counterwithin{figure}{section}
+%\counterwithin{figure}{subsection}
+%\counterwithin{figure}{subsubsection}
+
+%\counterwithin{table}{section}
+%\counterwithin{table}{subsection}
+%\counterwithin{table}{subsubsection}
+
+%\renewcommand{\thefigure}{
+%	\ifnum\value{subsection}=0{\thesection-\arabic{figure}}
+%	\else\ifnum\value{subsubsection}=0{\thesubsection-\arabic{figure}}
+%	\else{\thesubsubsection-\arabic{figure}}\fi}
+%
+%\renewcommand{\thetable}{
+%	\ifnum\value{subsection}=0{\thesection-\arabic{table}}
+%	\else\ifnum\value{subsubsection}=0{\thesubsection-\arabic{table}}
+%	\else{\thesubsubsection-\arabic{table}}\fi}
+%--------------------------------------------------------------------
+\usepackage{chngcntr}
+\counterwithin{figure}{chapter}
+\counterwithin{table}{chapter}
+
+% Definerer mellomrom mellom seksjons-, figur- og tabellnummer i innholdsliste til teksten begynner
+\renewcommand{\numberline}[1]{#1 \,}
+
+% Kan skrive i kolonner
+\usepackage{multicol}
+
+
+%----------ANDRE PAKKER--------------
+
+% Pakker fra AMS. Kan skrive matteformler
+\usepackage{amsfonts, amssymb, amsthm}
+\usepackage{mathtools}
+
+% For grafikk (lime inn bilder, pdf-dokumenter)
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{subcaption}
+
+% Generere tekst
+\usepackage{kantlipsum}
+
+% Definere egne objekt
+\usepackage{tikz}
+
+% Lar deg lage lister på en mer oversiktlig måte
+\usepackage[sharp]{easylist}
+
+% Boks rundt tekst
+\usepackage{fancyvrb}
+
+% Test pakker
+\usepackage{array}
+\usepackage[margin=1in]{geometry} % Juster margene etter behov
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{lastpage}
+
+%---------------------------------------------------
+
+% Velger arial som skrifttype i dokumentet 
+%\renewcommand{\rmdefault}{qpl} % 
+%\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand*\familydefault{\sfdefault} % Helvetica(sans-serif)
+
+
+% Definerer egne farger
+\definecolor{mybla}{RGB}{25, 49, 90}
+\definecolor{mylysbla}{RGB}{0, 136, 176}
+\definecolor{renasysGreen}{RGB}{4, 255, 4}
+
+
+% Velger norsk språk på innholdsfortegnelse, figurliste og tabelliste.
+% Legger disse så til i innholdsfortegnelsen.
+\addto\captionsnorsk{\renewcommand{\contentsname}{Innholdsliste}}
+\addto\captionsnorsk{\renewcommand{\listfigurename}{Figurliste}}
+\addto\captionsnorsk{\renewcommand{\listtablename}{Tabelliste}}
+% Nynorsk!
+\addto\captionsnynorsk{\renewcommand{\contentsname}{Innhaldsfortegnelse}} 
+\addto\captionsnynorsk{\renewcommand{\listfigurename}{Figurliste}}
+\addto\captionsnynorsk{\renewcommand{\listtablename}{Tabelliste}}
+
+
+% ----- Justering av avstander mellom chapter / section / subsection / subsubsection
+
+% Justeringa av chapter, 
+% første verdi : Horisontalverdi frå venstre marg
+% Andre verdi : avstanden frå toppen av sida til tittelen
+% Tredje verdi : Avstand til neste tekst
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{0pt}{\Large}
+\titlespacing*{\chapter}{0pt}{-50pt}{20pt}
+
+% Juster avstanden for \section
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{10pt}{10pt}
+
+% Juster avstanden for \subsection
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{10pt}{10pt}
+
+% Juster avstanden for \subsubsection om nødvendig
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{10pt}{10pt}
+
+% -------------------------------------------------------------------------------
+
+%---------------------------------------------------------------------
+% Starter dokumentet
+
+% Define the page style
+\fancypagestyle{fancy}{
+  % Clear the header and footer
+  \fancyhf{}
+  % Set the right side of the footer to be the location of the page number
+  \fancyfoot[R]{Side \thepage\ av~\pageref{LastPage}} % Her sett ein fra side til side
+  \renewcommand{\headrulewidth}{0pt} % Remove header line
+  \renewcommand{\footrulewidth}{0pt} % Remove footer line
+}
+
+
+
+\begin{document}
+
+	% Turn on the style
+	\pagestyle{fancy}
+
+	%------------------FREMSIDE------------------------
+
+	% Linker inn fremsiden fra adms (administrative sider) fremside-filen.
+	\input{Tekst/Framside/Framside.tex}
+
+	%------------------------------------------------------
+
+	\newpage
+
+	% Nye marger
+	\newgeometry{top=2.5cm,bottom=3cm,right=2.2cm,left=2.2cm}
+
+	% Linjeavstand
+	\setstretch{1.3}
+
+
+
+	% Clear the header and footer
+	%\fancyhead{}
+	%\fancyfoot{}
+	%\fancyfoot[R]{Side \thepage\ av~\pageref{LastPage}} % Right footer
+	%\renewcommand{\headrulewidth}{0pt} % Remove header line
+	%\renewcommand{\footrulewidth}{0pt} % Remove footer line
+
+	% Set the right side of the footer to be location of the page number
+
+
+
+	% Ønsker tallnummerering videre.
+
+	
+
+	%--------------------Innhaldsliste / Figurliste / tabell liste---------------------	
+	% Innholdsliste
+	\tableofcontents % Genererer Innhaldsliste
+	\thispagestyle{empty} % Fjerner sidetall
+	\listoffigures % Genererer figur liste
+	\thispagestyle{empty}
+	%\quad
+	%\listoftables
+	%\thispagestyle{empty}
+	%\cleardoublepage
+
+
+
+	\pagenumbering{arabic}
+	\setcounter{page}{3}
+
+	%------------------------------------------------------
+
+	%------------------ Lim inn sider til documentet her ------------------------
+
+	\input{Tekst/Kapittel1/Innleiing.tex}
+	\input{Tekst/Kapittel1/problemstillings.tex}
+	\input{Tekst/backpage.tex}
+	%\input{Tekst/malTest.tex}
+
+
+
+
+\end{document}
