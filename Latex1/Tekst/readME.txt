@@ -1,0 +1,1 @@
+Oppsettet for mappestrukturen er bare ett forslag, og må gjerne endres
