@@ -142,8 +142,8 @@
 % første verdi : Horisontalverdi frå venstre marg
 % Andre verdi : avstanden frå toppen av sida til tittelen
 % Tredje verdi : Avstand til neste tekst
-\titleformat{\chapter}[display]
-  {\normalfont\bfseries}{}{0pt}{\Large}
+\titleformat{\chapter}[hang]
+  {\normalfont\bfseries\Large}{\thechapter}{1em}{}
 \titlespacing*{\chapter}{0pt}{-50pt}{20pt}
 
 % Juster avstanden for \section
@@ -212,8 +212,8 @@
 
 
 	% Ønsker tallnummerering videre.
-
-	
+	%-------------------- 			FORORD			---------------------	
+	\input{Tekst/Forord/Forord.tex}
 
 	%--------------------Innhaldsliste / Figurliste / tabell liste---------------------	
 	% Innholdsliste
@@ -249,6 +249,9 @@
 	
 	% Kapittel 4
 	\input{Tekst/Kapittel4 - Programering/Programering.tex}
+
+	% Kapittel 5
+	\input{Tekst/Kapittel5 - Jokernotasjonskappitelet/Jokernotasjonskappitelet.tex}
 
 	% Kapittel 6
 	\input{Tekst/Kapittel6 - Testing/Testing.tex}
