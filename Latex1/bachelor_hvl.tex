@@ -108,7 +108,7 @@
 \usepackage[margin=1in]{geometry} % Juster margene etter behov
 \usepackage{titlesec}
 \usepackage{tabularx}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage{lastpage}
 
 %---------------------------------------------------
@@ -123,7 +123,9 @@
 \definecolor{mybla}{RGB}{25, 49, 90}
 \definecolor{mylysbla}{RGB}{0, 136, 176}
 \definecolor{renasysGreen}{RGB}{4, 255, 4}
-
+\definecolor{purewhite}{RGB}{255,255,255}
+\definecolor{lightgray}{gray}{0.8}
+\definecolor{myblack}{gray}{0.1}
 
 % Velger norsk språk på innholdsfortegnelse, figurliste og tabelliste.
 % Legger disse så til i innholdsfortegnelsen.
@@ -222,7 +224,7 @@
 	\listoffigures % Genererer figur liste
 	\thispagestyle{empty}
 	%\quad
-	%\listoftables
+	\listoftables
 	%\thispagestyle{empty}
 	%\cleardoublepage
 
@@ -251,6 +253,9 @@
 	\input{Tekst/Kapittel3 - Anleggets virkemåte AKA FSD/Mottakkstank.tex}
 	\input{Tekst/Kapittel3 - Anleggets virkemåte AKA FSD/Reaktor.tex}
 	\input{Tekst/Kapittel3 - Anleggets virkemåte AKA FSD/ReaktorSekvensar.tex}
+	\input{Tekst/Kapittel3 - Anleggets virkemåte AKA FSD/Slamhandtering.tex}
+	\input{Tekst/Kapittel3 - Anleggets virkemåte AKA FSD/Pumpehus.tex}
+	\input{Tekst/Kapittel3 - Anleggets virkemåte AKA FSD/Høgbelastningsmodus.tex}
 
 	
 	% Kapittel 4
