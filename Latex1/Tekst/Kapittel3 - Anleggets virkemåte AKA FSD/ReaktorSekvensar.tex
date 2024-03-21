@@ -1,0 +1,75 @@
+\newpage
+\section{REAKTOR-SEKVENSAR}
+Reaktorsekvensane er delt opp i fem sekvensar som er basert på SBR-teknologi beskrive i avsnitt xx.xx.
+Sekvensane blir forklart i rekkjefølgje.
+
+\subsection{Pause}
+Ein reaktor vil være i pausesekvens så lenge det ikkje er bruk for reaktorens kapasitet. I pausesekvens vil reaktoren luftast periodisk gjennom tilhøyrande blåsar (PA01-BL01 / PA02-BL01) 
+for å oppretthalde oksygeninnholdet i tanken og halde slammet aktivt, men samtidig ikkje bryte det heilt ned. Grad av periodisk lufting kan
+
+Dersom følgande føresetnad er oppfylt går reaktoren over i innpumpingssekvens:
+\begin{itemize}
+    \item Nivågivar i mottaktstank (PP00-LT01) signaliserer innpumpingsnivå.
+    \item Dersom nivågivar har feil vil flottør (PP00-LS02) fungere som backup.
+    \item Nivågivar i respektiv reaktortank (PP01-LT01 / PP02-LT02) fungerer.
+    \item Motorvern for pumpe ikkje slått ut.
+\end{itemize}
+
+\subsection{Innpumping}
+Innpumpingsekvens byrjar ved å starte respektiv motor (PP01-PS01 / PP02-PS01) samt opne pneumatisk ventil (PP01-VP01 / PP02-VP01). 
+Reaktor vil fyllast med avlaupsvatn så lenge nivågivar i mottakstank (PP00-LT01) eller flottør (PP00-LS02) signaliserer at det er nok vatn i mottakstanken. 
+Startnivå for innpumping kan endrast frå operatørpanelet.
+
+Dersom nivået i mottakstanken går under startnivå vil pumpe stoppe og ventil lukke. 
+Dette medfører ikkje at innpumpingssekvensen er ferdig, men at den venter på meir vatn. 
+Når nivågivar i mottaktstanken går over startnivå vil innpumping forsette. 
+
+I Innpumpingssekvens vil reaktoren periodisk lufte reaktoren.
+Systemet vil sørge for at dei to matepumpene vil ha tilnærma lik gangtid.
+Dersom reaktor skulle overfyllast vil overlaup frå reaktor førast ned i mottaktstank.
+
+Dersom følgande føresetnad er oppfylt går reaktoren over i reaksjonssekvens:
+\begin{itemize}
+    \item Nivågivar i reaktor (PP01-LT01 / PP02-LT02) signaliserer fullt bruksvolum eller makstid for innpumpingssekvens er nådd.
+\end{itemize}
+
+Lengda på sekvensen vil difor være bestemt av til-renninga opp mot makstid.
+Når betingelse er oppfylt vil pumpe stoppe og pneumatisk ventil stenge.
+
+\subsection{Reaksjon}
+\underline{\textbf{Aerob}} \newline
+Reaktor tilførast kontinuerleg oksygen frå respektiv blåser (PA01-BL01 / PA02-BL01). Lengde av aerob fase kan endrast frå operatørpanelet.
+
+\underline{\textbf{Anoksisk}} \newline
+Reaktor tilførast ikkje oksygen, respektiv blåser (PA01-BL01 / PA02-BL01) stopper. Lengde av anoksisk fase kan endrast frå operatørpanelet
+
+\underline{\textbf{Simultanfelling}} \newline
+Simultanfelling betyr kombinert biologisk og kjemisk reinsing. I slutten av reaksjonssekvensen tilsettast det kjemikaliar i reaktortanken. 
+Doseringspumpe (CH00-PH01 / CH00-PH02) pumpar (kjemikalie) frå kjemikalietank CH00-BX01 og tilsett direkte til reaktortank.
+
+Dosering av kjemikaliar er proporsjonalt med innpumpa råkloakk. Gangtida kontrollerast frå operatørpanelet, eller justerast direkte på doseringspumpa. 
+Doseringmengda kan og skal justerast av driftsoperatør. Den skal justerast i forhold til målt fosfat-fosfor (orto-fosfat) på resipientprøven.
+
+Dersom følgande føresetnad er oppfylt går reaktoren over i sedimenteringssekvens
+\begin{itemize}
+    \item Tid på reaksjonssekvens er ferdig.
+\end{itemize}
+
+\subsection{Sedimentering}
+Sedimentering startar ved avslutta reaksjonsfase. I sedimenteringsfasen er eit roleg miljø nødvendig. Derfor skal den hydrauliske belastninga i tanken være lik null.
+Dette medfører ingen innpumping, opne ventilar eller lufting av reaktor.
+
+Dersom følgande føresetnad er oppfylt går reaktoren over i uttapping sekvens.
+\begin{itemize}
+    \item Tid på sedimenteringssekvens er ferdig.
+\end{itemize}
+
+\subsection{Uttapping}
+Etter sedimenteringssekvensen vil slammet og SS være skilt ifrå vatnet. 
+Vatnet på toppen av reaktoren kan no drenerast med sjølvfall mot resipient. 
+Pneumatisk dreneringsventil (TW01-VP01) opnast og reinsa vatn drenerast ut.
+
+Dersom følgande er oppfylt går reaktoren over i pausesekvens.
+\begin{itemize}
+    \item Dreneringstid for reaktor ferdig, eller nivågivar i reaktor (PP01-LT01 / PP02-LT02) signaliserer stoppnivå.
+\end{itemize}
