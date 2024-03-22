@@ -92,6 +92,9 @@
 \usepackage[table]{xcolor}
 \usepackage{lastpage}
 
+% pakke for ordliste
+\usepackage[automake]{glossaries-extra}
+
 %---------------------------------------------------
 
 % Velger arial som skrifttype i dokumentet 
@@ -154,6 +157,60 @@
   \renewcommand{\footrulewidth}{0pt} % Remove footer line
 }
 
+% ------------------------- KODE FOR ORDLISTE ---------------------
+
+% Kode for å lage ei meir kompakt ordliste
+\newglossarystyle{compact}{%
+  % base this style on the list style:
+  \setglossarystyle{list}%
+  % adjust the space between entries:
+  \renewenvironment{theglossary}{%
+    \begin{description}%
+    \setlength{\itemsep}{-10pt}% adjust this value as needed
+    \setlength{\parskip}{0pt}%
+  }%
+  {%
+    \end{description}%
+  }%
+}
+
+\setglossarystyle{compact}
+
+% Kode for å lage stil for ordlista
+\newglossarystyle{tablestyle}{
+  % Start the glossary as a tabular environment
+  \renewenvironment{theglossary}{
+	\setlength{\LTleft}{0pt} % Align the table with the left margin
+    \begin{longtable}{lp{\glsdescwidth}}
+    }{
+    \end{longtable}
+  }
+  \renewcommand*{\glossaryheader}{
+    \bfseries Term & \bfseries Description \\
+    \endfirsthead
+    \bfseries Term & \bfseries Description \\
+    \endhead
+  }
+  % No heading between groups
+  \renewcommand*{\glsgroupheading}[1]{}
+  % No space between groups
+  \renewcommand*{\glsgroupskip}{}
+  % Define how each entry should appear:
+  \renewcommand*{\glossentry}[2]{
+    \glstarget{##1}{\glossentryname{##1}} &
+    \glossentrydesc{##1} \\
+  }
+}
+
+% Setter Stil for Ordlista
+\setglossarystyle{tablestyle}
+
+
+\makeglossaries
+\loadglsentries{Ordliste.tex}
+
+% ---------------------------------- END kode for ordliste -----------------------------
+
 % ------------------------------------ Dokumentet starter her ----------------------------
 
 \begin{document} % Dokument start
@@ -189,10 +246,12 @@
 	\listoffigures % Genererer figur liste
 	\thispagestyle{empty}
 	%\quad
-	\listoftables
+	\listoftables % Genererer ei liste med tabeller
 	%\thispagestyle{empty}
 	%\cleardoublepage
-
+	\renewcommand{\glossaryname}{Ordliste} % Denne er med for å kunne endre navn på ordlista
+	\printglossaries %Printer ut alle ord som er brukt frå ordlista
+	
 
 	% Set counter setter sidetallet for innholdsliste-siden.
 	\pagenumbering{arabic}
@@ -201,6 +260,8 @@
 	%------------------------------------------------------
 
 	%------------------ Lim inn sider til documentet her ------------------------
+
+
 
 	% Kapittel 1
 	\input{Tekst/Kapittel1 - Innleiing/Innleiing.tex}
