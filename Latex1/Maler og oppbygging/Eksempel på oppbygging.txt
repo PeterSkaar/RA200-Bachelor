@@ -1,0 +1,30 @@
+
+ Forord
+ 
+ 1 - Intro
+ 
+ 2 - Forraport / Prosjektbeskrivelse med avgrensinger og løsning
+ 
+ 3 - Beskrivelse av valgt løsning, software og Anleggets virkemåte
+   - Codesys, github, LaTeX, Visio, Toolbox, IEC 63131, GAMMAL FSD, GX !WORKS, ChatGPT/AI/Youtube
+ 
+ 4 - Underlag for programmering /FSD - Alt må vere med som vedlegg, for å vise arbeid.
+ 
+ 
+ 5 - Dokumentasjon (Interlock, blokkdiagram, IO-liste osv) SIKKERHEIT
+
+ 
+ 6 - Programmering
+   - Utdrag fra programering, forklaring av oppbygging, 
+  
+ 7 - Testing / Simulering
+ 
+ 8 - Evaluering av den endelige løsning / simulering, diskusjon rundt valgene
+ 
+ 9 - Konklusjon / Måloppnåelse.
+ 
+ 10 - Kilder / Vedlegg
+	- Datablad, Gant, linker(github, logg, yt), blokkdokumentasjon, PI&D, Orgianle fsd.
+	- FSD
+	
+ Referanser - Biovac, Statsforvalteren PDF, orgianl fsd, 
