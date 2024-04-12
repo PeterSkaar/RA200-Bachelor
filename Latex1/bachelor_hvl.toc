@@ -1,0 +1,37 @@
+\babel@toc {norsk}{}\relax 
+\contentsline {chapter}{Ordliste}{5}{section*.5}%
+\contentsline {chapter}{\numberline {1}Innleiing}{6}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Organisering av rapporten}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Oppdragsgivar}{7}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Renasys AS}{7}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Sunnfjord kommune}{7}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Problemstilling}{7}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Forrapport}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Forrapport2}{8}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Anleggets Virkemåte}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}AKTIV SLAM- SEQUENCING BATCH REACTOR (SBR)}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}VATNES GANG GJENNOM ANLEGGET}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}MEKANISK UTSTYR}{11}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Tankar}{11}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Roterande Utstyr}{12}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Ventilar}{12}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Røyr}{12}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}BESKRIVING AV PROGRAM}{13}{section.3.4}%
+\contentsline {section}{\numberline {3.5}MOTTAKTSTANK}{14}{section.3.5}%
+\contentsline {section}{\numberline {3.6}REAKTOR}{16}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Luftesystem}{16}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Reaktor-soner}{16}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3.7}REAKTOR-SEKVENSAR}{18}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Pause}{18}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Innpumping}{18}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Reaksjon}{19}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}Sedimentering}{19}{subsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.7.5}Uttapping}{19}{subsection.3.7.5}%
+\contentsline {section}{\numberline {3.8}SLAMHANDTERING}{20}{section.3.8}%
+\contentsline {section}{\numberline {3.9}PUMPEHUS}{21}{section.3.9}%
+\contentsline {section}{\numberline {3.10}HØGBELASTNINGSMODUS}{22}{section.3.10}%
+\contentsline {section}{\numberline {3.11}Testing av latex}{23}{section.3.11}%
+\contentsline {chapter}{\numberline {4}Programering}{24}{chapter.4}%
+\contentsline {chapter}{\numberline {5}JOKERNORD!}{25}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Testing}{26}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Avslutting}{27}{chapter.7}%
