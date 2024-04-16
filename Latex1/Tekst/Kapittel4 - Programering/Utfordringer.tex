@@ -1,0 +1,13 @@
+\section{Utfordringer}
+\thispagestyle{fancy}
+
+Problematikk rundt det å ha fleire blokker, som styrer samme komponetar da vi skriver til ein felles global variabel.
+Denne variabelen blir då satt true og false i frå fleire plassar i programmet, noko som gjer at variablenen sinn tilstand vil vere tilfeldig, basert på korleis Codesys sin kompilator leser koden.
+
+Dette kan vi løyse ved å bruke ein egen global variabel for hver blokk, og så skrive til ein funksjonsblokk som styrar den endelege globale variabelen.
+Det er fleire plassar i programmet vi møter denna utfordringa, som blant anna med pumpestyring, da hver reaktor kan styre samme pumpe.
+Samme løysning vil gjelde i denna situasjonen, der vi må lage ei blokk som tar inngangar frå begge pumpene og setter utgangen til riktig tilstand.
+
+Dette er eit klassisk eksempel der vi har koda noko vi trur fungerar optimalt, men under testing så finner vi ut at det ikkje fungerar som vi har tenkt.
+Løsninga setter nokre føringar for variabelhandtering videre i programmet, og vi står over eit val der valet våras gjør koden noko meir "innvikla", men vi opprettholder
+funksjonaliteten i programmet slik vi opprinneleg hadde tenkt.
