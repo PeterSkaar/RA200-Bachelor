@@ -157,6 +157,17 @@
   \renewcommand{\footrulewidth}{0pt} % Remove footer line
 }
 
+% ------ Justering av avstander i dokumentet for itemize ---------------------
+
+\let\olditemize\itemize
+\renewcommand{\itemize}{
+  \olditemize
+  \setlength{\itemsep}{-10pt} 
+}
+
+% -------------------------------------------------------------------
+
+
 % ------------------------- KODE FOR ORDLISTE ---------------------
 
 % Kode for å lage ei meir kompakt ordliste
@@ -266,6 +277,8 @@
 	% Kapittel 1
 	\input{Tekst/Kapittel1 - Innleiing/Innleiing.tex}
 	\input{Tekst/Kapittel1 - Innleiing/problemstillings.tex}
+	\input{Tekst/Kapittel1 - Innleiing/Analyse av problemet.tex}
+	\input{Tekst/Kapittel1 - Innleiing/Vurdering HW-SW.tex}
 
 	% Kapittel 2
 	\input{Tekst/Kapittel2/Forrapport.tex}
@@ -296,6 +309,8 @@
 
 	% Kapittel 7
 	\input{Tekst/Kapittel7 - Avslutting-Samandrag-Konklusjon/Avslutting.tex}
+	\input{Tekst/Kapittel7 - Avslutting-Samandrag-Konklusjon/Konklusjon.tex}
+	\input{Tekst/Kapittel7 - Avslutting-Samandrag-Konklusjon/ExitPoints.tex}
 
 
 	% Referanseliste (Berre for test, citep må flyttast inn i teksten)
