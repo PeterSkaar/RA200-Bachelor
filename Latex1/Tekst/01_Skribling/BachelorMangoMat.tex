@@ -1,0 +1,152 @@
+TO DO LISTE
+
+
+
+
+- Lage tilstandsdiagram over tisltandsmaskina vår (Visio mat)
+- Oppdatere SCD, til siste skrik
+
+Kap1
+- Litt meir juice på renasys som bedrift og sunnfjord kommune
+- Må komme tydleg fram! 
+1. Gjekk detaljert inn i annleggets verkemåte
+2. Progammerte anlegget frå verkemåte i (ST) og ikkje tidlegare program (Ladder)
+3. 
+
+Kap4
+Første del : Programvare.
+- Skrive inn forskjeller mellom Gammalt annlegg og nytt anlegget Programmerings messigt.
+- Kva gjore me annaleis?
+- Korleis er gammalt annlegg bygt opp, korleis er det nye annlegg bygd opp.
+- t.d. Berekning av kubikk inn, Gjort på ein anna måte
+- IEC Norm -> MA,MB,SBV,SBE blokker (Referere til heile dokumentet?)
+
+Kap5 (Dokumentasjon)
+- Interlock, t.d. Styringen av pumpene i innpuming, reaktorar kan ikkje gå i innpumping på likt
+
+
+
+Skjelettet vi vil ha!
+
+Romartall før kapittel?
+- Framside
+- Forord
+- Samandrag
+- Innhaldsliste
+- Tabelliste
+- Figurliste
+- Ordliste
+- Appendiksliste (Datasheet, Drawings, Video og Bilete osv A -> I)
+
+kapittel
+1. Innleeing
+    1.1 Arbeidsgivar
+
+2.  Analyse av problem
+    2.1 Introduksjon til problem, med grunngjeving
+    2.2 Forslag til løysning 
+        2.2.1 Ein til Ein utskifting av PLC (Laste opp ladder logikk på anna PLC)
+        2.2.2 Oversetting av kode frå Ladder til ST, bytte PLC
+        2.2.3 Ny kode i ST ut i frå annleggets verkemåte og regjering av HW og SW oppdatering (evt ny sensorikk)
+    Skrivast bra kort og konsist
+    2.3 Val og Drøfting 
+    2.4 Konklusjon - (Korleis me konkluderer ting, først teknologisk -> programmering)
+
+3. Krav og mål
+    3.1 Krav
+    3.2 Hovudmål, Delmål
+    3.3 Tilleggsmål -> Forbetring av anlegget
+    - HMI
+
+4. Anleggets Verkemåte (Sette seg inn i korleis anlegget fungerar)
+    4.1 Teknologist Verkemåte SBR, korleis funkar dette (Sjå vekk frå sande) (Få inn nokk info, slik at ein kan kutte ut den mekansike delen) (Referansa viktig)
+    - Forbehandling
+    - utjamningstank
+    - Sekvenser
+    - osv
+    4.2 Sande RA200 teoretisk verkemåte (Slik skal det funke) (Korleis er sande knytta opp mot teknologien)
+    - Vatnets gang gjennom annlegget
+    - Høgbelastningsmodus
+    - Pumpehus
+    - Huber
+    - Gaula
+    4.3 Sande RA200 praktisk verkemåte (Avvik frå teoretisk)(Slik fungerar det på sande)
+    - Slammuttak i Reaksjon??
+    - P&ID
+    4.4 Dokumentasjon Fornyiing
+    - FSD, 
+
+5. Tillrettelegging for programering
+    5.1 Codesys m/git, Programmerings språk (ST) - Hungarian notation
+    5.2 IEC Standard (Generelt, templates osv, Arguemtering kvifor) (Vegen videre ved val av standariserte blokker)
+    5.3 Tiltenkt tilstandsmaskin (Sekvenser -> Visio)
+    5.4 SCD Generell forklaring -> Første utkast
+    - Kvifor me tok dei vala me gjore.
+
+
+6. Programmering
+    6.1 Programmering av IEC Blokker (MB,MA,SBE,SBV) -> + fb blokker (fbTimer, fbAnalougeAlarm, fbCAC)
+    - Til appendiks, Heile kode for t.d. fbTimer, fbCAC osv
+   
+    6.2 Tilstandsmaskin
+
+    6.3 Oppbygningen av programmet (Peter Visio Layer)
+    - Korleis me brukte IEC Blokker, fbTimer
+
+    6.4 Tilstandslogikk
+    - Bilete fbInnpumping
+    - Felleslogikk
+
+    Få forklart mest mogleg av programmet!
+    Det som ikkje er forklart er heller ikkje gjort!
+
+7. Dokumentasjon
+    7.1 Blokkdokumentasjon IEC og eigne fb
+    - Bruke mal for å dokumentere blokkene vi har laga, som appendiks
+    7.2 Alarmliste
+    7.3 Interlocker
+    7.4 Objektliste (Liste over alle komponentar)
+    7.5 Vedlikehalds dokumentasjon? 
+    7.6 Programmerings verkemåte -> FSD
+    ++?
+
+
+8. Simulering / Verifisering
+    8.1 Kontinuerleg simulering
+    - Simuleringen som vart gjort undervegs i programmeringa
+    8.2 Simuleringsblokker
+    8.3 Full simulering av annlegget
+    - Figur av simulering
+    - Full scala test
+    8.4 Vegen videre?? Treng me denne her?
+
+9. Diskusjon (Oppsummering)
+    9.1 Vegen vidare for Annlegget
+    9.2 Vegen videre for Programmeringa
+    9.3 Vegen videre for Dokumentasjon
+    9.4 Vegen videre mot Tilleggsmål
+
+10. Konklusjon 
+    - Måloppnåing
+
+
+Referanser
+
+Appendikser
+- Logg, Timelister
+- Gannt
+- Blokkdokumentasjon
+- Github link -> Evt med pascal filer, slik at koden blir "lesleg" utan codesys
+- Meir bilete?
+
+Bilder og Video
+- Video av simuleringa
+
+
+
+TIL OLAV (SPYRJEMÅL)
+
+- Dokumentering av blokker -> Litt i rapport, detalj i appendiks?
+- Kor mykje kode skal me ha med i rapporten?
+- 
+
