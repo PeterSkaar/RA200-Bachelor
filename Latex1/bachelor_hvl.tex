@@ -75,6 +75,9 @@
 \usepackage{pdfpages}
 \usepackage{subcaption}
 
+% For inportering av csv-filer som tabeller.
+\usepackage{csvsimple}
+
 % Generere tekst
 \usepackage{kantlipsum}
 
@@ -132,7 +135,7 @@
 % Andre verdi : avstanden frå toppen av sida til tittelen
 % Tredje verdi : Avstand til neste tekst
 \titleformat{\chapter}[hang]
-  {\normalfont\bfseries\Large}{\thechapter}{1em}{}
+  {\normalfont\bfseries\LARGE}{\thechapter}{1em}{}
 \titlespacing*{\chapter}{0pt}{-50pt}{20pt}
 
 % Juster avstanden for \section
@@ -309,12 +312,12 @@
 	% Kapittel 5 - Tilrettelegging for programmering
 	\input{Tekst/Kapittel5 - Tillrettelegging for programmering/5.0 - Intro.tex}
 	\input{Tekst/Kapittel5 - Tillrettelegging for programmering/5.1 - Codesys.tex}
+	\input{Tekst/Kapittel5 - Tillrettelegging for programmering/5.2 - Github.tex}
 
 	% Kapittel 6 - Programmering
 	\input{Tekst/Kapittel6 - Programmering/6.0 - Programmering.tex}
 	\input{Tekst/Kapittel6 - Programmering/Programering.tex}
-	\input{Tekst/Kapittel6 - Programmering/Utfordringer.tex}
-	\input{Tekst/Kapittel6 - Programmering/Github.tex}
+	\input{Tekst/Kapittel6 - Programmering/Utfordringer.tex}	
 	\input{Tekst/Kapittel6 - Programmering/leVolume.tex}
 	
 
