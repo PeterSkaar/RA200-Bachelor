@@ -1,1 +1,11 @@
 Her kan vi samle kodesnipps, for copy paste 
+
+---
+Hyperlink
+Referansen til linken (Der du hoppar til i dokumentet om du trukker linken)
+\label{sec:NAVN}
+
+Der linken skal vere i teksten
+\ref{sec:NAVN}
+----
+
