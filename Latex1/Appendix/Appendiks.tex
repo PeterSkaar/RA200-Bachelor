@@ -1,0 +1,28 @@
+%\chapter{MB Blokk}
+%Dette er ein appendiks for MB blokka
+%\includepdf[pages=-]{MB Dokumentasjon.pdf}  
+
+\chapter{IEC Blokker}
+
+% MB Blokk
+% Include only the first page
+\includepdf[pages=1,scale=0.8, pagecommand={\section{Montor binary}\thispagestyle{empty}},fitpaper=true]{Appendix/IEC Blokker/MB Dokumentasjon.pdf}
+% Include the rest of the pages, Starts from the second page to the last, Keep the same scale for all pages
+\includepdf[pages=2-, scale=0.8, pagecommand={\thispagestyle{empty}}, fitpaper=true]{Appendix/IEC Blokker/MB Dokumentasjon.pdf}
+
+% MA Blokk
+\includepdf[pages=1, scale=0.8, pagecommand={\section{Monitor Analogue}\thispagestyle{empty}}, fitpaper=true ]{Appendix/IEC Blokker/MA Dokumentasjon.pdf}
+\includepdf[pages=2-,scale=0.8, pagecommand={\thispagestyle{empty}},fitpaper=true]{Appendix/IEC Blokker/MA Dokumentasjon.pdf}
+
+% SBE Blokk
+\includepdf[pages=1, scale=0.8, pagecommand={\section{Switch Binary Eletrical}\thispagestyle{empty}}, fitpaper=true ]{Appendix/IEC Blokker/SBE Dokumentasjon.pdf}
+\includepdf[pages=2-,scale=0.8, pagecommand={\thispagestyle{empty}},fitpaper=true]{Appendix/IEC Blokker/SBE Dokumentasjon.pdf}
+
+% SBV Blokk
+\includepdf[pages=1, scale=0.8, pagecommand={\section{Switch Binary Value}\thispagestyle{empty}}, fitpaper=true ]{Appendix/IEC Blokker/SBV Dokumentasjon.pdf}
+\includepdf[pages=2-,scale=0.8, pagecommand={\thispagestyle{empty}},fitpaper=true]{Appendix/IEC Blokker/SBV Dokumentasjon.pdf}
+
+% Litt enklere format
+%\includepdf[pages=-, pagecommand={\thispagestyle{empty}}]{Appendix/IEC Blokker/MB Dokumentasjon.pdf}
+%\section{MA Blokk}
+%\includepdf[pages=-, pagecommand={\thispagestyle{empty}}]{Appendix/IEC Blokker/MA Dokumentasjon.pdf}

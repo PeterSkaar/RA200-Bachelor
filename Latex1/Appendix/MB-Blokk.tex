@@ -1,0 +1,46 @@
+\chapter{MB-Blokk}
+\thispagestyle{fancy}
+
+\begin{enumerate}
+    \item Bruk
+    \item Standard
+    \item Inputs
+    \item Outputs
+    \item Logikk
+    \item Testing og resultat
+    \item Vedlikehald
+\end{enumerate}
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|c|c|c|}
+    \hline
+        \rowcolor{myblack} % Assuming 'myblack' is meant to be 'black'
+        \textcolor{purewhite}{Terminal Code} & \textcolor{purewhite}{Signal Type} & \textcolor{purewhite}{Terminal name} & \textcolor{purewhite}{Supplementary Description}\\ \hline
+        \rowcolor{lightgray}  X  & Binary input & Normal function input & Binary input signal from process \\ \hline
+        \rowcolor{purewhite}  XF & Binary input & External fault & Fault indication from outside the template \\ \hline
+        \rowcolor{lightgray}  RX & Binary input & Reset latched output & Resets the output Y when RX goes high \\ \hline
+        \rowcolor{purewhite}  FB & Binary input & Force blocking & If FB is true, Y is set to 0 \\ \hline
+        \rowcolor{lightgray}  FU & Binary input & Force suppression. & If FU is true, Y is set to 0, YF is set to 0 and OS
+        alarm is set to 0 \\ \hline
+    \end{tabular}
+    \caption{Inputs}\label{table:MB Blokk}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \small % You can also use \footnotesize or \scriptsize
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        \rowcolor{myblack} % Assuming 'myblack' is meant to be 'black'
+        \textcolor{purewhite}{Terminal Code} & \textcolor{purewhite}{Signal Type} & \textcolor{purewhite}{Terminal name} & \textcolor{purewhite}{Supplementary Description}\\ \hline
+        \rowcolor{lightgray}  X  & Binary input & Normal function input & Binary input signal from process \\ \hline
+        \rowcolor{purewhite}  XF & Binary input & External fault & Fault indication from outside the template \\ \hline
+        \rowcolor{lightgray}  RX & Binary input & Reset latched output & Resets the output Y when RX goes high \\ \hline
+        \rowcolor{purewhite}  FB & Binary input & Force blocking & If FB is true, Y is set to 0 \\ \hline
+        \rowcolor{lightgray}  FU & Binary input & Force suppression. & If FU is true, Y is set to 0, YF is set to 0 and OS
+        alarm is set to 0 \\ \hline
+    \end{tabular}
+    \caption{Normal og Høgbelastningsmodus tider}\label{table:MB Blokk}
+\end{table}
