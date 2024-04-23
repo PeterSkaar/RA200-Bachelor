@@ -120,15 +120,17 @@
 \definecolor{lightgray}{gray}{0.8}
 \definecolor{myblack}{gray}{0.1}
 
-% Velger norsk språk på innholdsfortegnelse, figurliste og tabelliste.
+% Velger norsk språk på innholdsfortegnelse, figurliste, tabelliste og Referanseliste
 % Legger disse så til i innholdsfortegnelsen.
-\addto\captionsnorsk{\renewcommand{\contentsname}{Innholdsliste}}
+\addto\captionsnorsk{\renewcommand{\contentsname}{Innhaldsliste}}
 \addto\captionsnorsk{\renewcommand{\listfigurename}{Figurliste}}
 \addto\captionsnorsk{\renewcommand{\listtablename}{Tabelliste}}
+\addto\captionsnorsk{\renewcommand{\bibname}{Referansar}}
 % Nynorsk!
-\addto\captionsnynorsk{\renewcommand{\contentsname}{Innhaldsfortegnelse}} 
+\addto\captionsnynorsk{\renewcommand{\contentsname}{Innhaldsliste}} 
 \addto\captionsnynorsk{\renewcommand{\listfigurename}{Figurliste}}
 \addto\captionsnynorsk{\renewcommand{\listtablename}{Tabelliste}}
+\addto\captionsnynorsk{\renewcommand{\bibname}{Referansar}}
 
 
 % ----- Justering av avstander mellom chapter / section / subsection / subsubsection
@@ -228,6 +230,12 @@
 
 \makeglossaries
 \loadglsentries{Ordliste.tex}
+
+% Stil for referansar
+\bibliographystyle{unsrt}
+
+% Endre namn på overskrifta til referanselista
+
 
 % ---------------------------------- END kode for ordliste -----------------------------
 
@@ -367,8 +375,7 @@
 
 	%Referanseliste (Berre for test, citep må flyttast inn i teksten)
 	\clearpage
-	\bibliographystyle{unsrt}
-	\bibliography{Referansar}
+	\bibliography{Referansar} % Dette er ein referanse til Referansar.bib
 
 	
 
