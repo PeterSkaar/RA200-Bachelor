@@ -45,6 +45,7 @@
 \contentsline {section}{\numberline {10.1}Avslutting}{22}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Konklusjon}{22}{section.10.2}%
 \contentsline {section}{\numberline {10.3}Exit Points}{22}{section.10.3}%
+\ttl@starttoc {appendices@1}
 \contentsline {chapter}{Liste av Appendikser}{23}{section*.13}%
 \contentsline {chapter}{\numberline {A}Gant}{24}{appendix.1.A}%
 \contentsline {section}{\numberline {A.1}Gant}{25}{section.1.A.1}%
@@ -74,4 +75,5 @@
 \contentsline {section}{\numberline {D.1}FC Volum rektangel}{128}{section.1.D.1}%
 \contentsline {section}{\numberline {D.2}FC Volum Sylinder}{132}{section.1.D.2}%
 \contentsline {chapter}{\numberline {E}IO liste}{136}{appendix.1.E}%
+\ttl@stoptoc {appendices@1}
 \contentsfinish 
