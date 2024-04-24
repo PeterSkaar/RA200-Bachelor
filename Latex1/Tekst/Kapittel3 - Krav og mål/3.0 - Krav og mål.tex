@@ -1,57 +1,59 @@
 \chapter{Krav og mål}
 \thispagestyle{fancy}
-Krav i frå \gls{Renasys} var at vi skulle bli einige med \gls{Sunnfjord Kommune} om ein kravspesifikasjon.
-Vi hadde eit møte med \gls{Sunnfjord Kommune} der dei hadde nokon konkrete ønsker til oppgåva.
+\gls{Renasys} hadde som krav at vi etablerte ein kravspesifikasjon i samråd med \gls{Sunnfjord Kommune}.
+Vi hadde eit møte med kommunen der dei hadde nokon konkrete ønsker til oppgåva.
 
 \begin{enumerate}
-    \item Vekk frå høge lisenskostandar og skifte ut pls
-    \item Betre og ny dokumentasjon, med bl.a.\ funksjonsbeskrivelse
-    \item Klargjering av styresystemet for nye komponentar som ein forbertring av anlegget
+    \item Overgang frå system med høge lisenskostandar og utskifting av pls
+    \item Forbetring og utvikling av ny dokumentasjon, som inkludera ei ny funksjonsbeskriving 
+    \item Klargjering av styresystemet for integrering av ny funksjonalitet og komponentar
 \end{enumerate}
 
 \section{Krav}
-Vi brukte dei overnemnde krava til \gls{Sunnfjord Kommune} til å forme kravspesifikasjon vår.
-Derretter utarbeida vi ei liste med krav der det vart naturleg og dele dette opp i tre
-hovuddelar; dokumentasjon, programering og simulering med verifisering. Dette gjorde vi i samråd med rettleiar
-og fekk dette godkjent av oppdragsgivarane våre.
+Vi tok utgangspunkt i ønska frå \gls{Sunnfjord Kommune} for å forme kravspesifikasjon vår.
+Deretter utarbeida vi ei liste med krav som naturleg delte seg i tre
+hovuddelar: dokumentasjon, programmering og simulering med verifisering. Denne oppdelinga, som vart gjort i samråd med rettleiar, 
+vart godkjent av oppdragsgivarane våre.
 
 \begin{enumerate}
-    \item Dokumentasjon med detaljert funksjonsbeskrivelse som innheld bl.a.
+    \item Dokumentasjon med detaljert funksjonsbeskriving som inneheld: “MODIFISER PUNKT"
         \begin{itemize} 
-        \item Anleggets verkemåte
+        \item Beskriving av anleggets verkemåte
         \item Blokkdiagram
-        \item Interlock-liste
-        \item IO-liste
-        \item objektliste
-        \item Alarmliste
-        \item Eletriske teikningar
-        \item P\&ID
+        \item Interlock, Alarm og IO lister
+        \item Oversikt over objekta
+        \item Elektriske teikningar og P\&ID
         \item Vedlikehaldsmanual
         \end{itemize}
-    \item Programmering
+    \item Programmering, vi skal:
         \begin{itemize}
-        \item Bruke ny funksjonsbeskrivelse som base
-        \item Bruke open kjeldekode og ikkje låse seg til leverandør
-        \item etter IEC 61131\textemdash3 standard
+        \item Bruke den ny funksjonsbeskriving som grunnlag for programmeringa.
+        \item Anvende open kjeldekode og ikkje låse oss til spesifikke leverandørar.
+        \item Følge \gls{IEC} 61131\textemdash3 standard for programmering.
         \end{itemize}
     \item Simulering med verifisering
         \begin{itemize}
-        \item Lage eit sumleringsverktøy for å teste koden
+        \item Utvikle eit simuleringsverktøy for å teste og verifisere programmet
         \end{itemize}
 \end{enumerate}
 
-bruke Open source codesys programmering
-- ikkje dyrt, enkelt og vedlikehalde
-- Ikkje låse seg til ein leverandør
-
+\newpage
 \section{Mål}
-Det er nokon mål me har lyst og oppnå for dette systemet.
+Vi har satt følgande mål for systemet:
 
 \begin{itemize}
-    \item Programmere fire IEC blokker: MB,MA,SBE og SBE
-    \item program som er enkelt og vedlikehalde
+    \item Programmere fire \gls{IEC} blokker: MB,MA,SBE og SBE
+    \item Utvikle programvare som er enkelt og vedlikehalde
+    \item Implementera tilstandsmaskin for alle prosess sekvensane
 \end{itemize}
 
-\section{Oppgraderingar}
+\section{Ny funksjonalitet og sensorar}
+Følgande funksjonar og sensorar er ikkje nødvendig for programmets grunnleggande verkemåte, Men 
+er ønska av \gls{Sunnfjord Kommune} om tiden strekker til.  
+\begin{itemize}
+    \item Temperatur, nivå og trykksensorar(reintvan inn).
+    \item Ventil tilbakemeldingar og oksygenmåling
+    \item Mengdemåling for overlaup og frekvensstyring av pumper
+    \item Integrasjon av MJK prøvetakar og energimåling
+\end{itemize}
 
-Dette var ekstra ønsker frå kommunen i forhold til programmet. 
