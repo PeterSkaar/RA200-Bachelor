@@ -1,20 +1,66 @@
 \newpage
 \section{Teoretisk Virkemåte}
+\thispagestyle{fancy}
+
+
+% Sande reinseanlegg består av primærreinsing via ein grovrist. Frå grovrista
+% rennet vatnet med sjølvfall til ein mottakstank som fungerar som utjamningstank og samlar varierande tilstrøymingar 
+% for å gi resten av anlegget homogene forhold. 
+% Vidare blir vatnet pumpa frå mottakstanken opp til ein av reaktorane.
+% Innpumping skjer til den reaktoren som er i riktig fase og er klar for ny batch.
+% Sekundær og tærtierreinsing skjer i desse reaktorane som anvender SBR-teknologi.
+
+% Dersom ingen av reaktorane er i riktig fase vil avlaupsvatnet lagrast i mottakstanken
+% heilt til ein av reaktorane har avslutta sin syklus.
+% Avlaupsvatnet vil opphalde seg i eller på veg mot ein av desse fire hovuddelane medan det er i anlegget.
 
 Sande reinseanlegg består av primærreinsing via grovrist, ein mottakstank 
 som samlar varierande tilstrøymingar for å gi resten av anlegget homogene forhold og
-sekundær og tærtier reising ved to reaktorar som anvender SBR-teknologi.
+sekundær og tærtierreinsing ved to reaktorar som anvender SBR-teknologi.
+
+Avlaupsvatnet vil opphalde seg i eller på veg mot ein av desse fire hovuddelane medan det er i anlegget.
+Ferdig behandle avlaupsvatn blir drenert ut til resepienten Gaula. 
+Gaula er ei elv som renn ifrå Hestad, forbi Sande og munner ut i Dalsfjorden.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{Figurar/Sande verkemåte.png}
-    \caption{RA200 oppbygging}\label{fig:HMI}
+    \caption{RA200 flytskjema}\label{fig:HMI}
 \end{figure}
 
+\subsection{Grovrist}
+Innløpet på anlegget renn først igjennom grovrista. Grovrista på reinseanlegget
+er ein (Huber rotomat R09). Grovrista fungerer som ein liten tank og ein nivågivar starters
+skruen ved innkommande avlaupsvatn. Skruen tek med unøska materiale og fjernar det til eigen avfallshandtering.
+Dersom grovrist feile vil vatnet renne vidare via overløpsrøyr.
+
+\newpage
+\subsection{Mottakstank}
+Frå grovrista renner vatnet med sjølvfall mot mottakstanken som ligger som lavaste punkt på anlegget.
+Mottakstanken er 120 $m^3$ og er ein felles lagringsplass for vatnet før det går vidare mot reaktorane.
+Mottakstanken har fire sensorar som heng ifrå taket.
+
 \begin{itemize}
-    \item Tar ut slam i reaksjon istaden for Sedementering
-    \item Simultanfelling
-    \item 
+    \item Trykkgivar for nivå (PP00-LT01)
+    \item Trykkgivar for overløp (PP00-LT02)
+    \item Flottør-vippe lav (PP00-LS02)
+    \item Flottør-vippe høg (PP00-LS01)  
 \end{itemize}
 
-\thispagestyle{fancy}
+Nivået i mottakstanken blir primært målt med trykkgivar LT01. For at vatnet skal pumpast vidare mot ein
+reaktor i riktig sekvens må trykkgivar indikere at nivået er høgt nok. LS02 fungerar som backup.
+I toppen av mottakstanken er det ei overløpskasse som drenerer mot resepient, her vil det
+ved normale omstendigheter ikkje renne anna ein reinsavatn. Trykkgivar for overløp måler
+dersom ureinsavatn renner i resepientrøyret.
+
+%% Må endre på tegning fordi det eine navnet er feil. Ikkje reject frå sivbed.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{Figurar/Mottakstank.png}
+    \caption{Illustrasjon mottakstank}\label{fig:HMI}
+\end{figure}
+
+\newpage
+\subsection{Reaktor}
+
