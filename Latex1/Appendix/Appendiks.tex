@@ -2,8 +2,15 @@
 %Dette er ein appendiks for MB blokka
 %\includepdf[pages=-]{MB Dokumentasjon.pdf}  
 
-\chapter{IEC Blokker}
+\chapter{Gant}
+% GANT
+% Include only the first page
+\label{sec:A}
+\includepdf[pages=1, angle=90,scale=0.8, pagecommand={\section{Gant}\thispagestyle{empty}},fitpaper=true]{Appendix/Gant2.pdf}
 
+
+\chapter{IEC Blokker}
+\label{sec:B}
 % MB Blokk
 % Include only the first page
 \includepdf[pages=1,scale=0.8, pagecommand={\section{Montor binary}\thispagestyle{empty}},fitpaper=true]{Appendix/IEC Blokker/MB Dokumentasjon.pdf}
@@ -25,6 +32,7 @@
 
 % ------------ Nytt Kapittel
 \chapter{Funksjons Blokker}
+\label{sec:C}
 % Sekvens Blokker 
 % FB Pause
 \includepdf[pages=1, scale=0.8, pagecommand={\section{FB Pause Sekvens}\thispagestyle{empty}}, fitpaper=true ]{Appendix/Funksjons Blokker/fbPause.pdf}
@@ -78,6 +86,7 @@
 
 % ----------- Nytt Kapittel
 \chapter{Funksjoner}
+\label{sec:D}
 % Volume Rektangel
 \includepdf[pages=1, scale=0.8, pagecommand={\section{FC Volum rektangel}\thispagestyle{empty}}, fitpaper=true ]{Appendix/Funksjoner/Volume_Rectangle.pdf}
 \includepdf[pages=2-,scale=0.8, pagecommand={\thispagestyle{empty}},fitpaper=true]{Appendix/Funksjoner/Volume_Rectangle.pdf}

@@ -1,8 +1,8 @@
 Her kan vi samle kodesnipps, for copy paste 
 
 
-\citep{Renasys} - REFERANSE
-\gls{IO}        - GLOSSERY
+Renasys\citep{Renasys} - REFERANSE, 
+\gls{IO}               - GLOSSERY, lagar en hyperlink av ordet IO
 ---
 Hyperlink
 Referansen til linken (Der du hoppar til i dokumentet om du trukker linken)
