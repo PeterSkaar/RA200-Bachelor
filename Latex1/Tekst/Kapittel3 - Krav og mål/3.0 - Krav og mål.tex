@@ -1,3 +1,57 @@
 \chapter{Krav og mål}
 \thispagestyle{fancy}
-Her kan vi starte underlaget for kappittelet
+Krav i frå \gls{Renasys} var at vi skulle bli einige med \gls{Sunnfjord Kommune} om ein kravspesifikasjon.
+Vi hadde eit møte med \gls{Sunnfjord Kommune} der dei hadde nokon konkrete ønsker til oppgåva.
+
+\begin{enumerate}
+    \item Vekk frå høge lisenskostandar og skifte ut pls
+    \item Betre og ny dokumentasjon, med bl.a.\ funksjonsbeskrivelse
+    \item Klargjering av styresystemet for nye komponentar som ein forbertring av anlegget
+\end{enumerate}
+
+\section{Krav}
+Vi brukte dei overnemnde krava til \gls{Sunnfjord Kommune} til å forme kravspesifikasjon vår.
+Derretter utarbeida vi ei liste med krav der det vart naturleg og dele dette opp i tre
+hovuddelar; dokumentasjon, programering og simulering med verifisering. Dette gjorde vi i samråd med rettleiar
+og fekk dette godkjent av oppdragsgivarane våre.
+
+\begin{enumerate}
+    \item Dokumentasjon med detaljert funksjonsbeskrivelse som innheld bl.a.
+        \begin{itemize} 
+        \item Anleggets verkemåte
+        \item Blokkdiagram
+        \item Interlock-liste
+        \item IO-liste
+        \item objektliste
+        \item Alarmliste
+        \item Eletriske teikningar
+        \item P\&ID
+        \item Vedlikehaldsmanual
+        \end{itemize}
+    \item Programmering
+        \begin{itemize}
+        \item Bruke ny funksjonsbeskrivelse som base
+        \item Bruke open kjeldekode og ikkje låse seg til leverandør
+        \item etter IEC 61131\textemdash3 standard
+        \end{itemize}
+    \item Simulering med verifisering
+        \begin{itemize}
+        \item Lage eit sumleringsverktøy for å teste koden
+        \end{itemize}
+\end{enumerate}
+
+bruke Open source codesys programmering
+- ikkje dyrt, enkelt og vedlikehalde
+- Ikkje låse seg til ein leverandør
+
+\section{Mål}
+Det er nokon mål me har lyst og oppnå for dette systemet.
+
+\begin{itemize}
+    \item Programmere fire IEC blokker: MB,MA,SBE og SBE
+    \item program som er enkelt og vedlikehalde
+\end{itemize}
+
+\section{Oppgraderingar}
+
+Dette var ekstra ønsker frå kommunen i forhold til programmet. 
