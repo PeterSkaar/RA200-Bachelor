@@ -2,4 +2,26 @@
 \thispagestyle{fancy}
 
 
-- Legge inn forklaring av "felleskoden", utrekningar, sivebedrotasjon, dataprossesing, Høgbelastningsprogram, ProvessedWater.
+- Legge inn forklaring av "felleskoden", utrekningar', sivebedrotasjon', dataprossesing', Høgbelastningsprogram', ProvessedWater.
+- Alt under her er er ikkje skrevet i stein.
+
+Høgbelastningsmodus (Sjå appendiks xXx).
+Høgbelastningsmodus blir aktivert ved stor tilstrøyming til anlegget. 
+Tilstrøyminga blir utrekna ved nivåendring i mottakstanken, og blir målt over ein periode på 30minutter og ein gjennomsnittleg tilstrøyming for tanken blir kalkulert. Denne kalkulerte verdien blir samanlikna med ein fastsett førehandsbestemte verdi, og om tilstrøyminga er større en tillat, blir høgbelastningsmodus aktivert. 
+Når høgbelastningsmodus er aktivert vil tidene for sekvensane justert, slik at anlegget får ein større kapasitet.
+
+Utrekningar (Sjå appendiks xXx)
+Det er nokre rekneoppgåver som ligger i bakgrunnen og køyrer. 
+Desse er samla i fbCalculations, og er i hovudsak utrekningar av volum i reaktor- og mottakstank, og drenert volum i frå reaktortank. 
+
+Sivebedsrotasjon (Sjå appendiks xXx)
+Sidan anlegget har fire forskjellige sivebed, er det viktig å oppretthalde rotasjon mellom dei. Anlegget tappar i frå reaktor til eit sivebed omgangen, og roterer i mellom desse etter ein parameter som angir kor mange syklusar den skal tappe til kvart sivebed. 
+Det er og mogleg å ta eit sivebed ut av rotasjon, da vil programmet utelukka sivebedet frå rotasjonen.
+
+Dataprossesing (Sjå appendiks xXx)
+fbDataprocessing blir brukt i samband med innsamling av driftsdata. 
+Når nokon av objekta som er tiltenkt å ha driftsdata køyrer eller er aktive, blir desse sendt til fbDataprocessing, og derifrå kallar den opp fbTimeMeter som lagrar og teller driftsdata for objektet.
+
+fbProcessedWater (Sjå appendiks xXx)
+Det er laga ei eiga blokk for å halde oversikt over driftsdata som omhandlar behandla vann for anlegget. 
+Denne blokka gir informasjon for totalt behandla vann, nåverande år, nåverande månad, nåverande veke, nåverande dag, førre år, færre månad, færre veke og førre dag.
