@@ -1,4 +1,4 @@
-\section{IEC \gls{FB}}
+\section{IEC \glspl{FB}}
 \thispagestyle{fancy}
 
 %Skriv OM:
@@ -9,15 +9,15 @@
 % Skrive litt om blokka sin funksjonalitet
 % Korleis me brukte blokkene i programmet.
 
-\glspl{FB} har fleir inngangnsfunkjonar som handterar ulike sikkerheit og driftsmodusar:
+\glspl{FB} har fleire inngangnsfunkjonar som handterar ulike sikkerheits- og driftsmodusar.
 \begin{itemize}
     \item \textbf{Lock Safeguarding:} Beskyttar mot uautorisert driftsendring.
     \item \textbf{Force Safeguarding:} Hindrar tvangsstyring under visse tilhøve.
     \item \textbf{Force Disable Transition:} Deaktiverer overgang til tvangsstyring.
-    \item \textbf{Force Blocking:} Blokkerer tvangsstyring.
-    \item \textbf{Force Suppression:} Undertrykkjer tvangssignal.
+    \item \textbf{Force Blocking:} Blokker all tvangsstyring.
+    \item \textbf{Force Suppression:} Undertrykkjer signal som fører til tvangskøyring.
 \end{itemize}
-
+Ein eller fleire av desse funksjonane blir brukt i blokkene.
 
 \subsection{Monitor Analogue}
 \gls{MA} funksjonsblokka er brukt for skalering, visning, overvåking og alarmhandtering av analoge inngangsvariablar i ein prosess.
@@ -70,7 +70,7 @@ Funksjonsblokka er brukt i programmet for å overvaka alle digitale nivåfølera
 
 \subsection{Switch Binary Value}
 
-\gls{SBV} \gls{FB} skal brukast til binær av/på kontroll av eit flyt element ved å endra straumen av medium (varme eller væske). 
+\gls{SBV} \gls{FB} skal brukast til binær av/på kontroll av eit straumningselement ved å endra straumen av medium (varme eller væske). 
 Typisk komponentar som styrast er bl.a. ventilar og spjeld.
 \gls{FB} er i dette programmet brukt til og styre ventilar.
 
@@ -78,15 +78,17 @@ Typisk komponentar som styrast er bl.a. ventilar og spjeld.
 Desse inngangane styrer ein utgang Y, som sender opne/stenge-kommando(høg/låg) til ventilaktivatoren.
 Alternativt kan dei pulsmodulerte utgangane YH og YL kan også nyttast.
 
-\gls{FB} har også inngongar XGH og XGL som gjer tilbakemelding om ventiler er heilt open eller stengd,
+\gls{FB} har også inngongar XGH og XGL som gjer tilbakemelding om ventilen er heilt open eller stengd,
 som då bekrefter ventilen sin posisjon.
 
 \textbf{Kontrollfunksjonane i \gls{FB} inkluderar:}
 \begin{itemize}
     \item Generering av feilstatus (YF) om det oppstår ein intern eller ekstern feil.
-    \item Den set utgangen Y i samsvar med parameter når feil blir oppdaga.
-    \item Den set utgangen Y basert på tilbakemelding i ytremodus når ingen eksterne inngangar blir brukte (XOH/XOL).
+    \item Blokka set utgangen Y i samsvar med parameter når feil blir oppdaga.
+    \item Blokka set utgangen Y basert på tilbakemelding i "outside mode" når ingen eksterne inngangar blir brukte (XOH/XOL).
 \end{itemize}
+
+Funksjonsblokka inkluderar alarm suppression, blocking, safeguarding og transition funksjonalitet.
 
 \begin{figure}[htbp]
     \centering
@@ -108,14 +110,15 @@ som då bekrefter ventilen sin posisjon.
 
 \subsection{Switch Binary Eletrical}
 
-\gls{SBE} funksjonsblokka blir brukt for binærkontroll av straumningselement for elektrisitet, varme eller væske. Det
-kontrollerte elementet er av typen motor, pumpe, varmeelement, vifte etc.
+\gls{FB} blir brukt for binærkontroll (av/på) kontroll av straumningselement for elektrisitet, varme eller væske. Det
+kontrollerte komponenten er av typen motor, pumpe, varmeelement, vifte etc.
 
-SBE blokka beskriver korleis ein kontrollarar ein enhet, for eksempel ein motor, pumpe, varmeelement, vifte etc.
-Det er ein utgang Y, som gir ein opne/lukke (høg/lav) kommando til enheten. Blokka har fleire funksjonar, der den
-tar output og samanliknar med tilbakemelding og gir korrekt BCL/BCH status. Den genererer også ein feil status på
-YF om ein har ein ekstern feil inn.
-Funksjonsblokka inkluderer alarm suppression, blocking, safeguarding og transition funksjonalitet.
+\gls{FB} beskriver korleis ein kontrollarar ein komponent, som tl.d. Motor, pumpe, varmeelement eller ei vifte.
+Det er utgangen Y, som sender ein opne/stenge kommando(høg/lav) til komponenten. Blokka har fleire funksjonar, der den
+tar utgangen og samanliknar med tilbakemelding (XGH) som gjer korrekt (BCL/BCH) status. Den genererer også ein feil status på
+(YF) om ein har ein ekstern feil inn(XF).
+
+\gls{FB} inkluderer alarm suppression, blocking, safeguarding og transition funksjonalitet.
 
 \begin{figure}[htbp]
     \centering
