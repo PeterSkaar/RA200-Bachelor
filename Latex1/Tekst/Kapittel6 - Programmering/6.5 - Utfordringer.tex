@@ -1,22 +1,12 @@
 \section{Utfordringer}
 \thispagestyle{fancy}
 
-Problematikk rundt det å ha fleire blokker, som styrer samme komponetar da vi skriver til ein felles global variabel.
+Vi opplevde noko problematikk rundt det å ha fleire blokker, som styrer samme komponentar da vi skrivar til ein felles global variabel.
 Denne variabelen blir då satt true og false i frå fleire plassar i programmet, noko som gjer at variablenen sinn tilstand vil vere tilfeldig, basert på korleis Codesys sin kompilator leser koden.
 
-Dette kan vi løyse ved å bruke ein egen global variabel for hver blokk, og så skrive til ein funksjonsblokk som styrar den endelege globale variabelen.
-Det er fleire plassar i programmet vi møter denna utfordringa, som blant anna med pumpestyring, da hver reaktor kan styre samme pumpe.
-Samme løysning vil gjelde i denna situasjonen, der vi må lage ei blokk som tar inngangar frå begge pumpene og setter utgangen til riktig tilstand.
+Dette kan vi løyse ved å bruke ein egen global variabel for kvar blokk, og så skrive til ein funksjonsblokk som styrar den endelege globale variabelen.
+Det er fleire plassar i programmet vi møter denne utfordringa, som blant anna med pumpestyring, da kvar reaktor kan styre same pumpe.
+Same løysning vil gjelde i denne situasjonen, der vi må lage ei blokk som tar inngangar frå begge pumpene og setter utgangen til riktig tilstand.  
 
-Dette er eit klassisk eksempel der vi har koda noko vi trur fungerar optimalt, men under testing så finner vi ut at det ikkje fungerar som vi har tenkt.
-Løsninga setter nokre føringar for variabelhandtering videre i programmet, og vi står over eit val der valet våras gjør koden noko meir "innvikla", men vi opprettholder
-funksjonaliteten i programmet slik vi opprinneleg hadde tenkt.
-
-BARE RABLERIER FRA VEGARD
-Volume utregninger har bydd på nokre utfordringer, da vi ikkje har noen form for flowmåling
-Alt baserer seg på matte og nivåmålinger, og informasjon frå program.
-
-Vi baserer våre volum målingar i mottaktstank på volume av kvadrat, v=b*l*h.
-
-Høgbelastningsprogramm belager seg på at det er utregna ein hydraulisk belastning basert på nivåendringer i mottaktstanken
-Det er ikkje til å ungå at ved oppgradering av anlegget, at flow måling må inn for ein mer nøyaktig måling.
+Dette er eit klassisk eksempel der vi har koda noko vi trur fungera optimalt, men under testing så finner vi ut at det ikkje fungera som vi har tenkt.
+Løysninga setter nokre føringar for variabelhandtering videre i programmet, og vi står over eit val der valet våra gjer koden noko meir avansert, men vi oppretthelder funksjonaliteten i programmet slik vi opphavleg hadde tenkt.
