@@ -1,4 +1,4 @@
-\section{Programmering av blokker}
+\section{IEC \gls{FB}}
 \thispagestyle{fancy}
 
 %Skriv OM:
@@ -8,6 +8,16 @@
 
 % Skrive litt om blokka sin funksjonalitet
 % Korleis me brukte blokkene i programmet.
+
+\glspl{FB} har fleir inngangnsfunkjonar som handterar ulike sikkerheit og driftsmodusar:
+\begin{itemize}
+    \item \textbf{Lock Safeguarding:} Beskyttar mot uautorisert driftsendring.
+    \item \textbf{Force Safeguarding:} Hindrar tvangsstyring under visse tilhøve.
+    \item \textbf{Force Disable Transition:} Deaktiverer overgang til tvangsstyring.
+    \item \textbf{Force Blocking:} Blokkerer tvangsstyring.
+    \item \textbf{Force Suppression:} Undertrykkjer tvangssignal.
+\end{itemize}
+
 
 \subsection{Monitor Analogue}
 \gls{MA} funksjonsblokka er brukt for skalering, visning, overvåking og alarmhandtering av analoge inngangsvariablar i ein prosess.
@@ -33,12 +43,12 @@ funksjonsblokka er brukt i programmet for å overvåke analoge trykknivågivarar
 \newpage
 
 \subsection{Monitor Binary}
+\gls{MB} \gls{FB} blir brukt til automatisk overvåking, alarmhandtering, framvising og latching av binære prosess variablar.
+\gls{FB} inkluderer alarm suppression og blokkerings funksjonalitet. Den har moglegheit for invertering av 
+inngangssignal og moglegheit for tids forseinking av utgangssignal via parameter.
 
-\gls{MB} funksjonsblokk blir brukt til automatisk overvåking, alarmhandtering, framvising og latching av binære prosess variablar.
-Funksjonsblokka inkluderer alarm suppression og blocking funksjonalitet. Funksjonsblokka har moglegheit for invertering av 
-inngangssignal og moglegheit for tidsforsinkelse av utgangssignal via parameter.
+Funksjonsblokka er brukt i programmet for å overvaka alle digitale nivåfølerar i prosessen.
 
-funksjonsblokka er brukt i programmet for å overvåke alle digitale nivåfølerar i prosessen.
 
 \begin{figure}[htbp]
     \centering
@@ -60,22 +70,23 @@ funksjonsblokka er brukt i programmet for å overvåke alle digitale nivåføler
 
 \subsection{Switch Binary Value}
 
-\gls{SBV}-funksjonsblokka skal brukast til binær (på/av) kontroll av eit flyt element ved å endra straumen av medium (varme eller væske). 
-Typisk kontrollerte element er ventilar, spjeld, osv.
-Funksjonsblokka er brukt i programmet til og styre ventilar.
+\gls{SBV} \gls{FB} skal brukast til binær av/på kontroll av eit flyt element ved å endra straumen av medium (varme eller væske). 
+Typisk komponentar som styrast er bl.a. ventilar og spjeld.
+\gls{FB} er i dette programmet brukt til og styre ventilar.
 
-Funksjonsblokka skildrar kontrollen av ventilar med dei binære inngangane XH og XL.
-Det er ein utgang Y, som formidlar eit opne/lukke (høg/låg) kommando til ventilaktivatoren,
-eller dei pulserte utgangane YH og YL kan brukast. Funksjonsblokka har også utgonger XGH og XGL som bekreftar at ventil har fått høg eller låg tilbake melding frå ventilen.
-Forklaringa på kontrollfunksjonane (rektangla) er som følgjer: "Kontrollfunksjon":Denne funksjonen utfører fleire oppgåver.
+\gls{FB} styrer ventilen ved hjelp av dei binære inngangane XH og XL.
+Desse inngangane styrer ein utgang Y, som sender opne/stenge-kommando(høg/låg) til ventilaktivatoren.
+Alternativt kan dei pulsmodulerte utgangane YH og YL kan også nyttast.
+
+\gls{FB} har også inngongar XGH og XGL som gjer tilbakemelding om ventiler er heilt open eller stengd,
+som då bekrefter ventilen sin posisjon.
+
+\textbf{Kontrollfunksjonane i \gls{FB} inkluderar:}
 \begin{itemize}
-    \item Den genererer feilstatus YF dersom ein ekstern eller intern feil blir rapportert
-    \item Den set utgangen Y i samsvar med parameter når feil blir oppdaga;
+    \item Generering av feilstatus (YF) om det oppstår ein intern eller ekstern feil.
+    \item Den set utgangen Y i samsvar med parameter når feil blir oppdaga.
     \item Den set utgangen Y basert på tilbakemelding i ytremodus når ingen eksterne inngangar blir brukte (XOH/XOL).
 \end{itemize}
-
-Der er det mogleg og bruke inngongar som kan handtere Lock safeguarding Force safeguarding, force disable transition, Force blocking, Force suppression. Videre er det også inngangar for lock Auto, manuell og outside.
-Samt utgonger for som bekreftar status blocked, suppressed, auto/man og outside.
 
 \begin{figure}[htbp]
     \centering
