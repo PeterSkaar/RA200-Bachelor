@@ -2,7 +2,7 @@
 \thispagestyle{fancy}
 
 Vi opplevde noko problematikk rundt det å ha fleire blokker, som styrer samme komponentar da vi skrivar til ein felles global variabel.
-Denne variabelen blir då satt true og false i frå fleire plassar i programmet, noko som gjer at variablenen sinn tilstand vil vere tilfeldig, basert på korleis Codesys sin kompilator leser koden.
+Denne variabelen blir då satt true og false i frå fleire plassar i programmet, noko som gjer at variablenen sin tilstand vil vere tilfeldig, basert på korleis Codesys sin kompilator leser koden.
 
 Dette kan vi løyse ved å bruke ein egen global variabel for kvar blokk, og så skrive til ein funksjonsblokk som styrar den endelege globale variabelen.
 Det er fleire plassar i programmet vi møter denne utfordringa, som blant anna med pumpestyring, da kvar reaktor kan styre same pumpe.
@@ -10,3 +10,9 @@ Same løysning vil gjelde i denne situasjonen, der vi må lage ei blokk som tar 
 
 Dette er eit klassisk eksempel der vi har koda noko vi trur fungera optimalt, men under testing så finner vi ut at det ikkje fungera som vi har tenkt.
 Løysninga setter nokre føringar for variabelhandtering videre i programmet, og vi står over eit val der valet våra gjer koden noko meir avansert, men vi oppretthelder funksjonaliteten i programmet slik vi opphavleg hadde tenkt.
+
+
+Anlegget har ikkje nokon form for gjennomstrøymingsmålar og har difor ein teoretisk utrekna strøymingsverdiar. 
+Verdiane er utrekna frå tankvolum, og det gjelder for mottakstank og reaktortank. 
+Dette kan vere noko uheldig da dette gir oss noko manglande nøyaktigheit i målingane våra, som forplantar seg vidare til databehandlinga.
+Vi har tatt utgangspunkt i planteikningane for å få så nøyaktige mål som mogleg, i tillegg til at vi har fått verifisert tank (mottakstank) innvending med video for å konstatere at våra mål og utrekningar er korrekte.
