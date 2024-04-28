@@ -9,7 +9,11 @@
 % Skrive litt om blokka sin funksjonalitet
 % Korleis me brukte blokkene i programmet.
 
-\glspl{FB} har fleire inngangnsfunkjonar som handterar ulike sikkerheits- og driftsmodusar.
+Vi gjore eit utval av blokker basert på dei komponentane vi identifiserte i annlegget.
+For å laga eit robust program falt valet på som nemd i førre kapittel på: \gls{MA}, \gls{MB}, \gls{SBE} og \gls{SBV}.
+
+Funksjons blokkene har fleire inngangsfunksjonar som handtera ulike sikkerheits- og driftsmodusar.
+Ein eller fleire av desse inngangane vil gå at i alle blokkene.
 \begin{itemize}
     \item \textbf{Lock Safeguarding:} Beskyttar mot uautorisert driftsendring.
     \item \textbf{Force Safeguarding:} Hindrar tvangsstyring under visse tilhøve.
@@ -17,7 +21,6 @@
     \item \textbf{Force Blocking:} Blokker all tvangsstyring.
     \item \textbf{Force Suppression:} Undertrykkjer signal som fører til tvangskøyring.
 \end{itemize}
-Ein eller fleire av desse funksjonane blir brukt i blokkene.
 
 \subsection{Monitor Analogue}
 \gls{MA} funksjonsblokka er brukt for skalering, visning, overvåking og alarmhandtering av analoge inngangsvariablar i ein prosess.
