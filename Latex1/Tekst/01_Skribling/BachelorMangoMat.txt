@@ -76,6 +76,8 @@ kapittel
     4.4 Dokumentasjon Fornyiing
     - FSD, 
 
+    meir bilete av sjølve anlegget på sande, slik at ein får meir forhold til korleis det ser ut
+
 5. Tillrettelegging for programering
     5.1 Codesys m/git, Programmerings språk (ST) - Hungarian notation
     5.2 IEC Standard (Generelt, templates osv, Arguemtering kvifor) (Vegen videre ved val av standariserte blokker)

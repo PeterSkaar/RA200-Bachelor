@@ -1,0 +1,14 @@
+
+
+Litt spørsmål til møtet.
+
+- Bruk av bilete frå annlegget på sande, meir bilete frå sande for
+  å danne eit bilete av kva me jobba med ?
+
+- Er programmeringa dokumentert på ein god måte? meir eller mindre detaljar?
+
+- Dokumentering av programmet, appendiksar. 
+  Programmet er på engelsk, bør då dokumentasjonen av blokkene være på englandsk? 
+  Input, output og parameter er på engelsk per no. Forklaringar er på norsk.
+
+- 
