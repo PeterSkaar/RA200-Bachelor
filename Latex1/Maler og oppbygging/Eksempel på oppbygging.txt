@@ -6,14 +6,13 @@
  2 - Forraport / Prosjektbeskrivelse med avgrensinger og løsning
  
  3 - Beskrivelse av valgt løsning, software og Anleggets virkemåte
-   - Codesys, github, LaTeX, Visio, Toolbox, IEC 63131, GAMMAL FSD, GX !WORKS, ChatGPT/AI/Youtube
+   - Codesys, github, LaTeX, Visio, SCD-Toolbox, IEC 63131, GAMMAL FSD, GX !WORKS, ChatGPT/AI/Youtube
  
  4 - Underlag for programmering /FSD - Alt må vere med som vedlegg, for å vise arbeid.
  
- 
  5 - Dokumentasjon (Interlock, blokkdiagram, IO-liste osv) SIKKERHEIT
+      - Eksisterande anlegget? ASIMASTER
 
- 
  6 - Programmering
    - Utdrag fra programering, forklaring av oppbygging, 
   
@@ -25,6 +24,7 @@
  
  10 - Kilder / Vedlegg
 	- Datablad, Gant, linker(github, logg, yt), blokkdokumentasjon, PI&D, Orgianle fsd.
-	- FSD
+	- FSD, Forrapport
 	
- Referanser - Biovac, Statsforvalteren PDF, orgianl fsd, 
+ Referanser - Biovac, Statsforvalteren PDF, orgianl fsd, Sunnfjord kommune bilder, Normatic screenshot, Mitsubishi
+            - Microsoft Word? Microsoft Excel? OlavSande-fbSwitchBistable, Håvar Dankel - Oppgåveoppbygging?
