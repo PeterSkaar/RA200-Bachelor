@@ -382,13 +382,16 @@
 	\input{Tekst/Kapittel10 - Konklusjon/Konklusjon.tex}
 	\input{Tekst/Kapittel10 - Konklusjon/ExitPoints.tex}
 
+	\clearpage
 	\renewcommand{\glossaryname}{Ordliste} % Denne er med for å kunne endre navn på ordlista
 	\printglossaries %Printer ut alle ord som er brukt frå ordlista
 
 	%Referanseliste (Berre for test, citep må flyttast inn i teksten)
 	%\clearpage
-	\chapter{Referansar} % sjekk om det skal være slik, for å få den opp i innhaldslista.
+	%\chapter{Referansar} % sjekk om det skal være slik, for å få den opp i innhaldslista.
+	\clearpage
 	\bibliography{Referansar} % Dette er ein referanse til Referansar.bib
+	\addcontentsline{toc}{chapter}{Referansar}  % Adds the unnumbered chapter to the table of contents
 
 
 	% Create a partial table of contents for appendices
