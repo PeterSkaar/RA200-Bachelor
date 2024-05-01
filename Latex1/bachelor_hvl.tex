@@ -358,23 +358,27 @@
 	\input{Tekst/Kapittel10 - Konklusjon/Konklusjon.tex}
 	\input{Tekst/Kapittel10 - Konklusjon/ExitPoints.tex}
 
+	%Referanseliste (Berre for test, citep må flyttast inn i teksten)
+	\clearpage
+	\chapter{Referansar} % sjekk om det skal være slik, for å få den opp i innhaldslista.
+	\bibliography{Referansar} % Dette er ein referanse til Referansar.bib
+
+
 	% Create a partial table of contents for appendices
 	% Generate the list of appendices
 	% Start of appendices, capture contents for appendices list
-	\begin{appendices}
-		% This command initializes the recording of contents for appendices
-		\startcontents[appendices]
-		\phantomsection
-		\addcontentsline{toc}{chapter}{Liste av Appendikser} % Her kan ein endre navn for appendix lista
-		\input{Appendix/Appendiks.tex}
-		% Stop capturing contents and print them
-		\stopcontents[appendices]
-	\end{appendices}
+	%\begin{appendices}
+	%	% This command initializes the recording of contents for appendices
+	%	\startcontents[appendices]
+	%	\phantomsection
+	%	\addcontentsline{toc}{chapter}{Liste av Appendikser} % Her kan ein endre navn for appendix lista
+	%	\input{Appendix/Appendiks.tex}
+	%	% Stop capturing contents and print them
+	%	\stopcontents[appendices]
+	%\end{appendices}
 
 
-	%Referanseliste (Berre for test, citep må flyttast inn i teksten)
-	\clearpage
-	\bibliography{Referansar} % Dette er ein referanse til Referansar.bib
+
 
 	
 
