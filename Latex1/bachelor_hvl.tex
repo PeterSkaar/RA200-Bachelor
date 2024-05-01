@@ -109,6 +109,9 @@
 % For å kunne justere bilete
 \usepackage{adjustbox}
 
+% 
+\usepackage{tocloft}
+
 %---------------------------------------------------
 
 % Velger arial som skrifttype i dokumentet 
@@ -252,6 +255,12 @@
 
 % Endre namn på overskrifta til referanselista
 
+% dette må stå her slik at romartalla viser korrekt i rapporten
+\makeatletter
+\let\ps@oldplain\ps@plain
+\renewcommand\ps@plain{\pagestyle{romanpages}}
+\makeatother
+
 
 % ---------------------------------- END kode for ordliste -----------------------------
 
@@ -287,22 +296,22 @@
 	\input{Tekst/Forord/Samandrag.tex}
 
 	%--------------------Innhaldsliste / Figurliste / tabell liste---------------------	
-	% Innholdsliste
-	%\pagestyle{romanpages}
-	\tableofcontents % Genererer Innhaldsliste
-	%\thispagestyle{empty} % Fjerner sidetall
+	% innholdsliste
+	\cleardoublepage
 	\pagestyle{romanpages}
-	\listoffigures % Genererer figur liste
-	%\thispagestyle{empty}
-	%\quad
-	\pagestyle{romanpages}
-	\listoftables % Genererer ei liste med tabeller
-	\pagestyle{romanpages}
-	%\thispagestyle{empty}
-	%\cleardoublepage
+	\tableofcontents
+	\thispagestyle{romanpages}  % Apply to the first page of the Table of Contents
 
-	% Set counter setter sidetallet for innholdsliste-siden.
+	\cleardoublepage
+	\pagestyle{romanpages}
+	\listoffigures
+	\thispagestyle{romanpages}  % Apply to the first page of the List of Figures
 	
+	\cleardoublepage
+	\pagestyle{romanpages}
+	\listoftables
+	\thispagestyle{romanpages}  % Apply to the first page of the List of Tables
+
 	% Turn on the style
 	\pagestyle{fancy}
 
