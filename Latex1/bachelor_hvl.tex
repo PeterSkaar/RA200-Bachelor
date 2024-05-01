@@ -166,6 +166,30 @@
   {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
 \titlespacing*{\subsubsection}{0pt}{10pt}{10pt}
 
+% ------------------- jusetring av lister ------------------
+
+% Denne vil endre skriftstørrelse ...
+% Legg til \hfill før LARGE om overskrifta skal sentrerest
+\renewcommand{\cfttoctitlefont}{\LARGE\bfseries}
+\renewcommand{\cftaftertoctitle}{}
+\renewcommand{\cftloftitlefont}{\LARGE\bfseries}
+\renewcommand{\cftafterloftitle}{}
+\renewcommand{\cftlottitlefont}{\LARGE\bfseries}
+\renewcommand{\cftafterlottitle}{}
+
+% Avstand mellom toppen av sida og ned til overskrifta t.d. innhaldsliste
+\setlength{\cftbeforetoctitleskip}{-20pt}  % Adjust the value as needed, negative reduces the space
+\setlength{\cftbeforeloftitleskip}{-20pt}  % Adjust the value as needed
+\setlength{\cftbeforelottitleskip}{-20pt}  % Adjust the value as needed
+
+% Avstand mellom Overskrift og kapittel
+\setlength{\cftaftertoctitleskip}{15pt}
+\setlength{\cftafterloftitleskip}{15pt}
+\setlength{\cftafterloftitleskip}{15pt}
+
+
+% -------------------------------------------------------------
+
 % Her definerer ein pagestylen til hovud opplegget
 \fancypagestyle{fancy}{
   % Clear the header and footer
