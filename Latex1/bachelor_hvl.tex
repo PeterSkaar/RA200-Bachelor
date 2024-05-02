@@ -219,7 +219,19 @@
   \setlength{\itemsep}{-10pt} 
 }
 
+% ------ Justering av avstander i dokumentet for enumerable ---------------------
+
+% Save the original definition of enumerate
+\let\oldenumerate\enumerate
+
+% Redefine the enumerate to adjust spacing
+\renewcommand{\enumerate}{
+  \oldenumerate
+  \setlength{\itemsep}{-7pt}  % Adjust this value as needed
+}
+
 % -------------------------------------------------------------------
+
 
 
 % ------------------------- KODE FOR ORDLISTE ---------------------
@@ -381,10 +393,11 @@
 	% Kapittel 6 - Programmering
 	\input{Tekst/Kapittel6 - Programmering/6.0 - Programmering.tex}
 	\input{Tekst/Kapittel6 - Programmering/6.1 - Programmering av blokker.tex}
-	\input{Tekst/Kapittel6 - Programmering/6.2 - Tilstandsmashina.tex}
-	\input{Tekst/Kapittel6 - Programmering/6.3 - Tilstandslogikk.tex}
-	\input{Tekst/Kapittel6 - Programmering/6.4 - Oppbygginga av programmet.tex}
-	\input{Tekst/Kapittel6 - Programmering/6.5 - Utfordringer.tex}
+	\input{Tekst/Kapittel6 - Programmering/6.2 - Felles kode.tex}
+	\input{Tekst/Kapittel6 - Programmering/6.3 - Tilstandsmashina.tex}
+	\input{Tekst/Kapittel6 - Programmering/6.4 - Tilstandslogikk.tex}
+	\input{Tekst/Kapittel6 - Programmering/6.5 - Oppbygginga av programmet.tex}
+	\input{Tekst/Kapittel6 - Programmering/6.6 - Utfordringer.tex}
 
 	% Kapittel 7 Dokumentasjon
 	\input{Tekst/Kapittel7 - Dokumentasjon/7.0 - Intro.tex}
