@@ -171,11 +171,7 @@ Innleiing
 
 2.1
 
-Mangler til programmering
+Mangler
 - Feilhandtering
 - Pumpehus
 - Driftsdata trending i frå fbProcessedWater
-    XGH fra MB i blåseblokk.    
-    MJK teller
-    HMI
-    
