@@ -171,7 +171,11 @@ Innleiing
 
 2.1
 
-Mangler
+Mangler til programmering
 - Feilhandtering
 - Pumpehus
 - Driftsdata trending i frå fbProcessedWater
+- MJK teller 
+- HMI
+- Nivå vann på bakken
+- Prossessluft måler. 
