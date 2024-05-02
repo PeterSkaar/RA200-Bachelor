@@ -11,4 +11,6 @@ Litt spørsmål til møtet.
   Programmet er på engelsk, bør då dokumentasjonen av blokkene være på englandsk? 
   Input, output og parameter er på engelsk per no. Forklaringar er på norsk.
 
+  Spør om IEC blokker har riktig ikon for tilstandsblokkene?
+
 - 
