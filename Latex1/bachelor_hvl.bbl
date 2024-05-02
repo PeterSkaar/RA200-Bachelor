@@ -1,39 +1,63 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Renasys}
 Renasys.
 \newblock Renasys as, 2024.
+\newblock \href{https://www.renasys.com/nb}{Link}, Last accessed on 2024-04-19.
 
 \bibitem{SunnfjordKommune}
 Sunnfjord Kommune.
 \newblock Sunnfjord kommune, 2024.
+\newblock \href{https://sunnfjord.kommune.no/}{Link}, Last accessed on
+  2024-04-19.
 
 \bibitem{Codesys}
 Codesys.
 \newblock Codesys, 2024.
+\newblock \href{https://www.codesys.com}{Link}, Last accessed on 2024-04-24.
+
+\bibitem{BuildingAutomation}
+CODESYS.
+\newblock Building automation libraries for codesys, 2024.
+\newblock
+  \href{https://store.codesys.com/en/codesys-building-automation-library.html}{Link},
+  Last accessed on 2024-04-25.
+
+\bibitem{DateAndTime}
+CODESYS.
+\newblock Date and time libraries for codesys, 2024.
+\newblock \href{https://store.codesys.com/en/date-and-time.html}{Link}, Last
+  accessed on 2024-04-25.
 
 \bibitem{IEC}
 IEC.
 \newblock Iec, 2024.
+\newblock \href{https://www.iec.ch/homepage}{Link}, Last accessed on
+  2024-04-24.
 
 \bibitem{IEC-SNL}
 Store~Norske Leksikon.
 \newblock Iec, 2022.
+\newblock
+  \href{https://snl.no/International_Electrotechnical_Commission}{Link}, Last
+  accessed on 2022-01-10.
 
 \bibitem{Wiki-93}
 Wikipedia.
 \newblock Iec 61131, 2023.
+\newblock \href{https://en.wikipedia.org/wiki/IEC_61131}{Link}, Last accessed
+  on 2023-09-13.
 
 \bibitem{IEC-61131}
 IEC.
 \newblock Iec 61131, 2013.
+\newblock \href{https://webstore.iec.ch/publication/4552}{Link}, Last accessed
+  on 2013-02-20.
 
 \bibitem{IEC-63131}
 IEC.
-\newblock Iec pas 63131, 2017.
-
-\bibitem{website}
-Author Name.
-\newblock Title of the web page, 2022.
+\newblock Iec pas 63131, 2022.
+\newblock \href{https://webstore.iec.ch/publication/60599}{Link}, Last accessed
+  on 2017-11-07.
 
 \end{thebibliography}
