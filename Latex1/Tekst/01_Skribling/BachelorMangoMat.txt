@@ -178,4 +178,6 @@ Mangler til programmering
 - MJK teller 
 - HMI
 - Nivå vann på bakken
-- Prossessluft måler. 
+- Prossessluft måler.
+- Forrigling mot uttapping samtidig, ikkje nødvending, men vi må gjerne skrive noe rundt risikovurdering, valg av løsning.
+- Fullskala simulering 
