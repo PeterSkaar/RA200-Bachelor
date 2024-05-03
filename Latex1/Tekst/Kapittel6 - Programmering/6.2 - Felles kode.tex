@@ -38,14 +38,15 @@ Blokka kalkulerar gjennomsnittleg tilstraumning ved å sample tank nivået kvart
 Denne kalkuleringa blir samanlikna med eit parameter PXR 'setpunkt' for å sette annlegget i høgsbelastningsmodus.
 Blokka gjer også antatt tilstrøymning per time.
 
-\subsection{fbsivebedrotasjon}
-Sivebedsrotasjon (Sjå appendiks xXx)
-Sidan anlegget har fire forskjellige sivebed, er det viktig å oppretthalde rotasjon mellom dei. Anlegget tappar i frå reaktor til eit sivebed omgangen, og roterer i mellom desse etter ein parameter som angir kor mange syklusar den skal tappe til kvart sivebed. 
+\subsection{fbSivbedRotation}
+Anlegget har fire ventilar til sivebedet som det viktig å oppretthalde rotasjon mellom ventilane. Anlegget tappar frå ein reaktor om gongen 
+og \gls{FB} Sivbedrotation vel kva ventil som skal aktiverast.
+
+rotasjon mellom desse blir angitt av ein parameter som angir kor mange syklusar den skal tappe til kvart sivebed. 
 Det er og mogleg å ta eit sivebed ut av rotasjon, da vil programmet utelukka sivebedet frå rotasjonen.
 
-\subsection{Dataprossesing}
-Dataprossesing (Sjå appendiks xXx)
-fbDataprocessing blir brukt i samband med innsamling av driftsdata. 
+\subsection{fbDataprocessing}
+fbDataprocessing (Sjå appendiks xXx) blir brukt i samband med innsamling av driftsdata. 
 Når nokon av objekta som er tiltenkt å ha driftsdata køyrer eller er aktive, blir desse sendt til fbDataprocessing, og derifrå kallar den opp fbTimeMeter som lagrar og teller driftsdata for objektet.
 
 \subsection{fbProcessedWater}
