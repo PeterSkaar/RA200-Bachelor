@@ -4,52 +4,55 @@
 % Legge inn forklaring av "felleskoden", utrekningar', sivebedrotasjon', dataprossesing', Høgbelastningsprogram', ProvessedWater.
 % Alt under her er er ikkje skrevet i stein.
 
-Undervegs i programmeringa av \gls{IEC} blokkene såg me også nødvendigheita av nokon generelle funksjonsblokker
-som kunne gjenbrukast fleire gonger i programmet. Dette er då hensiktsmessigt sidan ein då slepp og skrive lik 
-funksjonalitet fleire gonger, men heller kallar ei \gls{FB} som kann gjere denne same jobben. \newline
+Undervegs i programmeringa av \gls{IEC}-blokkene såg me også nødvendigheita av nokre generelle funksjonsblokker
+som kunne gjenbrukast fleire gonger i programmet. Dette er hensiktsmessig sidan ein då slepp å skrive lik 
+funksjonalitet fleire gonger, men heller kan kalle ei \gls{FB} som kan utføre den same jobben. \newline
 Sjå appendix xXx for meir dokumentasjon.
 
 \subsection{fbTimer}
-Timer \gls{FB} kan brukast om ein treng ein tids forseinking i programmet.
-Her kan ein nytta tidsforsinka inn, tidsforsinka ut eller ein kombinasjon av begge.
+Timer \gls{FB} kan brukast når ein treng ei tidsforsinking i programmet.
+Her kan ein nytte tidsforsinka inn, tidsforsinka ut, eller ein kombinasjon av begge.
 
 \subsection{fbAnalougeAlarm}
-Analogue alarm \gls{FB} brukast til å overvåke, tidsforsinke, behandle grenser, 
-gje alarmar og legge på hystereser på ferdig skalerte analoge inngangsverdiar.
+Analogue alarm \gls{FB} blir brukt til å overvake, tidsforsinke, behandle grenseverdiar, 
+gi alarmar og legge til hysteresar på ferdig skalerte analoge inngangsverdiar.
 
 \subsection{fbDigitalAlarm}
-Digital alarm \gls{FB} kan overvåke, tidsforsinke og gje alarmer. Det er valbart om blokka skal trigge på høg eller låg
+Digital alarm \gls{FB} kan overvake, tidsforsinke og gi alarmer. Det er valbart om blokka skal aktiverast på høg eller låg
 inngang basert på ein parameter.
 
 \subsection{fbSwap}
-Swap \gls{FB} får ein inngangsverdi og sekvensielt bytter på og bruke to utgangsverdiar. Det vil sei at blokka hugsar på kva utgang som vart brukt sist,
+Swap \gls{FB} mottar ein inngangsverdi og byter sekvensielt mellom å bruke to utgangsverdiar. Det vil sei at blokka hugsar på kva utgang som vart brukt sist,
 og vil bruke den andre utgangen ved neste kall. Blokka har også moglegheit for feilhandtering.
 
 \subsection{fbCalculations}
-Calculations \gls{FB} gjer nokre rekneoppgåver som ligger i bakgrunnen og køyrer kontinuerleg. 
-Det er i hovudsak utrekningar av volum i reaktor, mottakstank og drenert volum i frå reaktortank.
+Calculations \gls{FB} utfører nokre rekneoppgåver som ligg i bakgrunnen og køyrer kontinuerleg. 
+Det er hovudsakleg utrekningar av volum i reaktorane, mottakstank og drenert volum i frå reaktortankane.
 
 \subsection{fbTimeMeter}
-Time meter \gls{FB} er ei blokk som teller tid så lenge den er kalla på og lagrar verdien i forskjellige tidsformater for seinare bruk.
-Denne er brukt i programmet til å telle gangtid for forskjellige eletriske komponentar.
+Time meter \gls{FB} er ei blokk som tel tida så lenge den er kalla på, og lagrar verdien i forskjellige tidsformat for seinare bruk.
+Den blir brukt i programmet til å telle gangtida for forskjellige eletriske komponentar.
 
 \subsection{fbHighLoad}
-High Load \gls{FB} lokka blir brukt til og overvåke antatt innstraumning i mottakstanken basert på nivå endringa i tanken. 
-Blokka kalkulerar gjennomsnittleg tilstraumning ved å sample tank nivået kvart minutt over totalt 30 minutt.
-Denne kalkuleringa blir samanlikna med eit parameter PXR 'setpunkt' for å sette annlegget i høgsbelastningsmodus.
-Blokka gjer også antatt tilstrøymning per time.
+High Load \gls{FB}-blokka blir brukt til å overvake den antatte innstraumningen i mottakstanken, basert på nivåendringane i tanken.
+Blokka kalkulerer gjennomsnittleg tilstraumning ved å måle tanknivået kvart minutt over totalt 30 minutt.
+Denne kalkuleringa blir samanlikna med eit parameter, PXR 'setpunkt', for å sette anlegget i høgbelastningsmodus.
+BBlokka estimerer også den antatte tilstraumminga per time.
 
 \subsection{fbSivbedRotation}
-Anlegget har fire ventilar til sivebedet som det er viktig å oppretthalde rotasjon imellom. Anlegget tappar frå ein reaktor om gongen, 
+Anlegget har fire ventilar til sivebedet som det er viktig å oppretthalde rotasjon mellom. Anlegget tappar frå ein reaktor om gongen, 
 og \gls{FB} Sivbedrotation vel kva ventil som skal aktiverast.
-Rotasjon blir angitt av ein parameter som fastset kor mange syklusar kvar ventil skal nyttast. 
-Det er også mogleg å ta ein ventil ut av rotasjonen, slik at den ikkje blir inkludert i syklusen.
+Rotasjonen blir angitt av ein parameter som fastset kor mange syklusar kvar ventil skal nyttast. 
+Det er også mogleg å ta ein ventil ut av rotasjonen, slik at han ikkje blir inkludert i syklusen.
 
 \subsection{fbDataprocessing}
-fbDataprocessing blir brukt i samband med innsamling av driftsdata. 
-Når nokon av objekta som er tiltenkt å ha driftsdata køyrer eller er aktive, blir desse sendt til fbDataprocessing, og derifrå kallar den opp fbTimeMeter som lagrar og teller driftsdata for objektet.
+fbDataprocessing blir brukt i samband med innsamlinga av driftsdata. 
+Når nokon av objekta som er meinte å ha driftsdata er i drift eller aktive, blir desse sendt til fbDataprocessing. Derifrå kallar den opp fbTimeMeter, som lagrar og tel driftsdata for objektet.
 
 \subsection{fbProcessedWater}
-fbProcessedWater 
-Det er laga ei eiga blokk for å halde oversikt over driftsdata som omhandlar behandla vann for anlegget. 
-Denne blokka gir informasjon for totalt behandla vann, nåverande år, nåverande månad, nåverande veke, nåverande dag, førre år, færre månad, færre veke og førre dag.
+fbProcessedWater er ein eigen blokk for å halde oversikt over driftsdata som gjeld vatn som har blitt behandla av reaktorane. 
+Denne blokka gir informasjon om totalt behandla vatn for det noverande året, den noverande månaden, 
+den noverande veka, den noverande dagen, føregåande år, førre månad, førre veke og førre dag.
+
+
+
