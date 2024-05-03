@@ -1,6 +1,8 @@
 \section{IEC \glspl{FB}}
 \thispagestyle{fancy}
 
+
+
 %Skriv OM:
 %Programmering av IEC Blokker (MB,MA,SBE,SBV) 
 %+ fb blokker (fbTimer, fbAnalougeAlarm, fbCAC)
@@ -11,16 +13,20 @@
 
 \textbf{Skrive om at alle IEC blokkene har alarmutgang og feilmeldings(int) for seinare alarmhandtering, tilrettelagt for feilhandtering}
 Vi gjore eit utval av blokker basert på dei komponentane vi identifiserte i annlegget.
-For å laga eit robust program falt valet på som nemd i førre kapittel på: \gls{MA}, \gls{MB}, \gls{SBE} og \gls{SBV}.
+For å laga eit robust program treng vi, som nemd i førre kapittel: \gls{MA}, \gls{MB}, \gls{SBE} og \gls{SBV}.
 
 Funksjons blokkene har fleire inngangsfunksjonar som handtera ulike sikkerheits- og driftsmodusar.
 Ein eller fleire av desse inngangane vil gå at i alle blokkene.
+
+IEC har sentrale begreper som vi ynskjer å utdjupe nærmare. Grunna mangel på gode norske begreper 
+og for å forhindre forvirring har vi valgt å beskrive begrepa slik dei er definert i normen.
+
 \begin{itemize}
-    \item \textbf{Lock Safeguarding:} Beskyttar mot uautorisert driftsendring.
-    \item \textbf{Force Safeguarding:} Hindrar tvangsstyring under visse tilhøve.
-    \item \textbf{Force Disable Transition:} Deaktiverer overgang til tvangsstyring.
-    \item \textbf{Force Blocking:} Blokker all tvangsstyring.
-    \item \textbf{Force Suppression:} Undertrykkjer signal som fører til tvangskøyring.
+    \item \textbf{Lock:} Action overruling any other signal while being true
+    \item \textbf{Force:} Action overruling any other signal
+    \item \textbf{Disable Transition:} Transistion high/low function not avaliable
+    \item \textbf{Blocking:} Prevention of certain functions or operations 
+    \item \textbf{Suppression:} Disable alarm annunciation as well as any associated automatic actions
 \end{itemize}
 
 Alle blokkene som er designet etter IEC PAS 63131, har alle handtering av feil med utgang som indikerer om det er noko feil, og ein eige utgang med ein numerisk feilkode for identifisering av korleis feilkode blokka gir. 
@@ -28,7 +34,7 @@ Desse funksjonane er veldig viktig i videre arbeid mot feilhandtering og alarmli
 
 \subsection{Monitor Analogue}
 \gls{MA} funksjonsblokka (Legg til appendix her) er brukt for skalering, visning, overvåking og alarmhandtering av analoge inngangsvariablar i ein prosess.
-Funksjonsblokka inneheld supression og blokking funksjonalitet.
+Funksjonsblokka inneheld 'supression' og 'blocking' funksjonalitet.
 
 funksjonsblokka er brukt i programmet for å overvåke analoge trykknivågivarar samt å skalere og vise desse som ein fyllingsgrad i prosent.
 
@@ -75,7 +81,7 @@ Funksjonsblokka er brukt i programmet for å overvaka alle digitale nivåfølera
 
 \newpage
 
-\subsection{Switch Binary Value}
+\subsection{Switch Binary Valve}
 
 \gls{SBV} \gls{FB} (Legg til appendix her) skal brukast til binær av/på kontroll av eit straumningselement ved å endra straumen av medium (varme eller væske). 
 Typisk komponentar som styrast er bl.a. ventilar og spjeld.

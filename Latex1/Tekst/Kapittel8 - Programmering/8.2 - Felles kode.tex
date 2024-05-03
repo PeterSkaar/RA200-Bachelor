@@ -6,34 +6,35 @@
 
 Undervegs i programmeringa av \gls{IEC} blokkene såg me også nødvendigheita av nokon generelle funksjonsblokker
 som kunne gjenbrukast fleire gonger i programmet. Dette er då hensiktsmessigt sidan ein då slepp og skrive lik 
-funksjonalitet fleire gonger, men heller kallar ei \gls{FB} som kann gjere denne same jobben.
+funksjonalitet fleire gonger, men heller kallar ei \gls{FB} som kann gjere denne same jobben. \newline
+Sjå appendix xXx for meir dokumentasjon.
 
 \subsection{fbTimer}
-Timer (Sjå appendix xXx) \gls{FB} kan brukast om ein treng ein tids forseinking i programmet.
+Timer \gls{FB} kan brukast om ein treng ein tids forseinking i programmet.
 Her kan ein nytta tidsforsinka inn, tidsforsinka ut eller ein kombinasjon av begge.
 
 \subsection{fbAnalougeAlarm}
-Analogue alarm (sjå appendix xXx) \gls{FB} brukast til å overvåke, tidsforsinke, behandle grenser, 
+Analogue alarm \gls{FB} brukast til å overvåke, tidsforsinke, behandle grenser, 
 gje alarmar og legge på hystereser på ferdig skalerte analoge inngangsverdiar.
 
 \subsection{fbDigitalAlarm}
-Digital alarm (Sjå appendix xXx) \gls{FB} kan overvåke, tidsforsinke og gje alarmer. Det er valbart om blokka skal trigge på høg eller låg
+Digital alarm \gls{FB} kan overvåke, tidsforsinke og gje alarmer. Det er valbart om blokka skal trigge på høg eller låg
 inngang basert på ein parameter.
 
 \subsection{fbSwap}
-Swap \gls{FB} (sjå appendiksar) får ein inngangsverdi og sekvensielt bytter på og bruke to utgangsverdiar. Det vil sei at blokka hugsar på kva utgang som vart brukt sist,
+Swap \gls{FB} får ein inngangsverdi og sekvensielt bytter på og bruke to utgangsverdiar. Det vil sei at blokka hugsar på kva utgang som vart brukt sist,
 og vil bruke den andre utgangen ved neste kall. Blokka har også moglegheit for feilhandtering.
 
 \subsection{fbCalculations}
-Calculations \gls{FB} (Sjå appendiks xXx) gjer nokre rekneoppgåver som ligger i bakgrunnen og køyrer kontinuerleg. 
+Calculations \gls{FB} gjer nokre rekneoppgåver som ligger i bakgrunnen og køyrer kontinuerleg. 
 Det er i hovudsak utrekningar av volum i reaktor, mottakstank og drenert volum i frå reaktortank.
 
 \subsection{fbTimeMeter}
-Time meter \gls{FB} (Sjå appendiks xXx) er ei blokk som teller tid så lenge den er kalla på og lagrar verdien i forskjellige tidsformater for seinare bruk.
+Time meter \gls{FB} er ei blokk som teller tid så lenge den er kalla på og lagrar verdien i forskjellige tidsformater for seinare bruk.
 Denne er brukt i programmet til å telle gangtid for forskjellige eletriske komponentar.
 
 \subsection{fbHighLoad}
-High Load \gls{FB} (Sjå appendiks xXx) lokka blir brukt til og overvåke antatt innstraumning i mottakstanken basert på nivå endringa i tanken. 
+High Load \gls{FB} lokka blir brukt til og overvåke antatt innstraumning i mottakstanken basert på nivå endringa i tanken. 
 Blokka kalkulerar gjennomsnittleg tilstraumning ved å sample tank nivået kvart minutt over totalt 30 minutt.
 Denne kalkuleringa blir samanlikna med eit parameter PXR 'setpunkt' for å sette annlegget i høgsbelastningsmodus.
 Blokka gjer også antatt tilstrøymning per time.
@@ -46,10 +47,10 @@ rotasjon mellom desse blir angitt av ein parameter som angir kor mange syklusar 
 Det er og mogleg å ta eit sivebed ut av rotasjon, da vil programmet utelukka sivebedet frå rotasjonen.
 
 \subsection{fbDataprocessing}
-fbDataprocessing (Sjå appendiks xXx) blir brukt i samband med innsamling av driftsdata. 
+fbDataprocessing blir brukt i samband med innsamling av driftsdata. 
 Når nokon av objekta som er tiltenkt å ha driftsdata køyrer eller er aktive, blir desse sendt til fbDataprocessing, og derifrå kallar den opp fbTimeMeter som lagrar og teller driftsdata for objektet.
 
 \subsection{fbProcessedWater}
-fbProcessedWater (Sjå appendiks xXx)
+fbProcessedWater 
 Det er laga ei eiga blokk for å halde oversikt over driftsdata som omhandlar behandla vann for anlegget. 
 Denne blokka gir informasjon for totalt behandla vann, nåverande år, nåverande månad, nåverande veke, nåverande dag, førre år, færre månad, færre veke og førre dag.

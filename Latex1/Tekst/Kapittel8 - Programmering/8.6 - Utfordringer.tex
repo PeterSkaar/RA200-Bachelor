@@ -1,7 +1,7 @@
 \section{Utfordringer}
 \thispagestyle{fancy}
 
-Vi opplevde noko problematikk rundt det å ha fleire blokker, som styrer samme komponentar da vi skrivar til ein felles global variabel.
+Vi opplevde noko utfordringar rundt det å ha fleire blokker, som styrer samme komponentar da vi skrivar til ein felles global variabel.
 Denne variabelen blir då satt true og false i frå fleire plassar i programmet, noko som gjer at variablenen sin tilstand vil vere tilfeldig, basert på korleis Codesys sin kompilator leser koden.
 
 Dette kan vi løyse ved å bruke ein egen global variabel for kvar blokk, og så skrive til ein funksjonsblokk som styrar den endelege globale variabelen.
