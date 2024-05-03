@@ -29,7 +29,7 @@ Calculations \gls{FB} (Sjå appendiks xXx) gjer nokre rekneoppgåver som ligger 
 Det er i hovudsak utrekningar av volum i reaktor, mottakstank og drenert volum i frå reaktortank.
 
 \subsection{fbTimeMeter}
-Time meter \gls{FB} (Sjå appendiks xXx) er ei blokk som teller tid så lenge den er kalla på og lagrar verdien i forskjellige tidsformater for seinare bruk.
+Time meter \gls{FB} (Sjå appendiks xXx) er ei blokk som teller tid så lenge den blir kalla på og lagrar desse verdien i forskjellige tidsformater.
 Denne er brukt i programmet til å telle gangtid for forskjellige eletriske komponentar.
 
 \subsection{fbHighLoad}
@@ -39,11 +39,10 @@ Denne kalkuleringa blir samanlikna med eit parameter PXR 'setpunkt' for å sette
 Blokka gjer også antatt tilstrøymning per time.
 
 \subsection{fbSivbedRotation}
-Anlegget har fire ventilar til sivebedet som det viktig å oppretthalde rotasjon mellom ventilane. Anlegget tappar frå ein reaktor om gongen 
+Anlegget har fire ventilar til sivebedet som det er viktig å oppretthalde rotasjon imellom. Anlegget tappar frå ein reaktor om gongen, 
 og \gls{FB} Sivbedrotation vel kva ventil som skal aktiverast.
-
-rotasjon mellom desse blir angitt av ein parameter som angir kor mange syklusar den skal tappe til kvart sivebed. 
-Det er og mogleg å ta eit sivebed ut av rotasjon, da vil programmet utelukka sivebedet frå rotasjonen.
+Rotasjon blir angitt av ein parameter som fastset kor mange syklusar kvar ventil skal nyttast. 
+Det er også mogleg å ta ein ventil ut av rotasjonen, slik at den ikkje blir inkludert i syklusen.
 
 \subsection{fbDataprocessing}
 fbDataprocessing (Sjå appendiks xXx) blir brukt i samband med innsamling av driftsdata. 
