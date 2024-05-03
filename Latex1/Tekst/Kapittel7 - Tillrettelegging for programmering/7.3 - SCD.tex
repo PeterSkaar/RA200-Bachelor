@@ -2,19 +2,23 @@
 \thispagestyle{fancy}
 
 
- \gls{SCD} er eit verktøy beskrevet i IEC PAS 63131 og konseptet \gls{SCD} går tilbake til grunnlaget for \gls{PID}.
- SCD fokuserar på å representera systemer og funksjonelle forhold, ikkje individuelt fysisk utstyr\citep{IEC-PAS-63131-CH4.1}
+ \gls{SCD} (System Control Diagram) er eit grafisk dokumentasjons verktøy beskrevet i IEC PAS 63131. \newline
+ \gls{SCD} blir brukt for å vise relasjonane mellom prosessens komponentar og programmet som styrer dei og skiljer seg frå eit \gls{PID}
+ som dokumenterer alt fysisk utstyr.
 
- Vi ønsker å bruke SCD som ein sentral del av vår tilrettelegging for programmering. 
- Diagrammet våra har som mål å:
- \begin{itemize}
-    \item Etablere prosessskjema og identifisere objekter
-    \item Beskrive prossessen og kontrollmålene
-    \item Definere aktuelle funksjonsmalar
-    \item Utvikle forriglingar
-\end{itemize}
+ Vi ynskjer å bruke SCD som eit planleggingsverktøy for programstrukteren. SCD inneheld IEC templat noko som gjer at ein kan
+ planlegge programmering av anlegget før ein har skreve sjølve IEC blokk-koden
+ Diagrammet gir oss mulighet til å visualsere, teikne og kople IEC blokkene mot komponentane på anlegget og 
+ gir oss også ein unik moglegheit for å kunne dokumentere arbeidet og vil gi ein grafisk representasjon
+ av styringsform og løysningar som blir valgt.
 
- Denne vert utarbeid med å bruke våra IEC funksjonsblokker, {PID} og tilstandsmaskin. 
- Vi brukar 'Microsoft Visio' med tilleggspakken 'SCD-Toolbox' for å designe SCD. 
+ Vi har kontakta MIDTechology\citep{MIDT} som er som er eit selskap som utviklar programvare for SCD og har fått utlevert studentlisensar
+ til programvaren. Vi vil bruke dette programmet for planlegging og dokumentering av koden til reiseanlegget på Sande.
+
+ \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.35\textwidth]{Bilder/Visio_eksempel.png}
+    \caption{Eksempel av SCD}\label{fig:SCD eksempel}    
+\end{figure}
 
 \newpage
