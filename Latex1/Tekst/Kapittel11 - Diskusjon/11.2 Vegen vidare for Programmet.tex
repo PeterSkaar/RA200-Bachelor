@@ -1,4 +1,33 @@
 \section{Vegen vidare for anlegget og programmet}
 \thispagestyle{fancy}
 
+Programmeringsarbeidet hadde eit for stort omfang til at vi klarte å ferdigstille programmeringa. 
+Vi måtte ta nokre val om kor vi skulle prioritere ressursane våra videre, da vi såg undervegs at vi ikkje kom i mål. 
+Vi valte å fokusere på å få til ei god samla simulering av programmet istedenfor å arbeide vidare med ferdigstilling av funksjonar.
+Denne fasen er veldig kritisk for å dokumentere og verifisere våra program, da det dukkar opp ukjente problemstillingar under denne fasen som er viktig å handtere.
 
+Vegen vidare for programmet er først og fremst ferdigstilling av de funksjonane som ikkje er laget og implementering av funksjonar som ikkje har blitt implementert. 
+Desse er som følger
+
+\begin{itemize}
+    \item Pumpehus er ikkje blitt programmert. 
+    \item Slamuttapping er laget til, men ikkje implementert.
+    \item Sivebedrotasjon er laget til, men ikkje implementert.
+    \item Høgbelastning er laget til, men ikkje implementert.
+    \item Sensor for vann på golv er ikkje programmert.
+    \item Tilbakemelding frå pressostat på kompressor er ikkje programmert.
+    \item PULS MJK er ikkje blitt programmert.
+    \item Gjennomgang av alarmliste med eigar av annlegget.
+   % \item Vurdering av implementering av tilleggsmål
+    \item Implementere beskyttelse av parametere.
+\end{itemize}
+
+Anlegget har ikkje noko beskyttelse mot inntasting av ulovlege parameterverdiar.
+Det er ein kjent problemstilling at ein operatør som har moglegheit til å stille på desse parameterane kan vere uheldig å sette ein parameter som ikkje gir meining. 
+Det er derfor viktig å lage til ein beskyttelse mellom HMI og programmet slik at ein ikkje klarar dette. 
+Det kan implementerast ved at ein sjekkar dei parameterane som blir tasta inn er innafor ein gyldig range, før ein sendar di videre til programmet. 
+
+Programmet står nå satt opp i simuleringsmodus, og det må tilbakestillast til original tilstand før det kan brukast. 
+Simuleringsmodus har endra alle parameterane og er kopla opp i mot simuleringskode.  
+
+\newpage
