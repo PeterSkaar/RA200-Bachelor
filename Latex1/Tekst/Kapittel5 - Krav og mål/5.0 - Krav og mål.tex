@@ -1,59 +1,88 @@
 \chapter{Krav og mål}
 \thispagestyle{fancy}
-\gls{Renasys} hadde som krav at vi etablerte ein kravspesifikasjon i samråd med \gls{Sunnfjord Kommune}.
-Vi hadde eit møte med kommunen der dei kom med nokon konkrete ønsker til oppgåva.
+\gls{Renasys} hadde som ynskje at vi etablerte kravspesifikasjonen til oppgåva 
+i samråd med \gls{Sunnfjord Kommune}. \newline
+Vi hadde eit møte med kommunen der dei kom med nokon konkrete ynskjer til oppgåva
+og løysningsforslaget vi hadde presentert.
 
 \begin{enumerate}
-    \item Overgang frå system med høge lisenskostandar og utskifting av pls
-    \item Forbetring og utvikling av ny dokumentasjon, som inkludera ei ny funksjonsbeskrivelse 
-    \item Klargjering av styresystemet for integrering av ny funksjonalitet og komponentar
+    \item Unngå høge lisenskostandar i planlegginga rundt ny PLS og val av programmeringsverktøy.
+    \item Oprette ein funksjonsbeskrivelse som forklarer korleis anlegget virker.
+    \item Undersøke og planlegge forbetringar av anlegget ved hjelp av ny sensorikk.
 \end{enumerate}
 
+%\begin{enumerate}
+    %\item Overgang frå system med høge lisenskostandar og utskifting av PLS
+    %\item Forbetring og utvikling av ny dokumentasjon, som inkludera ein ny funksjonsbeskrivelse 
+    %\item Undersø
+%\end{enumerate}
+
 \section{Krav}
-Vi tok utgangspunkt i ønska frå \gls{Sunnfjord Kommune} for å forme kravspesifikasjon vår.
+Vi tok utgangspunkt i ynskja frå \gls{Sunnfjord Kommune} for å forme kravspesifikasjon vår.
 Deretter utarbeida vi ei liste med krav som naturleg delte seg i tre
-hovuddelar: dokumentasjon, programmering og simulering med verifisering. Denne oppdelinga vart framlagt for oppdragsgivarane våra og godkjent av dei. 
+hovuddelar: dokumentasjon, programmering og simulering med verifisering. 
+Denne oppdelinga vart framlagt for oppdragsgivarane og godkjent. 
+
+\begin{enumerate}
+    \item Dokumentasjon:
+    \begin{itemize}
+        \item Dokumentere anlegget og opprette ein funksjonsbeskrivelse.
+        \item Dokumentere det nye styresystemet.
+    \end{itemize}
+    \item Programmering, vi skal:
+    \begin{itemize}
+        \item Programmere etter den nyoppretta funksjonsbeskrivelsen.
+        \item Anvende open kjeldekode og ikkje låse anlegget til ein spesefikk leverandør.
+    \end{itemize}
+    \item Simulering med verifisering
+    \begin{itemize}
+        \item Simulere og teste det nye programmet
+    \end{itemize}
+\end{enumerate}
 
 
 %, fjernet "som vart gjort i samråd med rettleiar"
 
-\begin{enumerate}
-    \item Dokumentasjon med detaljert funksjonsbeskrivelse som inneheld:
-        \begin{itemize} 
-        \item Beskriving av anleggets verkemåte
-        \item \gls{blokkdiagram}
-        \item \gls{forrigling}, \gls{alarm}- og \gls{IO}-lister
-        \item Oversikt over objekta
-        \item \gls{PID}
-        \end{itemize}
-    \item Programmering, vi skal:
-        \begin{itemize}
-        \item Bruke den ny funksjonsbeskrivelsen som grunnlag for programmet.
-        \item Anvende open kjeldekode og ikkje låse oss til spesifikke leverandørar.
-        \end{itemize}
-    \item Simulering med verifisering
-        \begin{itemize}
-        \item Utvikle eit simuleringsverktøy for å teste og verifisere programmet
-        \end{itemize}
-\end{enumerate}
+%\begin{enumerate}
+    %\item Dokumentasjon med detaljert funksjonsbeskrivelse som inneheld:
+        %\begin{itemize} 
+        %\item Beskriving av anleggets verkemåte
+        %\item \gls{blokkdiagram}
+        %\item \gls{forrigling}, \gls{alarm}- og \gls{IO}-lister
+        %\item Oversikt over objekta
+        %\item \gls{PID}
+        %\end{itemize}
+    %\item Programmering, vi skal:
+        %\begin{itemize}
+        %\item Bruke den ny funksjonsbeskrivelsen som grunnlag for programmet.
+        %\item Anvende open kjeldekode og ikkje låse oss til spesifikke leverandørar.
+        %\end{itemize}
+    %\item Simulering med verifisering
+        %\begin{itemize}
+        %\item Utvikle eit simuleringsverktøy for å teste og verifisere programmet
+        %\end{itemize}
+%\end{enumerate}
 
-\newpage
+%\newpage
+
 \section{Mål}
-Vi har satt følgande mål for systemet:
+Utan om kravspesifikasjonane som var avklart med arbeidsgivar satt vi oss
+også nokre personlege mål for oppgåva.
 
 \begin{itemize}
-    \item Programmere eigne funksjonsblokker
-    \item Utvikle eit program som er enkelt og vedlikehalde
-    \item Implementera tilstandsmaskin for alle prosess sekvensane
+    \item Breie vår kompetanse og bruke eit nytt programmeringsprogram.
+    \item Programmere eigne funksjonsblokker som anvender relevante industri standarar.
+    \item Levere eit program som er lett å annvende og enkelt å vedlikehalde.
+    \item Implementere tilstandsmaskin som styringsform.
 \end{itemize}
 
-\section{Ny funksjonalitet og sensorar}
-Følgande funksjonar og sensorar er ikkje nødvendig for programmets grunnleggande verkemåte, men 
-er ønska av \gls{Sunnfjord Kommune} om tiden strekker til.  
-\begin{itemize}
-    \item Temperatur, nivå og trykksensorar(reintvan inn).
-    \item Ventil tilbakemeldingar og oksygenmåling
-    \item Mengdemåling for overlaup og frekvensstyring av pumper
-    \item Integrasjon av \gls{MJK} prøvetakar og energimåling
-\end{itemize}
+%\section{Ny funksjonalitet og sensorar}
+%Følgande funksjonar og sensorar er ikkje nødvendig for programmets grunnleggande verkemåte, men 
+%er ønska av \gls{Sunnfjord Kommune} om tiden strekker til.  
+%\begin{itemize}
+    %\item Temperatur, nivå og trykksensorar(reintvan inn).
+    %\item Ventil tilbakemeldingar og oksygenmåling
+    %\item Mengdemåling for overlaup og frekvensstyring av pumper
+    %\item Integrasjon av \gls{MJK} prøvetakar og energimåling
+%\end{itemize}
 
