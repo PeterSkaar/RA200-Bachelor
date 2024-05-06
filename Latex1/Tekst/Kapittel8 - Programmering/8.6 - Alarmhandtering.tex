@@ -1,0 +1,38 @@
+\newpage
+\section{Alarm og feilhandtering}
+\thispagestyle{fancy}
+
+% Skriver litt om introduksjon om alarm og feilhandtering
+Alarm og feilhandtering er ein sentral del av eit velfungerande styresystem. Det er viktig
+at anlegget effektivt handterer og varslar om uønska situasjonar slik at 
+driftspersonell kan varslast og tiltak kan iverksettast.
+
+% Skrive litt om codesys alarmhantering
+For å varsle om alarm og feil i vårt program har vi nytta oss av \gls{Codesys} sine
+innebygde alarmhandteringsfunksjonar. Desse funksjonane gir oss god mulighet for å 
+kontrollere, gruppere og prioritere alarmar samt sende informative tekstar til driftspersonell.
+
+% Skriver om alarmar både gamle og nye.
+IEC blokkene som vi har laga gir oss moglegheiten til å detektere fleire forskjellige typar varslingar
+som feil, alarmar og forvarsel.
+Dei forkjellige blokkene har ein ulik mengde med feil som skal kunne detekterast og varslast.
+Feil blir detektert og ein boolsk variabel YF settast sann, 
+samt at ein integer verdi YFI indikerar kva type feil som har opptrådd. \newline
+Alle desse moglege typane varslingar, som er vidare beskreve i Appenix xXx, 
+har vi samla i programmet vårt ilag 
+med dei aktive varslingane som er på Sande reinseanlegg idag.
+
+Vi har valgt å dele opp alle varslingane i fire forskjellige grupper.
+
+\begin{itemize}
+    \item \textbf{Feil}          (Der systemet ikkje fungerar, t.d sensorfeil og blokkfeil)
+    \item \textbf{Alarmar}       (Kritisk prosessparameter, t.d straumbrudd og veldig høge nivå)
+    \item \textbf{Forvarsel}     (Prosessparameter på veg mot kritisk nivå)
+    \item \textbf{Informasjon}   (Prosessinformasjon med nytteverdi)
+\end{itemize}
+
+Ved å dele opp varslingar i fire forskjellige grupper med ulikt prioriteringsnivå vil systemet
+og driftspersonell enklare kunne forstå samanhengen og alvoret på varslinga.
+
+
+\newpage
