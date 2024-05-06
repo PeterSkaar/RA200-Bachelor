@@ -22,9 +22,10 @@ Desse er som følger
     \item Implementere beskyttelse av parametere.
 \end{itemize}
 
-Tilleggsmåla 
-Skrive noe om at anlegget burde ha verifisering av parametera, slik at 
-ikkje operatør setter ulovlige verdier.
+Anlegget har ikkje noko beskyttelse mot inntasting av ulovlege parameterverdiar.
+Det er ein kjent problemstilling at ein operatør som har moglegheit til å stille på desse parameterane kan vere uheldig å sette ein parameter som ikkje gir meining. 
+Det er derfor viktig å lage til ein beskyttelse mellom HMI og programmet slik at ein ikkje klarar dette. 
+Det kan implementerast ved at ein sjekkar dei parameterane som blir tasta inn er innafor ein gyldig range, før ein sendar di videre til programmet. 
 
-Skrive om at kanskje det hadde vert en lur ide med en transit i mellom sekvensane, å sjekke tilstanden på objekta før den går videre
+
 
