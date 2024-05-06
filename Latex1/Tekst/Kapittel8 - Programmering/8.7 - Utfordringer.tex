@@ -1,19 +1,46 @@
 \section{Utfordringer}
 \thispagestyle{fancy}
 
-Vi opplevde noko utfordringar rundt det å ha fleire blokker, som styrer samme komponentar da vi skrivar til ein felles global variabel.
-Denne variabelen blir då satt true og false i frå fleire plassar i programmet, noko som gjer at variablenen sin tilstand vil vere tilfeldig, basert på korleis Codesys sin kompilator leser koden.
+\subsection{Blokker}
+Vi opplevde noko utfordringar rundt det å ha fleire blokker som styrer samme komponentar og det å  
+skrivar til ein felles global variabel.
+Denne variabelen blir då satt sann og usann i frå fleire plassar i programmet, noko som gjer at 
+variablenen sin tilstand vil vere tilfeldig basert på korleis Codesys sin kompilator leser koden.
 
-Dette kan vi løyse ved å bruke ein egen global variabel for kvar blokk, og så skrive til ein funksjonsblokk som styrar den endelege globale variabelen.
-Det er fleire plassar i programmet vi møter denne utfordringa, som blant anna med pumpestyring, da kvar reaktor kan styre same pumpe.
-Same løysning vil gjelde i denne situasjonen, der vi må lage ei blokk som tar inngangar frå begge pumpene og setter utgangen til riktig tilstand.  
+Dette kan vi løyse ved å bruke ein egen global variabel for kvar blokk, 
+og så skrive til ein funksjonsblokk som styrar den endelege globale utgangsvariabelen.
+Det er fleire plassar i programmet vi møter denne utfordringa, som blant anna med pumpestyring, 
+da kvar reaktor skal kunne styre same pumpe. Same løysning vil gjelde i denne situasjonen, 
+der vi må lage ei blokk som tar inngangar frå begge pumpene og setter utgangen til riktig tilstand.  
 
-Dette er eit klassisk eksempel der vi har koda noko vi trur fungera optimalt, men under testing så finner vi ut at det ikkje fungera som vi har tenkt.
-Løysninga setter nokre føringar for variabelhandtering videre i programmet, og vi står over eit val der valet våra gjer koden noko meir avansert, men vi oppretthelder funksjonaliteten i programmet slik vi opphavleg hadde tenkt.
+\subsection{Mangel på sensorikk}
 
-Anlegget har ikkje nokon form for gjennomstrøymingsmålar og har difor ein teoretisk utrekna strøymingsverdiar. 
-Verdiane er utrekna frå tankvolum, og det gjelder for mottakstank og reaktortank. 
-Dette kan vere noko uheldig da dette gir oss noko manglande nøyaktigheit i målingane våra, som forplantar seg vidare til databehandlinga.
-Vi har tatt utgangspunkt i planteikningane for å få så nøyaktige mål som mogleg, i tillegg til at vi har fått verifisert tank (mottakstank) innvending med video for å konstatere at våra mål og utrekningar er korrekte.
+Anlegget har begrensa mengde med sensorikk noko som har gjort til at vi er nøyd til å
+beregne, estimere og programmere oss rundt mangel på sensorar.
+
+Som eksempel skal anlegget ha moglegheit til å gå inn i ein
+høgbelastningsmodus dersom tilstrøymninga på anlegget er høg, 
+men anlegget har ingen form for strøymningsmålar. \newline
+Vi har derfor måtte berekna eit teoretisk tilstrøymningsverdi basert på stigninga
+av volumet i mottakstanken.
+
+Sjølv om slike løysningar vil fungere, vil det ikkje være optimalt for anlegget.
+Estimering av prosessverdiar vil redusere nøyaktigheita i styringa og
+mykje unødvendig prosessorkraft vil bli brukt på beregningar som enkelt kunne bli
+erstatta av ein sensor. Det har også gått med mykje ekstra tid på programmeringa 
+av slike funksjonar som eksempelet over.
+Det har også krevd betydelig ekstra tid å programmere slike funksjoner, 
+som det overnevnte eksempelet viser
+
+
+% Trenger dette stå her?
+%Anlegget har ikkje nokon form for gjennomstrøymingsmålar 
+%og har difor ein teoretisk utrekna strøymingsverdiar. 
+%Verdiane er utrekna frå tankvolum, og det gjelder for mottakstank og reaktortank. 
+%Dette kan vere noko uheldig da dette gir oss noko manglande nøyaktigheit i målingane våra, 
+%som forplantar seg vidare til databehandlinga.
+%Vi har tatt utgangspunkt i planteikningane for å få så nøyaktige mål som mogleg, 
+%i tillegg til at vi har fått verifisert tank (mottakstank) 
+%innvending med video for å konstatere at våra mål og utrekningar er korrekte.
 
 
