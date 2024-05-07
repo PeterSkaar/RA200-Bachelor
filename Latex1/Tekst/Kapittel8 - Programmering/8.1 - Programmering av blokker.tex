@@ -11,7 +11,7 @@
 % Skrive litt om blokka sin funksjonalitet
 % Korleis me brukte blokkene i programmet.
 
-\textbf{Skrive om at alle IEC blokkene har alarmutgang og feilmeldings(int) for seinare alarmhandtering, tilrettelagt for feilhandtering}\newline
+\textbf{Skrive om at alle IEC blokkene har alarmutgang og feilmeldings (int) for seinare alarmhandtering, tilrettelagt for feilhandtering}\newline
 Vi gjore eit utval av blokker basert på dei komponentane vi hadde identifiserte i annlegget.
 For å laga eit robust program valde vi og fokusere på: \gls{MA}, \gls{MB}, \gls{SBE} og \gls{SBV}.
 Sjølv om blokkene kunne verke noko overkvalifiserte valde vi likevel å ha dei med, da nokon av tilleggsfunksjonane eventuelt kunne nyttast seinare
@@ -33,7 +33,7 @@ Desse funksjonane er veldig viktig i videre arbeid mot feilhandtering og alarmli
 
 \subsection{Monitor Analogue}
 \gls{MA} funksjonsblokka (Legg til appendix her) er brukt for skalering, visning, overvåking og alarmhandtering av analoge inngangsvariablar i ein prosess.
-Funksjonsblokka inneheld 'supression' og 'blocking' funksjonalitet.
+Funksjonsblokka inneheld ``supression'' og ``blocking'' funksjonalitet.
 
 funksjonsblokka er brukt i programmet for å overvåke analoge trykknivågivarar samt å skalere og vise desse som ein fyllingsgrad i prosent.
 
@@ -87,7 +87,7 @@ Typisk komponentar som styrast er bl.a. ventilar og spjeld.
 \gls{FB} er i dette programmet brukt til og styre ventilar.
 
 \gls{FB} styrer ventilen ved hjelp av dei binære inngangane XH og XL.
-Desse inngangane styrer ein utgang Y, som sender opne/stenge-kommando(høg/låg) til ventilaktivatoren.
+Desse inngangane styrer ein utgang Y, som sender opne/stenge-kommando (høg/låg) til ventilaktivatoren.
 Alternativt kan dei pulsmodulerte utgangane YH og YL kan også nyttast.
 
 \gls{FB} har også inngongar XGH og XGL som gjer tilbakemelding om ventilen er heilt open eller stengd,
@@ -97,7 +97,7 @@ som då bekrefter ventilen sin posisjon.
 \begin{itemize}
     \item Generering av feilstatus (YF) om det oppstår ein intern eller ekstern feil.
     \item Blokka set utgangen Y i samsvar med parameter når feil blir oppdaga.
-    \item Blokka set utgangen Y basert på tilbakemelding i "outside mode" når ingen eksterne inngangar blir brukte (XOH/XOL).
+    \item Blokka set utgangen Y basert på tilbakemelding i ``outside mode'' når ingen eksterne inngangar blir brukte (XOH/XOL).
 \end{itemize}
 
 Funksjonsblokka inkluderar alarm suppression, blocking, safeguarding og transition funksjonalitet.
@@ -126,9 +126,9 @@ Funksjonsblokka inkluderar alarm suppression, blocking, safeguarding og transiti
 kontrollerte komponenten er av typen motor, pumpe, varmeelement, vifte etc.
 
 \gls{FB} beskriver korleis ein kontrollarar ein komponent, som tl.d. Motor, pumpe, varmeelement eller ei vifte.
-Det er utgangen Y, som sender ein opne/stenge kommando(høg/lav) til komponenten. Blokka har fleire funksjonar, der den
+Det er utgangen Y, som sender ein opne/stenge kommando (høg/lav) til komponenten. Blokka har fleire funksjonar, der den
 tar utgangen og samanliknar med tilbakemelding (XGH) som gjer korrekt (BCL/BCH) status. Den genererer også ein feil status på
-(YF) om ein har ein ekstern feil inn(XF).
+(YF) om ein har ein ekstern feil inn (XF).
 
 \gls{FB} inkluderer alarm suppression, blocking, safeguarding og transition funksjonalitet.
 
