@@ -1,33 +1,43 @@
 \section{Vegen vidare for programmet}
 \thispagestyle{fancy}
 
-Programmeringsarbeidet hadde eit for stort omfang til at vi klarte å ferdigstille programmeringa. 
-Vi måtte ta nokre val om kor vi skulle prioritere ressursane våra videre, da vi såg undervegs at vi ikkje kom i mål. 
-Vi valte å fokusere på å få til ei god samla simulering av programmet istedenfor å arbeide vidare med ferdigstilling av funksjonar.
-Denne fasen er veldig kritisk for å dokumentere og verifisere våra program, da det dukkar opp ukjente problemstillingar under denne fasen som er viktig å handtere.
+Programmeringsarbeidet hadde eit for stort omfang til at vi klarte å ferdigstille programmet. 
+Vi måtte ta nokre val angående prioriteringen av ressursene våre etter vi innsåg at vi ikkje ville komme heilt i mål.
+Vi valte å fokusere på å få til ei god samla simulering av programmet istadenfor å arbeide vidare med ferdigstilling av funksjonar.
 
-Vegen vidare for programmet er først og fremst ferdigstilling av de funksjonane som ikkje er laget og implementering av funksjonar som ikkje har blitt implementert. 
-Desse er som følger
+\subsection{Programmering}
+
+Vegen vidare for programmet er først og fremst ferdigstilling av fleire av funksjonane som ikkje er komplette og 
+implementering av funksjonar som er laga til men ikkje tatt i bruk. 
+Det gjennstår også arbeid på feilhandtering og korleis anlegget skal aggere på spesefikke feilsituasjonar.
+
+Følgande kjem punkter vi ynskjer å arbeide vidare med.
 
 \begin{itemize}
-    \item Pumpehus er ikkje blitt programmert. 
-    \item Slamuttapping er laget til, men ikkje implementert.
-    \item Sivebedrotasjon er laget til, men ikkje implementert.
-    \item Høgbelastning er laget til, men ikkje implementert.
-    \item Sensor for vann på golv er ikkje programmert.
-    \item Tilbakemelding frå pressostat på kompressor er ikkje programmert.
-    \item PULS MJK er ikkje blitt programmert.
-    \item Gjennomgang av alarmliste med eigar av annlegget.
-   % \item Prøvetaking
-    \item Implementere beskyttelse av parametere.
+    \item Styring av pumpehuset er forbredt men ikkje programmert. 
+    \item Ferdigstilling av høgbelastningsmodus.
+    \item Generell Feilhandtering
+    \item Automatisk prøvetaking er ikkje blitt programmert.
+    %\item Implementere beskyttelse av parametere.
 \end{itemize}
 
-Anlegget har ikkje noko beskyttelse mot inntasting av ulovlege parameterverdiar.
-Det er ein kjent problemstilling at ein operatør som har moglegheit til å stille på desse parameterane kan vere uheldig å sette ein parameter som ikkje gir meining. 
-Det er derfor viktig å lage til ein beskyttelse mellom HMI og programmet slik at ein ikkje klarar dette. 
-Det kan implementerast ved at ein sjekkar dei parameterane som blir tasta inn er innafor ein gyldig range, før ein sendar di videre til programmet. 
+% Begge desse er vel forsåvidt berre MB blokker inn, så må det skje ting i spesefikk feilhantering istaden
+%\item Sensor for vann på golv er ikkje programmert.
+%\item Tilbakemelding frå pressostat på kompressor er ikkje programmert.
 
-Programmet står nå satt opp i simuleringsmodus, og det må tilbakestillast til original tilstand før det kan brukast. 
-Simuleringsmodus har endra alle parameterane og er kopla opp i mot simuleringskode.  
+\subsection{Simulering}
+
+Det gjennstår forsatt mykje simulering og testing av programmet før ein kan ansjå det som ferdig verifisert.
+Eksempelvis er funksjonsblokkene for slamuttapping og sivebedrotasjon testa seperat, men ikkje simulert i heilhet med
+tilstandsmaskinene og resterande program.
+
+I testing av eit program som dette bør ein aktivt leite og prøve å finne feil og manglar for å gjere programmet best mogleg.
+For blokkparameterer manglar eksempelvis fleire beskyttelsar mot ulovlege parameterverdiar, men slik vil ein oppdage ved meir simulering.
+
+Ved å invistere meir tid i vidare simuleringsfase sikrar vi at programmet oppfyller forventningane til Sunnfjord kommune og at ein eventuell
+praktisk innkøyringsfase går effektivt. \newline
+Programmet er no satt opp i simuleringsmodus, og det må tilbakestillast til original tilstand før det kan brukast. 
+Simuleringsmodus har endra fleire parameterverdiar og er kopla opp i mot simuleringsblokker.  
+
 
 \newpage
