@@ -6,12 +6,17 @@
 Det er nytta \gls{forrigling} av funksjonar nokre plassar i programmet. 
 Sidan vi brukar IEC blokkar til styring av alle våra objektar, har vi funksjonalitet i blokkene som gjer det enkelt for oss å 
 handheve forriglingar mellom komponentar.
-I tillegg har vi overordna kontroll med at tilstandsmaskina gir signal til XE, slik at dei komponentane som ikkje er i bruk i 
-sekvensen, skal ikkje kunne vere tilgjengeleg.
+I tillegg har vi overordna kontroll med at tilstandsmaskina gir signal til XE, 
+slik at dei komponentane som ikkje er i bruk i sekvensen, ikkje er tilgjengeleg.
+Forriglingar i programmet.
 
-%Skrivast betre her, eg veit du kan.
-I tillegg er det laga til ein forrigling i mellom reaktorane, slik at dei ikkje kan gå i innpumpingtilstanden samtidig. 
-Dette er gjort ved at vist begge reaktorane er i pausetilstand, så vil den eine reaktoren vere forrigla mot å gå til neste tilstand.
+\begin{itemize}
+    \item Pumpemotorane er forigla mot å gå samstundes via fvSwap.
+    \item Reaktorane er forigla mot å vera i innpumpingssekvesen samstundes igjennom fbPumpLock 
+    og signal frå den andre tilstandsmaskina når den er i innpumping.
+\end{itemize}
+
+
 
 
 
