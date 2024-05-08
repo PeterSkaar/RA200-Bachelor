@@ -190,3 +190,4 @@ ferdigstille 11.1 - anbefalinger sensorikk
 10.4.2 - simuleringsresultat.
 
 Appendix og fsd, ordliste og referanser
+Olavs tilbakemelding, litt meir teknisk ordbruk
