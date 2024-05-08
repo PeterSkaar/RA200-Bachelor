@@ -1,43 +1,32 @@
 \section{Objektliste}
 \thispagestyle{fancy}
 
-Vi måtte danne oss eit bilde over alle komponentane som eksisterte og var tilkopla styresystmet. Dette for å gje oss ei o
-oversikt over komponentane vi skulle styre, meg også kva \gls{IEC} blokker \ref{IEC Seksjon} vi trengde og programmere.
+Grunna arbeidet rundt konstruksjonen av \gls{PID} valge vi også å lage ei liste over alle komponenante i anlegget som var tilkopla og styrt av styresystemet.
+Objektlista inneheld utstyrsbeskrivelse, plassering og tag. 
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[scale=0.6, page=1]{Appendix/Objektliste_midlertidig.pdf}
-    \caption{Objektliste}
-    \label{fig:Objektliste}
-\end{figure}
+I arbeidet rundt innhenting av informasjon til dei ulike objekta vi skulle styre har vi også laga til eit datablad-database,
+som inneheld relevant informasjon til kvar enkelt komponent i styresystemet.\newline
+Desse datablada er tilgjengeleg i appendix (Appendix xXx)
+
+I PLS programmet har vi brukt tags når vi definerer blokker og navngir komponentar. \newline
+Denne lista vil gi moglegheit for å knytte korrekt tag opp mot riktig komponent.
+
+
 
 \newpage
 
-
-
-
-% Place the PDF as a full page
-
-
-% Manually add a caption on the next page or in a suitable position
 \begin{tikzpicture}[remember picture, overlay]
     % Include the PDF page rotated, positioned at the center of the page
     \node[inner sep=0pt] at (current page.center) {
-        \includegraphics[angle=90, width=\paperwidth, keepaspectratio]{Bilder/SCD.pdf}
+        \includegraphics[page=1, scale=1, keepaspectratio]{Bilder/NyKomponentliste.pdf}
     };
 
     % Place the caption at the bottom of the page
     \node[anchor=south, yshift=10mm] at (current page.south) { % Adjust yshift to position the caption
         \begin{minipage}{\textwidth}
             \centering
-            \captionof{figure}{SCD innpumpingssekvens}
+            \captionof{figure}{Objektliste}
             \label{fig:SCD}
         \end{minipage}
     };
 \end{tikzpicture}
-
-
-\newpage
-\includepdf[pages=1, scale=0.75, pagecommand={\section{Objektliste}\thispagestyle{empty}}]{Appendix/Objektliste_midlertidig.pdf}
-
-\newpage
