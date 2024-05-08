@@ -181,3 +181,12 @@ Mangler til programmering
 - Prossessluft måler.
 - Forrigling mot uttapping samtidig, ikkje nødvending, men vi må gjerne skrive noe rundt risikovurdering, valg av løsning.
 - Fullskala simulering 
+
+---------------------
+
+Konklusjon i sin heilheit
+Flytte SCD til appendix og skrive nokre Ordliste
+ferdigstille 11.1 - anbefalinger sensorikk
+10.4.2 - simuleringsresultat.
+
+Appendix og fsd, ordliste og referanser
