@@ -3,21 +3,21 @@
 \thispagestyle{fancy}
 
 
-\gls{SCD} utgjør grunnlaget for det meste av programmeringsdokumentasjonen i vår oppgåve.
-Diagrammet er delt opp sidevis og sekvensvis og viser styring mellom program og komponentar i kvar enkelt sekvens
+\gls{SCD} utgjer grunnlaget for det meste av programmeringsdokumentasjonen i vår oppgåve.
+Diagrammet er delt opp sidevis og sekvensvis og viser styring mellom program og komponentar i kvar enkelt sekvens,
 samt ei side for resterande felles styring.
 
-Prosessen i \gls{SCD}en (i blå linjer) er basert på \gls{PID} som blei laga etter gjennomgangen av anlegget i kapittel 7.
-\gls{SCD} tar kunn hensyn til programerbart utstyr og har derfor ikkje med manuelle ventilar, tilbakeslagsventilar og liknande utstyr.
+Prosessen i \gls{SCD}en (blå linjer) er basert på \gls{PID} som blei laga etter gjennomgangen av anlegget i kapittel 7.
+\gls{SCD} tar kunn hensyn til programerbart utstyr og har derfor ikkje med manuelle ventilar, tilbakeslagsventilar og liknande.
 
-Grunna valget rundt å bruke tilstandslogikk-blokker i programmet var vi nøydt å legge til våre eigne funksjonsblokker inn i diagrammet.
-Dette hadde \gls{SCD} verktøyet ein funksjon for. \newline
-Funksjonsblokkene våre og IEC funksjonstemplata i diagrammet er dei same blokkene som vi har laga og brukt i programmeringsdelen 
-og dei stiplede linjene viser koplingar og styringa mellom dei. \newline
+For å representere våre eigne funksjonsblokker var vi nøydt til å legge dei til i \gls{SCD}en.
+\gls{SCD} verktøyet hadde moglegheit å legge inn eigendefinerte blokker med respektive inngangar og utgangar.
+
+Våre funksjonsblokker og IEC funksjonstemplata i diagrammet er dei same blokkene som vi har laga og brukt i programmeringsdelen. 
+Dei stiplede linjene viser koplingar og styringa mellom dei. \newline
 I enkelte av diagramma gjorde antall stiplede linjer diagrammet vanskeleg å lese. Vi har derfor benytta oss av koplingar med
 unik ID for å illustrere tilknyttninga.
 
-Heile \gls{SCD} er tilgjengelig i Appendix xXx
 Våre tilstanslogikkblokker har fått eigne forkortingar i \gls{SCD}en. Desse er dei relevante forkortingane 
 for å forstå blokkene og diagrammet.
 
@@ -31,19 +31,21 @@ for å forstå blokkene og diagrammet.
     \item \textbf{FBPH}: Function Block Pumpehus
 \end{itemize}
 
+Heile \gls{SCD} er tilgjengelig i Appendix xXx. \newline
+\newpage
+
 \begin{tikzpicture}[remember picture, overlay]
     % Include the PDF page rotated, positioned at the center of the page
     \node[inner sep=0pt] at (current page.center) {
-        \includegraphics[angle=90, width=\paperwidth, keepaspectratio]{Bilder/SCD.pdf}
+        \includegraphics[page=2,angle=90, scale=0.36, keepaspectratio]{Bilder/SCD.pdf}
     };
 
     % Place the caption at the bottom of the page
     \node[anchor=south, yshift=10mm] at (current page.south) { % Adjust yshift to position the caption
         \begin{minipage}{\textwidth}
             \centering
-            \captionof{figure}{SCD innpumpingssekvens}
+            \captionof{figure}{SCD av innpumpingssekvens}
             \label{fig:SCD}
         \end{minipage}
     };
-\end{tikzpicture
-
+\end{tikzpicture}
