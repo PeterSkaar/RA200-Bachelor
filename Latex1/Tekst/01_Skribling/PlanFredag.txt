@@ -1,0 +1,56 @@
+Dette er då planen for fredagen!
+
+ - skriv ferdig kapittel 11, peters notater
+ - Gjere ferdig forord
+ - Skrive eit samandrag
+ - Skrive konklusjon
+ - korekturlesing av rapporten
+ - Fikse orliste, slik at den gjer meining. Kanskje sjå på eit godt eksempel
+ - Appendix, ta med det me treng
+ - ta vekk tabell liste.
+ - Legge til meir bilete
+ - Note: Alarmreduksjon
+ - Note: ALL OG AHH feil brukt, det verste 
+
+ - ALL og AHH skal ikkje brukast. 
+ - XGH og XGL på tilstandslogikk var feil, BCL skal brukast .. dette må fiksast..
+ - X1 og X2 skal brukast, evt heilt på slutten..
+ - Fiks SCD, fiks program, bruk rett inn og utganga
+
+
+ kap 3
+ - Flytte om oss
+ kap 5
+ - lesast gjennom, evt endring
+
+ kap 6
+ 6.3.2 -- her ligg det sensor og tagger, ta vekk? eller legge til andre plassar
+
+ kap 7 
+ - ikkje reppeter oss sjølv
+ - skriv i rett verbøying
+ - skal bibloteka vere med -> flytte programmering.
+
+
+
+
+--------------
+referanse opplegg frå vår venn gpt
+
+Innleiing (1 Innleiing)
+Når du skildrar utfordringane og historia til avløpsreinseanlegget, inkludert dei utdaterte teknologiane og kommunen sitt svar.
+
+Tekniske skildringar (1.3 Problemstilling)
+For alle detaljerte skildringar av teknologien som blir brukt ved avløpsreinseanlegget, inkludert spesifikasjonar om dei utdaterte styringssystema og mangelen på tilgjengelege delar.
+
+Skildring av Renasys AS og Sunnfjord kommune (1.2.1 Renasys AS og 1.2.2 Sunnfjord Kommune)
+Der du diskuterer Renasys AS sin teknologi og offentlege tenester, og etableringa og ansvarsområda til Sunnfjord kommune.
+
+Tekniske løysingar og innovasjonar (Gjennom dokumentet)
+Kvar gong du nemner spesifikke teknologiske løysingar, innovasjonar eller bransjestandardar relatert til avløpsbehandling.
+
+Diskusjon av lovlege og miljømessige standardar (Ymse avsnitt)
+Når du diskuterer etterleving av miljøreguleringar eller dei juridiske implikasjonane av avløpsforvaltning.
+
+Konklusjonar og tilrådingar (Mot slutten)
+Der du gir konklusjonar og tilrådingar basert på forskinga og funna dine, ved å vise til liknande tilfelle, studiar eller presedens som støttar tilrådingane dine.
