@@ -1,20 +1,9 @@
 \section{IEC \glspl{FB}} \label{IEC Seksjon}
 \thispagestyle{fancy}
 
-
-
-%Skriv OM:
-%Programmering av IEC Blokker (MB,MA,SBE,SBV) 
-%+ fb blokker (fbTimer, fbAnalougeAlarm, fbCAC)
-%- Til appendiks, Heile kode for t.d. fbTimer, fbCAC osv
-
-% Skrive litt om blokka sin funksjonalitet
-% Korleis me brukte blokkene i programmet.
-
-%\textbf{Skrive om at alle IEC blokkene har alarmutgang og feilmeldings (int) for seinare alarmhandtering, tilrettelagt for feilhandtering}\newline
-Vi gjore eit utval av blokker basert på dei komponentane vi hadde identifiserte i annlegget.
+Vi gjore eit utval av funksjonsblokk maler basert på dei komponentane vi hadde identifiserte i reinseanlegget.
 For å laga eit robust program valde vi og fokusere på: \gls{MA}, \gls{MB}, \gls{SBE} og \gls{SBV}.
-Sjølv om blokkene kunne verke noko overkvalifiserte valde vi likevel å ha dei med, da nokon av tilleggsfunksjonane eventuelt kunne nyttast seinare
+Sjølv om funksjonsblokk malane kunne verke noko overkvalifiserte valde vi likevel å ha dei med, då nokon av tilleggsfunksjonane eventuelt kunne nyttast seinare
 og at det gav oss ein klar retning å arbeide mot.
 
 \gls{IEC} har sentrale begreper som vi ynskjer å utdjupe nærmare. Grunna mangel på gode norske begreper 
@@ -28,8 +17,11 @@ og for å forhindre forvirring har vi valgt å beskrive begrepa slik dei er defi
     \item \textbf{Suppression:} Disable alarm annunciation as well as any associated automatic actions
 \end{itemize}
 
-Alle blokkene som er designet etter IEC PAS 63131, har alle handtering av feil med utgang som indikerer om det er noko feil, og ein eigen utgang med ein numerisk feilkode for identifisering av korleis feilkode blokka gir. 
+Alle funksjonsblokk maler som er designet etter \gls{IEC} \gls{PAS} 63131, har alle handtering av feil med utgang som indikerer om det er noko feil, 
+og ein eigen utgang med ein numerisk feilkode for identifisering av kva feilkode blokka gir. 
 Desse funksjonane er veldig viktig i videre arbeid mot feilhandtering og alarmliste. 
+
+\newpage
 
 \subsection{Monitor Analogue}
 \gls{MA} funksjonsblokka (Legg til appendix her) er brukt for skalering, visning, overvåking og alarmhandtering av analoge inngangsvariablar i ein prosess.
@@ -52,7 +44,6 @@ funksjonsblokka er brukt i programmet for å overvåke analoge trykknivågivarar
     \end{subfigure}
     \caption{Monitor Analogue}\label{fig:Monitor Analogue}
 \end{figure}
-\newpage
 
 \subsection{Monitor Binary}
 \gls{MB} \gls{FB} (Legg til appendix her) blir brukt til automatisk overvåking, alarmhandtering, framvising og latching av binære prosess variablar.
