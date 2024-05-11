@@ -1,0 +1,277 @@
+\documentclass[11pt, a4paper]{report}
+%-----------NORSK LaTeX--------------
+
+% Denne pakken inkluderer skandinaviske bokstaver( æ, ø og å)
+\usepackage[utf8]{inputenc}
+
+% Denne pakken bruker norsk typesetting (innholdsliste osv.)
+\usepackage[norsk]{babel}
+
+%--------DOKUMENTOPPSETT------------
+
+% Lar deg tilpasse layouten i prosjektet
+\usepackage{fancyhdr}
+
+% Definere egne farger 
+\usepackage[usenames, dvipsnames]{color}
+
+% Avstand på marger til sidene på arket
+%\usepackage{geometry}
+
+% Linker i dokumentet (figurer, seksjoner osv)
+\usepackage[hidelinks]{hyperref}
+
+% Kildeliste-setup
+%\usepackage[natbibapa]{apacite} % For apalike eller apacite
+\usepackage{natbib} % For Chicago, Vancover, Harvard Style, Nature Style osv
+
+% Spacing mellom bokstaver
+\usepackage{microtype}
+
+% Laster inn forskjellige skrifttyper
+\usepackage{uarial} % Arial
+\usepackage[scaled]{helvet} % Helvetica
+%\usepackage{tgbonum} % Usikker
+%\usepackage{mathptmx} % Times New Roman
+%\usepackage{lmodern} % Latin Modern
+%\usepackage[charter]{mathdesign} % Charters
+\usepackage[T1]{fontenc}
+
+% Avsnitt mellom paragrafer
+\usepackage{parskip}
+
+% Linjeavstand i dokumentet
+\usepackage{setspace}
+\setlength{\parskip}{1em}
+
+% Fet skrift på alle figurnr
+\usepackage[labelfont=bf]{caption}
+\usepackage{capt-of}
+\usepackage{caption}
+\usepackage{tikz}
+
+\usepackage{chngcntr}
+\counterwithin{figure}{chapter}
+\counterwithin{table}{chapter}
+
+% Definerer mellomrom mellom seksjons-, figur- og tabellnummer i innholdsliste til teksten begynner
+\renewcommand{\numberline}[1]{#1 \,}
+
+% Kan skrive i kolonner
+\usepackage{multicol}
+
+% For appendix
+\usepackage{titletoc}
+\usepackage{appendix}
+
+%----------ANDRE PAKKER--------------
+
+% Pakker fra AMS. Kan skrive matteformler
+\usepackage{amsfonts, amssymb, amsthm}
+\usepackage{mathtools}
+
+% For grafikk (lime inn bilder, pdf-dokumenter)
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{subcaption}
+
+% For inportering av csv-filer som tabeller. ( Ikkje i bruk)
+%usepackage{csvsimple}
+
+% Pakke for citations
+%\usepackage{biblatex}
+% Pakke for at url linker skal fungere i bl.a. referansar
+\usepackage{url}
+
+% Generere tekst
+\usepackage{kantlipsum}
+
+% Definere egne objekt
+\usepackage{tikz}
+
+% Lar deg lage lister på en mer oversiktlig måte
+\usepackage[sharp]{easylist}
+
+% Boks rundt tekst
+\usepackage{fancyvrb}
+
+% Test pakker
+\usepackage{array}
+\usepackage[margin=1in]{geometry} % Juster margene etter behov
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+\usepackage{lastpage}
+
+% For å kunne justere bilete
+\usepackage{adjustbox}
+
+% 
+\usepackage{tocloft}
+
+
+% Sider til SCD
+\usepackage{afterpage}
+\usepackage{adjustbox}
+
+
+%---------------------------------------------------
+
+% Legger til bookmarks i pdf
+\hypersetup{
+    bookmarks=true, % Aktiver bokmerker
+    bookmarksnumbered=true, % Inkluder nummer i bokmerker
+    pdfstartview={FitH}, % Åpner PDF med passende bredde
+    %colorlinks=true, % Farger lenker i stedet for å bruke bokser
+    %linkcolor=blue, % Intern lenkefarge
+    %filecolor=magenta, % Fil-lenkefarge
+    %urlcolor=cyan % URL-lenkefarge
+}
+
+
+
+% Velger arial som skrifttype i dokumentet 
+%\renewcommand{\rmdefault}{qpl} % 
+%\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand*\familydefault{\sfdefault} % Helvetica(sans-serif)
+
+
+% Definerer egne farger
+\definecolor{mybla}{RGB}{25, 49, 90}
+\definecolor{mylysbla}{RGB}{0, 136, 176}
+\definecolor{renasysGreen}{RGB}{4, 255, 4}
+\definecolor{purewhite}{RGB}{255,255,255}
+\definecolor{lightgray}{gray}{0.8}
+\definecolor{myblack}{gray}{0.1}
+
+% Velger norsk språk på innholdsfortegnelse, figurliste, tabelliste og Referanseliste
+% Legger disse så til i innholdsfortegnelsen.
+\addto\captionsnorsk{\renewcommand{\contentsname}{Vedlegg}}
+\addto\captionsnorsk{\renewcommand{\listfigurename}{Figurliste}}
+\addto\captionsnorsk{\renewcommand{\listtablename}{Tabelliste}}
+\addto\captionsnorsk{\renewcommand{\bibname}{Referansar}}
+% Nynorsk!
+\addto\captionsnynorsk{\renewcommand{\contentsname}{Innhaldsliste}} 
+\addto\captionsnynorsk{\renewcommand{\listfigurename}{Figurliste}}
+\addto\captionsnynorsk{\renewcommand{\listtablename}{Tabelliste}}
+\addto\captionsnynorsk{\renewcommand{\bibname}{Referansar}}
+
+
+% ----- Justering av avstander mellom chapter / section / subsection / subsubsection
+
+% Justeringa av chapter, 
+% første verdi : Horisontalverdi frå venstre marg
+% Andre verdi : avstanden frå toppen av sida til tittelen
+% Tredje verdi : Avstand til neste tekst
+\titleformat{\chapter}[hang]
+  {\normalfont\bfseries\LARGE}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{-50pt}{0pt}
+
+% Juster avstanden for \section
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{10pt}{10pt}
+
+% Juster avstanden for \subsection
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{10pt}{10pt}
+
+% Juster avstanden for \subsubsection om nødvendig
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{10pt}{10pt}
+
+% ------------------- jusetring av lister ------------------
+
+% Denne vil endre skriftstørrelse ...
+% Legg til \hfill før LARGE om overskrifta skal sentrerest
+\renewcommand{\cfttoctitlefont}{\LARGE\bfseries}
+\renewcommand{\cftaftertoctitle}{}
+\renewcommand{\cftloftitlefont}{\LARGE\bfseries}
+\renewcommand{\cftafterloftitle}{}
+\renewcommand{\cftlottitlefont}{\LARGE\bfseries}
+\renewcommand{\cftafterlottitle}{}
+
+% Avstand mellom toppen av sida og ned til overskrifta t.d. innhaldsliste
+\setlength{\cftbeforetoctitleskip}{-20pt}  % Adjust the value as needed, negative reduces the space
+\setlength{\cftbeforeloftitleskip}{-20pt}  % Adjust the value as needed
+\setlength{\cftbeforelottitleskip}{-20pt}  % Adjust the value as needed
+
+% Avstand mellom Overskrift og kapittel
+\setlength{\cftaftertoctitleskip}{15pt}
+\setlength{\cftafterloftitleskip}{15pt}
+\setlength{\cftafterloftitleskip}{15pt}
+
+
+% -------------------------------------------------------------
+
+% Her definerer ein pagestylen til hovud opplegget
+\fancypagestyle{fancy}{
+  % Clear the header and footer
+  \fancyhf{}
+  % Set the right side of the footer to be the location of the page number
+  \fancyfoot[R]{Side \thepage\ av~\pageref{LastPage}} % Her sett ein fra side til side
+  \renewcommand{\headrulewidth}{0pt} % Remove header line
+  \renewcommand{\footrulewidth}{0pt} % Remove footer line
+}
+
+% Her definerer ein pagestylen til dei sidene som skal ha romartall
+\fancypagestyle{romanpages}{
+  % Clear the header and footer
+  \fancyhf{}
+  % Set the right side of the footer to be the location of the page number
+  \fancyfoot[R]{\thepage}
+  \renewcommand{\headrulewidth}{0pt} % Remove header line
+  \renewcommand{\footrulewidth}{0pt} % Remove footer line
+}
+
+
+% ------ Justering av avstander i dokumentet for itemize ---------------------
+
+\let\olditemize\itemize
+\renewcommand{\itemize}{
+  \olditemize
+  \setlength{\itemsep}{-10pt} 
+}
+
+% ------ Justering av avstander i dokumentet for enumerable ---------------------
+
+% Save the original definition of enumerate
+\let\oldenumerate\enumerate
+
+% Redefine the enumerate to adjust spacing
+\renewcommand{\enumerate}{
+  \oldenumerate
+  \setlength{\itemsep}{-7pt}  % Adjust this value as needed
+}
+
+
+
+% Stil for referansar
+\bibliographystyle{unsrt}
+
+
+\begin{document} % Dokument start
+
+\newgeometry{top=2.5cm,bottom=3cm,right=2.2cm,left=2.2cm}
+\input{Framside.tex}
+
+\thispagestyle{fancy}
+
+\tableofcontents
+	% Create a partial table of contents for appendices
+	% Generate the list of appendices
+	% Start of appendices, capture contents for appendices list
+	\begin{appendices}
+		% This command initializes the recording of contents for appendices
+		\startcontents[appendices]
+		\phantomsection
+		%\addcontentsline{toc}{chapter}{Liste av Vedlegg} % Her kan ein endre navn for appendix lista
+		\input{Vedlegg/Vedlegg.tex}
+		% Stop capturing contents and print them
+		\stopcontents[appendices]
+	\end{appendices}
+
+\end{document} % Dokument slutt
