@@ -3,18 +3,18 @@
 \thispagestyle{fancy}
 
 \subsection{Programmeringsmetode}
-For å sette i sammen alle funksjonsblokkene, som vi hadde skreve i strukturert tekst, valgte vi å bruke \GLS{Codesys} \gls{CFC} (Continuous Function Chart).
+For å sette i sammen alle funksjonsblokkene, som vi hadde skreve i \gls{ST}, valde vi å bruke \GLS{Codesys} Continuous Function Chart (\gls{CFC}).
 \gls{CFC} er er ein grafisk programmeringsmetode som bruker symbol og koplingar for å gjere programmet  meir visuelt.
 
-Alle sammensettningar av blokker valgte vi å gjere i \gls{CFC}. Ved å bruke ein grafisk metode sikra vi oss god lesbarhet og
+Alle sammensettningar av blokker valgte vi å gjere i \gls{CFC}. Ved å bruke ein grafisk metode sikra vi oss god lesbarheit og
 visuell forståelse i programmet. 
 
-Alle inngangar og utgangar er leselige og enkle og forstå. \gls{CFC} ilag med god dokumentasjon vil kunne gi personar utan programmeringsbakgrunn
-god forståelse av korleis programmet er satt opp, utan å måtte lese linjer med kode.
-\gls{CFC} gir godt grunnlag for feilsøking og analyse og bygger derfor vidare på filosofien med eit enkel og fleksibelt program.
+Alle inngangar og utgangar er leslege og enkle og forstå. \gls{CFC} i lag med god dokumentasjon vil kunne gi personar utan programmeringsbakgrunn
+god forståelse av korleis programmet er bygd opp, utan å måtte lese kodelinjer.
+\gls{CFC} gir eit godt grunnlag for feilsøking og analyse, dette bygger derfor vidare på filosofien med eit enkelt og fleksibelt program.
 
 Dersom antall koplingar og linjer gjorde programmet vanskeleg å lese var det også
-mogleg å opprette ``source'' og ``links'' som oppretta ein trådlaus forbindelsane gjennom ein unik ID. 
+mogleg å opprette ``source'' og ``links'' som oppretta ein trådlaus forbindelsane gjennom ein unik ID.
 
 \begin{figure}[htbp]
     \centering
@@ -27,16 +27,16 @@ mogleg å opprette ``source'' og ``links'' som oppretta ein trådlaus forbindels
 \subsection{Hovuddel}
 
 Programmet er delt opp i tre hovuddelar, ei tilstandsmaskin for kvar reaktor og ein del for samling av felles reaktor funksjonar.
-Alle desse har eit kall i MainTask og blir utført kvar PLS syklus. Tilstandsmaskina har overordna ansvar og bytter på kva 
+Alle delane har eit kall i MainTask og blir utført kvar \gls{PLS} syklus. Tilstandsmaskina har det overordna ansvaret og passar på kva 
 funskjonsblokk med tilstandslogikk som køyrer.
 
-Felles funksjonar er ein samling av funksjonsblokker og utrekningar som er felles og eller uavhengig av reaktorane med tilstandsmaskin.
-Driftsovervåking er ein sentral del av felles funksjoner, der timetelling og mengde prosessert vatn er eksempel på funksjonar og utrekningar
-som blir gjennomført.
+Felles funksjonar er ein samling av funksjonsblokker og utrekningar som er felles og er uavhengig av reaktorane med tilstandsmaskin.
+Driftsovervåking er ein sentral del av felles funksjoner, der gangtid og mengde prosessert vatn er eksempel på funksjonar og utrekningar
+som blir gjennomførte.
 
-I enkelte tilfeller måtte, som ved rullering av sivbed, var vi avhengig av at både tilstandsmaskin for reaktor 1 og reaktor 2 hadde samme informasjonen.
-Dette løyste vi ved å lage ei ``fbSivbedRotation'' i felles funsjonar som henter inn og akummulerte antall slamutakk for så å rotere når ei git grense var nådd.
-Denne informasjonen blir så sendt til kvar tilstandsmaskin og sørger for at begge reaktorane har same aktive sivbed.
+I nokre tilfeller, som ved rullering av sivbed, var vi avhengig av at både tilstandsmaskin for reaktor 1 og reaktor 2 hadde den same informasjonen.
+Dette løyste vi ved å lage ei funksjonsblokk ``fbSivbedRotation'' i felles funksjonar som henter inn og behandlar antall slamuttak for å så rotere sivbed når ei git grense var nådd.
+Denne informasjonen blir derretter sendt til kvar tilstandsmaskin og sørger for at begge reaktorane har same aktive sivbedet.
 
 
 \begin{figure}[htbp]
