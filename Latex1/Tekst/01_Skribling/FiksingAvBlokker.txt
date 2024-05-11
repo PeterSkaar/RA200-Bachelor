@@ -1,0 +1,7 @@
+AHH - Gate
+
+- SCD (endre navngiving)
+- Codesys (parameter/AHH)
+- Figurer i rapporten må oppdaterast
+- Dokumentasjonen må oppdaterast (FB Innpumping osv)
+- Generere nye alarmliste

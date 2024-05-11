@@ -41,7 +41,8 @@ Innleiing (1 Innleiing)
 Når du skildrar utfordringane og historia til avløpsreinseanlegget, inkludert dei utdaterte teknologiane og kommunen sitt svar.
 
 Tekniske skildringar (1.3 Problemstilling)
-For alle detaljerte skildringar av teknologien som blir brukt ved avløpsreinseanlegget, inkludert spesifikasjonar om dei utdaterte styringssystema og mangelen på tilgjengelege delar.
+For alle detaljerte skildringar av teknologien som blir brukt ved avløpsreinseanlegget,
+ inkludert spesifikasjonar om dei utdaterte styringssystema og mangelen på tilgjengelege delar.
 
 Skildring av Renasys AS og Sunnfjord kommune (1.2.1 Renasys AS og 1.2.2 Sunnfjord Kommune)
 Der du diskuterer Renasys AS sin teknologi og offentlege tenester, og etableringa og ansvarsområda til Sunnfjord kommune.
@@ -53,4 +54,5 @@ Diskusjon av lovlege og miljømessige standardar (Ymse avsnitt)
 Når du diskuterer etterleving av miljøreguleringar eller dei juridiske implikasjonane av avløpsforvaltning.
 
 Konklusjonar og tilrådingar (Mot slutten)
-Der du gir konklusjonar og tilrådingar basert på forskinga og funna dine, ved å vise til liknande tilfelle, studiar eller presedens som støttar tilrådingane dine.
+Der du gir konklusjonar og tilrådingar basert på forskinga og funna dine, ved å vise til liknande tilfelle,
+ studiar eller presedens som støttar tilrådingane dine.
