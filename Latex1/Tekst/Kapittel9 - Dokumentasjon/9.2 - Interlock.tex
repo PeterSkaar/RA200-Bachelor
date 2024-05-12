@@ -1,20 +1,19 @@
 \section{Forrigling}
 \thispagestyle{fancy}
 
-For å sikre oss at utilsikta situasjonar skal oppskje i programmet har vi lagt inn nokre forriglingar
-Desse forriglingane har vi koda i tilstandslogikken, 
-men IEC blokkene gir oss også funksjonalitet som gjer det enkelt for oss å handheve forriglingar mellom komponentar.
+For å unngå utilsikta situasjonar i programmet har vi implementert nokre forriglingar.
+Desse forriglingane har vi inkludert i tilstandslogikken.\newline
+\gls{IEC} blokkene tilbyr også funksjonalitet som gjer det enkelt for oss å handheve forriglingar mellom komponentane.
 
-Det ligger forrigling på styring av matepumpene til reaktorane. Det skal ikkje være mogleg at at begge pumpene går samtidig
-og beskyttelse for dette er handtert i funksjonsblokka fbSwap. 
-Det skal også ikkje forekomme at begge reaktorane kan være i innpumpingssekvens samtidig.
-Dei to tilstandsmaskinene som styrer kvar sin reaktor er uavhengige av kvarandre så dette måtte vi løyse med ein
-global variabel som blokkerer overgang frå tilstand pause til tilstand innpumping dersom ein reaktor allereie er i innpumpingssekvens,
+Det ligger forrigling på styringa av matepumpene til reaktorane. Det skal ikkje være mogleg at begge pumpene går samtidig
+og beskyttelse for dette er handtert i funksjonsblokka fbSwap(\ref{sec:1}).
 
-I tillegg har vi overordna kontroll med at tilstandsmaskina gir signal til XE, 
-slik at dei komponentane som ikkje er i bruk i sekvensen, ikkje er tilgjengeleg.
+Det skal heller ikkje inntreffe at begge reaktorane kan være i tilstand innpuming samstundes.
+Sidan tilstandsmaskinene som styrer kvar sin reaktor er uavhengige av kvarandre, måtte vi løyse dette med ein
+global variabel. Denne variabelen blokkerer overgangen frå tilstand pause til tilstand innpumping dersom ein reaktor allereie er i tilstand innpumping.
 
-
+I tillegg har vi overordna kontroll med at tilstandsmaskina gir signal til \gls{XE}, 
+slik at dei komponentane som ikkje er i bruk i tilstanden, ikkje er tilgjengeleg.
 
 \newpage
 

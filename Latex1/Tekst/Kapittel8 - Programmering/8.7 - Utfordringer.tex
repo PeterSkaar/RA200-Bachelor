@@ -2,33 +2,32 @@
 \thispagestyle{fancy}
 
 \subsection{Blokker}
-Vi opplevde noko utfordringar rundt det å ha fleire blokker som styrer samme komponentar og det å  
-skrivar til ein felles global variabel.
-Denne variabelen blir då satt sann og usann i frå fleire plassar i programmet, noko som gjer at 
-variablenen sin tilstand vil vere tilfeldig basert på korleis Codesys sin kompilator leser koden.
+Vi opplevde noko utfordringar rundt det å ha fleire blokker som styrer den same komponenten, samt det å  
+skriva til ein felles global variabel.
+Denne variabelen kan då bli skriven ``true'' eller ``false'' i frå fleire plassar i programmet, noko som gjer at 
+variablenen sin tilstand vil vere tilfeldig basert på korleis kompilatoren til \gls{Codesys} les koden.
 
-Dette kan vi løyse ved å bruke ein egen global variabel for kvar blokk, 
-og så skrive til ein funksjonsblokk som styrar den endelege globale utgangsvariabelen.
-Det er fleire plassar i programmet vi møter denne utfordringa, som blant anna med pumpestyring, 
-da kvar reaktor skal kunne styre same pumpe. Same løysning vil gjelde i denne situasjonen, 
-der vi må lage ei blokk som tar inngangar frå begge pumpene og setter utgangen til riktig tilstand.  
+Vi møtte denne utfordringa fleire plassar i programmet, t.d. i pumpestyringa,
+der kvar reaktor skulle kunne styre den same pumpa.
+Dette kunne vi løyse ved å bruke ein unik global variabel for kvar blokk, 
+og deretter skrive til ei funksjonsblokk som styrer den globale utgangsvariabelen som går til komponenten.\newline
+For pumpestyringa laga vi ei blokk som tok inngangen frå begge pumpene og satt utgangen til riktig tilstand.  
 
 \subsection{Mangel på sensorikk}
 
-Anlegget har begrensa mengde med sensorikk noko som har gjort til at vi er nøyd til å
-beregne, estimere og programmere oss rundt mangel på sensorar.
+Anlegget har ei avgremsa mengd med sensorikk, 
+noko som har ført til at vi må berekne, estimere og programmere rundt mangelen på sensorar.
 
-Som eksempel skal anlegget ha moglegheit til å gå inn i ein
-høgbelastningsmodus dersom tilstrøymninga på anlegget er høg, 
+Som døme har anlegget ein funksjon for å aktivere
+høgbelastningsmodus ved høg tilstrøyming av veske til annlegget, 
 men anlegget har ingen form for strøymningsmålar.\newline
-Vi har derfor måtte berekna eit teoretisk tilstrøymningsverdi basert på stigninga
-av volumet i mottakstanken.
+Difor har vi vore nøydde til å kalkulere ein teoretisk tilstrøymingsverdi basert på auken av volumet i mottakstanken.
 
-Sjølv om slike løysningar vil fungere, vil det ikkje være optimalt for anlegget.
-Estimering av prosessverdiar vil redusere nøyaktigheita i styringa og
-mykje unødvendig prosessorkraft vil bli brukt på beregningar som enkelt kunne bli
-erstatta av ein sensor. Det har også gått med mykje ekstra tid på programmeringa 
-av slike funksjonar.
+Sjølv om slike løysningar kan fungere, er det ikkje optimalt for anleggets drift.
+Estimering av prosessverdiar vil redusere nøyaktigheita i styresystemet og fører til at
+mykje unødvendig prosessorkraft vil bli brukt på berekningar som enkelt kunne vore erstatta av ein sensor.\newline
+Vidare har det også krevd mykje ekstra tid å programmere desse funksjonane.
+
 
 
 % Trenger dette stå her?

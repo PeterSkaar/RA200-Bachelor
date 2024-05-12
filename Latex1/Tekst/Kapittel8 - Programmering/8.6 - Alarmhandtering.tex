@@ -7,7 +7,6 @@ Alarm og feilhandtering utgjer ein sentral del av eit velfungerande styresystem.
 at anlegget effektivt handterer og varslar om uønskte hendingar, slik at 
 driftspersonalet blir varsla og nødvendige tiltak kan raskt setjast i verk.
 
-
 % Skrive litt om codesys alarmhantering
 For å varsle om alarm og feil i vårt program, har vi nytta oss av \gls{Codesys} sine
 innebygde alarmhandteringsfunksjonar \citep{CodesysAlarm}. Desse funksjonane gir oss høve til å 
@@ -16,18 +15,18 @@ kontrollere, gruppere og prioritere alarmar, samt å sende informative tekstar t
 % Skriver om alarmar både gamle og nye.
 \gls{IEC}-blokkene som vi har utvikla, gir oss moglegheita til å detektere ulike typar hendingar
 som feil, alarmar og forvarsel.
-Dei forkjellige blokkene har ein variert mengde med feil som skal kunne detekterast og varslast.
-Forløpet er slik at feil blir detektert og ein boolsk variabel \gls{YF} blir sett til sann, 
-samt at ein heiltalsverdi \gls{YFI} indikerar kva type feil som har inntruffe.\newline
+Dei forskjellige blokkene har ein variert mengde med feil som skal kunne detekterast og varslast.
+Forløpet er slik at feil blir detektert og ein boolsk variabel \gls{YF} blir sett til ``true'', 
+samt at ein heiltalsverdi \gls{YFI} indikera kva type feil som har inntruffe.\newline
 Alle desse moglege typane varslingar, som er omtala i vedlegg E, 
 er samla i programmet vårt saman 
 med dei aktive varslingane som er i bruk på Sande reinseanlegg i dag.
 
-Vi har valgt å dele opp alle varslingane i fire forskjellige grupper:
+Vi har valt å dele opp alle varslingane i fire forskjellige grupper:
 
 \begin{itemize}
-    \item \textbf{Feil}          (Der systemet ikkje fungerar, t.d. sensorfeil og blokkfeil)
-    \item \textbf{Alarmar}       (Kritiske prosessparameterar, t.d straumbrudd og veldig høge nivå)
+    \item \textbf{Feil}          (Der systemet ikkje fungera, t.d. sensorfeil og blokkfeil)
+    \item \textbf{Alarmar}       (Kritiske prosessparameterar, t.d. straumbrot og veldig høge nivå)
     \item \textbf{Forvarsel}     (prosessparameterar som nærmar seg kritisk nivå)
     \item \textbf{Informasjon}   (Prosessinformasjon med nytteverdi)
 \end{itemize}
@@ -37,3 +36,4 @@ vil systemet og driftspersonalet enklare kunne forstå samanhengen og alvoret i 
 Korleis dei ulike alarmane blir definert og prioriterte må evaluerast i samråd med \gls{Sunnfjord Kommune}.
 
 \newpage
+
