@@ -3,37 +3,37 @@
 \thispagestyle{fancy}
 
 % Skriver litt om introduksjon om alarm og feilhandtering
-Alarm og feilhandtering er ein sentral del av eit velfungerande styresystem. Det er viktig
-at anlegget effektivt handterer og varslar om uønska situasjonar slik at 
-driftspersonell kan varslast og tiltak kan iverksettast.
+Alarm og feilhandtering utgjer ein sentral del av eit velfungerande styresystem. Det er avgjerande
+at anlegget effektivt handterer og varslar om uønskte hendingar, slik at 
+driftspersonalet blir varsla og nødvendige tiltak kan raskt setjast i verk.
+
 
 % Skrive litt om codesys alarmhantering
-For å varsle om alarm og feil i vårt program har vi nytta oss av \gls{Codesys} sine
-innebygde alarmhandteringsfunksjonar. Desse funksjonane gir oss god mulighet for å 
-kontrollere, gruppere og prioritere alarmar samt sende informative tekstar til driftspersonell.
+For å varsle om alarm og feil i vårt program, har vi nytta oss av \gls{Codesys} sine
+innebygde alarmhandteringsfunksjonar \citep{CodesysAlarm}. Desse funksjonane gir oss høve til å 
+kontrollere, gruppere og prioritere alarmar, samt å sende informative tekstar til driftspersonalet.
 
 % Skriver om alarmar både gamle og nye.
-IEC blokkene som vi har laga gir oss moglegheiten til å detektere fleire forskjellige typar varslingar
+\gls{IEC}-blokkene som vi har utvikla, gir oss moglegheita til å detektere ulike typar hendingar
 som feil, alarmar og forvarsel.
-Dei forkjellige blokkene har ein ulik mengde med feil som skal kunne detekterast og varslast.
-Feil blir detektert og ein boolsk variabel YF settast sann, 
-samt at ein integer verdi YFI indikerar kva type feil som har opptrådd.\newline
-Alle desse moglege typane varslingar, som er vidare beskreve i Appenix xXx, 
-har vi samla i programmet vårt ilag 
-med dei aktive varslingane som er på Sande reinseanlegg idag.
+Dei forkjellige blokkene har ein variert mengde med feil som skal kunne detekterast og varslast.
+Forløpet er slik at feil blir detektert og ein boolsk variabel \gls{YF} blir sett til sann, 
+samt at ein heiltalsverdi \gls{YFI} indikerar kva type feil som har inntruffe.\newline
+Alle desse moglege typane varslingar, som er omtala i vedlegg E, 
+er samla i programmet vårt saman 
+med dei aktive varslingane som er i bruk på Sande reinseanlegg i dag.
 
-Vi har valgt å dele opp alle varslingane i fire forskjellige grupper.
+Vi har valgt å dele opp alle varslingane i fire forskjellige grupper:
 
 \begin{itemize}
-    \item \textbf{Feil}          (Der systemet ikkje fungerar, t.d sensorfeil og blokkfeil)
-    \item \textbf{Alarmar}       (Kritisk prosessparameter, t.d straumbrudd og veldig høge nivå)
-    \item \textbf{Forvarsel}     (Prosessparameter på veg mot kritisk nivå)
+    \item \textbf{Feil}          (Der systemet ikkje fungerar, t.d. sensorfeil og blokkfeil)
+    \item \textbf{Alarmar}       (Kritiske prosessparameterar, t.d straumbrudd og veldig høge nivå)
+    \item \textbf{Forvarsel}     (prosessparameterar som nærmar seg kritisk nivå)
     \item \textbf{Informasjon}   (Prosessinformasjon med nytteverdi)
 \end{itemize}
 
-Ved å dele opp varslingar i fire forskjellige grupper med ulikt prioriteringsnivå vil systemet
-og driftspersonell enklare kunne forstå samanhengen og alvoret på varslinga. \newline
-Korleis dei ulike alarmane er definert og prioritert må evaluerast med ilag med Sunnfjord kommune.
-
+Ved å kategorisere varslingar i fire ulike grupper med forskjellige prioriteringsnivå,
+vil systemet og driftspersonalet enklare kunne forstå samanhengen og alvoret i varslingane. \newline
+Korleis dei ulike alarmane blir definert og prioriterte må evaluerast i samråd med \gls{Sunnfjord Kommune}.
 
 \newpage
