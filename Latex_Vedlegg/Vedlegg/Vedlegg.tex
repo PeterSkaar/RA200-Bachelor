@@ -1,5 +1,11 @@
 \thispagestyle{fancy}
 
+% Define a command to left-align section titles
+\newcommand{\leftalignedsection}[1]{%
+  \titleformat{\section}[hang]{\raggedright\normalfont\Large\bfseries}{\thesection.}{1em}{}%
+  \section{#1}%
+}
+
 % -------------------------------------------------------------------
 
 
@@ -116,7 +122,10 @@
 
 % ----------- Nytt Kapittel
 % SCD Diagrammer
-\chapter{Sekvensar}
+
+{\raggedright
+\chapter{Sekvensar}\par
+}
 %\includepdf[pages=1, angle=90, pagecommand={\section{Tilstand Pause}\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/SCD.pdf}
 %\includepdf[pages=2, angle=90, pagecommand={\section{Tilstand Innpumping}\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/SCD.pdf}
 %\includepdf[pages=3, angle=90, pagecommand={\section{Tilstand Reaksjon}\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/SCD.pdf}
@@ -124,19 +133,29 @@
 %\includepdf[pages=5, angle=90, pagecommand={\section{Tilstand Uttapping}\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/SCD.pdf}
 %\includepdf[pages=6, angle=90, pagecommand={\section{Tilstand Felles Styring}\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/SCD.pdf}
 
-\section{Tilstand Pause}
+%\section{Tilstand Pause1}
+\thispagestyle{plain}
+{
+\raggedright
+\section{Tilstand Pause}\par
+}
+\thispagestyle{fancy}
+%\leftalignedsection{Tilstand Pause}
+\begin{adjustwidth}{-3cm}{-3cm}
 \begin{tikzpicture}[remember picture, overlay]
     % Include the PDF page rotated, positioned at the center of the page
+    % Gammel scale for alle SCD var scale=0.36 for fullpage scale
     \node[inner sep=0pt] at (current page.center) {
-        \includegraphics[page=1,angle=90, scale=0.36, keepaspectratio]{Vedlegg/SCD.pdf}
+        \includegraphics[page=1,angle=90, scale=0.27, keepaspectratio, trim=-100 -100 -100 -100]{Vedlegg/SCD.pdf}
     };
 \end{tikzpicture}
+\end{adjustwidth}
 \newpage
 \section{Tilstand Innpumping}
 \begin{tikzpicture}[remember picture, overlay]
     % Include the PDF page rotated, positioned at the center of the page
     \node[inner sep=0pt] at (current page.center) {
-        \includegraphics[page=2,angle=90, scale=0.36, keepaspectratio]{Vedlegg/SCD.pdf}
+        \includegraphics[page=2,angle=90, scale=0.28, keepaspectratio]{Vedlegg/SCD.pdf}
     };
 \end{tikzpicture}
 \newpage
@@ -144,7 +163,7 @@
 \begin{tikzpicture}[remember picture, overlay]
     % Include the PDF page rotated, positioned at the center of the page
     \node[inner sep=0pt] at (current page.center) {
-        \includegraphics[page=3,angle=90, scale=0.36, keepaspectratio]{Vedlegg/SCD.pdf}
+        \includegraphics[page=3,angle=90, scale=0.28, keepaspectratio]{Vedlegg/SCD.pdf}
     };
 \end{tikzpicture}
 \newpage
@@ -152,7 +171,7 @@
 \begin{tikzpicture}[remember picture, overlay]
     % Include the PDF page rotated, positioned at the center of the page
     \node[inner sep=0pt] at (current page.center) {
-        \includegraphics[page=4,angle=90, scale=0.36, keepaspectratio]{Vedlegg/SCD.pdf}
+        \includegraphics[page=4,angle=90, scale=0.28, keepaspectratio]{Vedlegg/SCD.pdf}
     };
 \end{tikzpicture}
 \newpage
@@ -160,7 +179,7 @@
 \begin{tikzpicture}[remember picture, overlay]
     % Include the PDF page rotated, positioned at the center of the page
     \node[inner sep=0pt] at (current page.center) {
-        \includegraphics[page=5,angle=90, scale=0.36, keepaspectratio]{Vedlegg/SCD.pdf}
+        \includegraphics[page=5,angle=90, scale=0.28, keepaspectratio]{Vedlegg/SCD.pdf}
     };
 \end{tikzpicture}
 \newpage
@@ -168,7 +187,7 @@
 \begin{tikzpicture}[remember picture, overlay]
     % Include the PDF page rotated, positioned at the center of the page
     \node[inner sep=0pt] at (current page.center) {
-        \includegraphics[page=6,angle=90, scale=0.36, keepaspectratio]{Vedlegg/SCD.pdf}
+        \includegraphics[page=6,angle=90, scale=0.28, keepaspectratio]{Vedlegg/SCD.pdf}
     };
 \end{tikzpicture}
 
