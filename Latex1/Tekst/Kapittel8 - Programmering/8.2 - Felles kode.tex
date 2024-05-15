@@ -16,11 +16,11 @@ Denne funksjonsblokka blir brukt til å overvake, tidsforsinke, behandle grensev
 gi alarmar og legge til hysteresar på ferdig skalerte analoge inngangsverdiar.
 
 \subsection{fbDigitalAlarm}
-Denne funksjonsblokka kan overvake, tidsforsinke og gi alarmer. Det er valbart om blokka skal aktiverast på høg eller låg
+Denne funksjonsblokka kan overvake, tidsforsinke og gi alarmar. Det er valbart om blokka skal aktiverast på høg eller låg
 inngang basert på ein parameter.
 
 \subsection{fbSwap}\label{sec:1}
-Denne funksjonsblokka mottar ein inngangsverdi og byter sekvensielt mellom å bruke to utgangsverdiar. Det vil sei at blokka hugsar på kva utgang som vart brukt sist,
+Denne funksjonsblokka mottar ein inngangsverdi og byter sekvensielt mellom å bruke to utgangsverdiar. Det vil seie at blokka hugsar på kva utgang som vart brukt sist,
 og vil bruke den andre utgangen ved neste kall. Blokka har også moglegheit for feilhandtering.
 
 \subsection{fbCalculations}
@@ -29,19 +29,19 @@ Det er hovudsakleg utrekningar av volum i reaktorane, mottakstank og drenert vol
 
 \subsection{fbTimeMeter}
 Denne funksjonsblokka er ei blokk som tel tida så lenge den er kalla på, og lagrar verdien i forskjellige tidsformat for seinare bruk.
-Den blir brukt i programmet til å telle gangtid for forskjellige eletriske komponentar.
+Den blir brukt i programmet til å telle gangtid for forskjellige elektriske komponentar.
 
 \newpage
 
 \subsection{fbHighLoad}
 Denne funksjonsblokka blir brukt til å overvake den antatte innstraumningen i mottakstanken, basert på nivåendringar.
-Blokka beregner gjennomsnittleg tilstraumning ved å måle tanknivået kvart minutt over totalt 30 minutt.
-Denne beregninga blir samanlikna med eit parameter  for å sette anlegget i høgbelastningsmodus.
+Blokka bereknar gjennomsnittleg tilstraumning ved å måle tanknivået kvart minutt over totalt 30 minutt.
+Denne berekninga blir samanlikna med eit parameter for å sette anlegget i høgbelastningsmodus.
 
 \subsection{fbSivbedRotation}
 Anlegget har fire ventilar til sivebedet som det er viktig å oppretthalde rotasjon mellom. Anlegget tappar frå ein reaktor om gongen, 
 og denne funksjonsblokka vel kva ventil som skal aktiverast.
-Rotasjonen blir angitt av ein parameter som fastset kor mange syklusar kvar ventil skal nyttast. 
+Rotasjonen blir angitt av ein parameter som fastset kor mange syklusar kvar ventil skal nytte. 
 Det er også mogleg å ta eit sivbed ut av rotasjonen, slik at ventilen ikkje blir inkludert i syklusen.
 
 \subsection{fbDataprocessing}

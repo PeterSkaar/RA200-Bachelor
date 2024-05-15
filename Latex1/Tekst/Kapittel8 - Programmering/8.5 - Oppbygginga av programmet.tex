@@ -6,11 +6,11 @@
 For å sette i samen alle funksjonsblokkene vi hadde skreve i \gls{ST}, så valde vi å bruke \GLS{Codesys} Continuous Function Chart (\gls{CFC}).
 \gls{CFC} er ein grafisk programmeringsmetode som bruker symbol og koplingar for å gjere programmet  meir visuelt.
 
-Alle samansetningar av blokker valte vi å gjere i \gls{CFC}. Ved å bruke ein grafisk metode sikra vi oss god lesbarheit og
+Alle samansetningar av blokker valde vi å gjere i \gls{CFC}. Ved å bruke ein grafisk metode sikra vi oss god lesbarheit og
 visuell forståelse av programmet. 
 
 Alle inngangar og utgangar er leselege og enkle og forstå. \gls{CFC} i lag med god dokumentasjon vil kunne gi personar utan programmeringsbakgrunn
-god forståelse av korleis programmet er bygd opp, utan å måtte lese kode linjer.
+god forståelse av korleis programmet er bygd opp, utan å måtte lese kodelinjer.
 \gls{CFC} gir eit godt grunnlag for feilsøking og analyse, dette bygger derfor vidare på filosofien med eit enkelt og fleksibelt program.
 
 Dersom antall koplingar og linjer gjorde programmet vanskeleg å lese var det også
@@ -26,7 +26,7 @@ mogleg å opprette ``source'' og ``links'' som oppretta ein trådlaus forbindels
 
 \subsection{Hovuddel}
 
-Programmet er delt opp i tre hovuddelar, ei tilstandsmaskin for kvar reaktor og ein del for samling av felles reaktor funksjonar.
+Programmet er delt opp i tre hovuddelar, ei tilstandsmaskin for kvar reaktor og ein del for samling av felles reaktorfunksjonar.
 Alle delane har eit kall i MainTask og blir utført ved kvar \gls{PLS} syklus. Tilstandsmaskina har det overordna ansvaret og passar på kva 
 funksjonsblokk med tilstandslogikk som køyrer.
 
@@ -34,7 +34,7 @@ Felles funksjonar er ei samling av funksjonsblokker og utrekningar som er felles
 Driftsovervaking er ein sentral del av felles funksjonar, der gangtid og mengda av prosessert vatn er døme på funksjonar og utrekningar som vert utførte.
 
 I nokre tilfelle, som ved rullering av sivbed, var vi avhengig av at både tilstandsmaskin for reaktor ein og reaktor to hadde den same informasjonen.
-Dette løyste vi ved å lage ei funksjonsblokk ``fbSivbedRotation'' i felles funksjonar, som hentar inn og behandlar antall slamuttak for å så rotere sivbed når ei gitt grense var nådd.
+Dette løyste vi ved å lage ei funksjonsblokk ``fbSivbedRotation'' i felles funksjonar, som hentar inn og behandlar antall slamuttak for å så rotere sivbed når ei gitt grense er nådd.
 Denne informasjonen blir deretter sendt til kvar tilstandsmaskin, som sørger for at begge reaktorane har same aktive sivbedet.
 
 \begin{figure}[htbp]
@@ -51,8 +51,8 @@ Som tidlegare nemnt er det tilstandslogikken som samarbeider opp mot \gls{IEC} b
 \gls{CFC} vindu som gjorde kall og koplingar meir visuelt. \gls{CFC} vinduet fikk namn etter kva sekvens i \gls{SBR}-prosessen
 den hadde ansvar for å styre. 
 
-Oppbyggningen av desse sekvensstyringane er gjort med inngangsblokker (\gls{MA} og \gls{MB}) øvst og utgangsblokker (\gls{SBE} og \gls{SBV}) i botn av vinduet.
-I mellom desse kjem sjølve tilstandslogikk blokka som inneheld styringslogikken.
+Oppbygginga av desse sekvensstyringane er gjort med inngangsblokker (\gls{MA} og \gls{MB}) øvst og utgangsblokker (\gls{SBE} og \gls{SBV}) i botn av vinduet.
+I mellom desse kjem sjølve tilstandslogikkblokka som inneheld styringslogikken.
 
 \begin{figure}[htbp]
     \centering
@@ -60,7 +60,7 @@ I mellom desse kjem sjølve tilstandslogikk blokka som inneheld styringslogikken
     \caption{Eksempel \gls{CFC} - styring innpumping}\label{fig:CFCInnpumping}
 \end{figure}
 
-I denne figuren er ekstra inngangar, parameter inngangar og ekstra utgangar fjerna for å betre kunne visualisere koplingane og samarbeidet mellom
+I denne figuren er ekstra inngangar, parameterinngangar og ekstra utgangar fjerna for å betre kunne visualisere koplingane og samarbeidet mellom
 \gls{IEC} blokkene og funksjonsblokka for tilstandslogikken.
 
 \newpage

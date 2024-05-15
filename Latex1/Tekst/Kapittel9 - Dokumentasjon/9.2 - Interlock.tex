@@ -5,10 +5,10 @@ For å unngå utilsikta situasjonar i programmet har vi implementert nokre forri
 Desse forriglingane har vi inkludert i tilstandslogikken.\newline
 \gls{IEC} blokkene tilbyr også funksjonalitet som gjer det enkelt for oss å handheve forriglingar mellom komponentane.
 
-Det ligger forrigling på styringa av matepumpene til reaktorane. Det skal ikkje være mogleg at begge pumpene går samtidig
+Det ligg forrigling på styringa av matepumpene til reaktorane. Det skal ikkje være mogleg at begge pumpene går samtidig
 og beskyttelse for dette er handtert i funksjonsblokka fbSwap(\ref{sec:1}).
 
-Det skal heller ikkje inntreffe at begge reaktorane kan være i tilstand innpuming samstundes.
+Det skal heller ikkje inntreffe at begge reaktorane kan være i tilstand innpumping samstundes.
 Sidan tilstandsmaskinene som styrer kvar sin reaktor er uavhengige av kvarandre, måtte vi løyse dette med ein
 global variabel. Denne variabelen blokkerer overgangen frå tilstand pause til tilstand innpumping dersom ein reaktor allereie er i tilstand innpumping.
 

@@ -1,13 +1,13 @@
 \section{IEC Funksjonsblokker} \label{IEC Seksjon}
 \thispagestyle{fancy}
 
-Vi gjore eit utval av funksjonsblokk maler basert på dei komponentane vi hadde identifiserte i reinseanlegget.
-For å laga eit robust program valde vi og fokusere på: \gls{MA}, \gls{MB}, \gls{SBE} og \gls{SBV}.
-Sjølv om funksjonsblokk malane kunne verke noko overkvalifiserte valde vi likevel å ha dei med, då nokon av tilleggsfunksjonane eventuelt kunne nyttast seinare
-og at det gav oss ein klar retning å arbeide mot.
+Vi gjorde eit utval av funksjonsblokkmalar basert på dei komponentane vi hadde identifisert i reinseanlegget.
+For å laga eit robust program valde vi å fokusere på: \gls{MA}, \gls{MB}, \gls{SBE} og \gls{SBV}.
+Sjølv om funksjonsblokkmalane kunne verke overkvalifiserte, valde vi likevel å ha dei med, då nokon av tilleggsfunksjonane eventuelt kunne nyttast seinare
+og det gav oss ein klar retning å arbeide mot.
 
-\gls{IEC} har sentrale begreper som vi ynskjer å utdjupe nærmare. Grunna mangel på gode norske begreper 
-og for å forhindre forvirring har vi valgt å beskrive begrepa slik dei er definert i normen.
+\gls{IEC} har sentrale begrep som vi ønskjer å utdjupe nærmare. Grunna mangel på gode norske begrep
+og for å forhindre forvirring valde vi å beskrive begrepa slik dei er skildra i normen.
 
 \begin{itemize}
     \item \textbf{Lock:} Action overruling any other signal while being true
@@ -17,17 +17,17 @@ og for å forhindre forvirring har vi valgt å beskrive begrepa slik dei er defi
     \item \textbf{Suppression:} Disable alarm annunciation as well as any associated automatic actions
 \end{itemize}
 
-Alle funksjonsblokk maler som er designet etter \gls{IEC} \gls{PAS} 63131 har alle moglegheit for handtering og varsling av feil 
-Desse funksjonane er veldig viktig i videre arbeid mot feilhandtering og alarmliste.
+Alle funksjonsblokkmalar som er laga etter \gls{IEC} \gls{PAS} 63131 har moglegheit for handtering og varsling av feil 
+Desse funksjonane er veldig viktige i vidare arbeid mot feilhandtering og alarmliste.
 
 \newpage
 
 \subsection{Monitor Binary}
-\gls{MB} funksjonsblokka (Vedlegg C.1) blir brukt til automatisk overvåking, alarmhandtering, framvising og låsing av binære prosess variablar.
+\gls{MB} funksjonsblokka (Vedlegg C.1) blir brukt til automatisk overvaking, alarmhandtering, framvising og låsing av binære prosess variablar.
 Funksjonsblokka inkluderer alarm ``suppression'' og ``blocking'' funksjonalitet. Den har moglegheit for invertering av 
 inngangssignal og moglegheit for tidsforseinking av utgangssignal via parameter.
 
-Funksjonsblokka er brukt i programmet for å overvaka alle digitale nivåvipper og trykkbrytarar i prosessen.
+Funksjonsblokka er brukt i programmet for å overvake alle digitale nivåvipper og trykkbrytarar i prosessen.
 
 
 \begin{figure}[htbp]
@@ -47,11 +47,11 @@ Funksjonsblokka er brukt i programmet for å overvaka alle digitale nivåvipper 
 \end{figure}
 
 \subsection{Monitor Analogue}
-\gls{MA} funksjonsblokka (Vedlegg C.2) er brukt for skalering, visning, overvåking og alarmhandtering av \newline
+\gls{MA} funksjonsblokka (Vedlegg C.2) er brukt for skalering, overvaking og alarmhandtering av \newline
 analoge inngangsvariablar i ein prosess.
 Funksjonsblokka inneheld ``suppression'' og ``blocking'' funksjonalitet.
 
-Funksjonsblokka er brukt i programmet for å overvåke analoge trykknivågivarar samt å skalere og vise desse som ein fyllingsgrad i prosent.
+Funksjonsblokka er brukt i programmet for å overvake analoge trykknivågivarar samt å skalere og vise desse som ein fyllingsgrad i prosent.
 
 \begin{figure}[htbp]
     \centering
@@ -73,8 +73,8 @@ Funksjonsblokka er brukt i programmet for å overvåke analoge trykknivågivarar
 
 \subsection{Switch Binary Eletrical} 
 
-\gls{SBE} funksjonsblokka (Vedlegg C.3) blir brukt for binærkontroll (av/på) av straumningselement for elektrisitet, varme eller væske. Den
-kontrollerte komponenten kan være av typen motor, pumpe, varmeelement, vifte osv.
+\gls{SBE} funksjonsblokka (Vedlegg C.3) blir brukt for binærkontroll (av/på) av straumningselement for elektrisitet, varme eller væske. 
+Den kontrollerte komponenten kan vere t.d. motor, pumpe, varmeelement, vifte.
 Funksjonsblokka er i dette programmet brukt til å styre motorar, pumper og blåserar.
 
 Funksjonsblokka beskriver korleis ein styrer ein komponent.
