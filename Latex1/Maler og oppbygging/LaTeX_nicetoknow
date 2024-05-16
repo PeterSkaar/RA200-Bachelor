@@ -19,3 +19,9 @@ BILDE
     \includegraphics[width=1\textwidth]{Figurar/Generellverkemåte.png}
     \caption{Generell verkemåte for eit avlaupsreinseanlegg}\label{fig:GenerellVerkemåte}
 \end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Bilder/Codesys.png}
+    \caption{Codesys programmvare}\label{fig:Codesys}
+\end{figure}
