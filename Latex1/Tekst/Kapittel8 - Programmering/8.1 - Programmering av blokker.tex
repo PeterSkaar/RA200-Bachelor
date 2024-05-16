@@ -1,33 +1,33 @@
-\section{IEC Funksjonsblokker} \label{IEC Seksjon}
+\section{IEC funksjonsblokker} \label{IEC Seksjon}
 \thispagestyle{fancy}
 
-Vi gjorde eit utval av funksjonsblokkmalar basert på dei komponentane vi hadde identifisert i reinseanlegget.
-For å laga eit robust program valde vi å fokusere på: \gls{MA}, \gls{MB}, \gls{SBE} og \gls{SBV}.
-Sjølv om funksjonsblokkmalane kunne verke overkvalifiserte, valde vi likevel å ha dei med, då nokon av tilleggsfunksjonane eventuelt kunne nyttast seinare
-og det gav oss ein klar retning å arbeide mot.
+Vi gjorde eit utval av moglege funksjonsblokktemplat basert på dei komponentane vi identifiserte i reinseanlegget.
+For å lage eit robust program valde vi å fokusere på: \gls{MA}, \gls{MB}, \gls{SBE} og \gls{SBV}.
+Sjølv om funksjonsblokktemplata kunne verke overkvalifiserte, valde vi likevel inkludere dei, då nokon av tilleggsfunksjonane eventuelt kunne nyttast seinare
+og at det gav oss ein klar retning å arbeide mot.
 
 \gls{IEC} har sentrale begrep som vi ønskjer å utdjupe nærmare. Grunna mangel på gode norske begrep
-og for å forhindre forvirring valde vi å beskrive begrepa slik dei er skildra i normen.
+og for å forhindre forvirring velger vi å beskrive begrepa slik dei er skildra i normen.
 
 \begin{itemize}
     \item \textbf{Lock:} Action overruling any other signal while being true
     \item \textbf{Force:} Action overruling any other signal
-    \item \textbf{Disable Transition:} Transistion high/low function not avaliable
+    \item \textbf{Disable transition:} Transistion high/low function not avaliable
     \item \textbf{Blocking:} Prevention of certain functions or operations 
     \item \textbf{Suppression:} Disable alarm annunciation as well as any associated automatic actions
 \end{itemize}
 
-Alle funksjonsblokkmalar som er laga etter \gls{IEC} \gls{PAS} 63131 har moglegheit for handtering og varsling av feil 
-Desse funksjonane er veldig viktige i vidare arbeid mot feilhandtering og alarmliste.
+Alle funksjonsblokktemplat som er basert på \gls{IEC} \gls{PAS} 63131 har moglegheit for handtering og varsling av feil. 
+Desse funksjonane er viktige i vidare arbeid mot feilhandtering.
 
 \newpage
 
 \subsection{Monitor Binary}
-\gls{MB} funksjonsblokka (Vedlegg C.1) blir brukt til automatisk overvaking, alarmhandtering, framvising og låsing av binære prosess variablar.
+\gls{MB} funksjonsblokka (Vedlegg C.1) blir brukt til automatisk overvaking, alarmhandtering, framvising og låsing av binære prosessvariablar.
 Funksjonsblokka inkluderer alarm ``suppression'' og ``blocking'' funksjonalitet. Den har moglegheit for invertering av 
 inngangssignal og moglegheit for tidsforseinking av utgangssignal via parameter.
 
-Funksjonsblokka er brukt i programmet for å overvake alle digitale nivåvipper og trykkbrytarar i prosessen.
+Funksjonsblokka er brukt i programmet for å overvake alle digitale inngangar t.d. pressostat og nivåvipper.
 
 
 \begin{figure}[htbp]
@@ -77,9 +77,10 @@ Funksjonsblokka er brukt i programmet for å overvake analoge trykknivågivarar 
 Den kontrollerte komponenten kan vere t.d. motor, pumpe, varmeelement, vifte.
 Funksjonsblokka er i dette programmet brukt til å styre motorar, pumper og blåserar.
 
-Funksjonsblokka beskriver korleis ein styrer ein komponent.
-Det er utgangen Y, som sender ein opne/stenge kommando (høg/lav) til komponenten. Blokka har fleire funksjonar, der den
-tar utgangen og samanliknar med tilbakemelding \gls{XGH} som gjer korrekt \gls{BCL}/\gls{BCH} status. 
+%Funksjonsblokka beskriver korleis ein styrer ein komponent.
+%Det er utgangen Y, som sender ein opne/stenge kommando (høg/lav) til komponenten. 
+
+%Blokka har fleire funksjonar t.d. samalikning med tilbakemelding \gls{XGH} som gjer korrekt \gls{BCL}/\gls{BCH} status. 
 
 Funksjonsblokka inkluderar alarm ``suppression'', ``blocking'', ``safeguarding'' og ``transition'' funksjonalitet.
 
@@ -107,19 +108,12 @@ Funksjonsblokka inkluderar alarm ``suppression'', ``blocking'', ``safeguarding''
 Typisk komponentar som styrast er bl.a.\ ventilar og spjeld.
 Funksjonsblokka er i dette programmet brukt til å styre ventilar.
 
-Funksjonsblokka styrer ventilen ved hjelp av dei binære inngangane \gls{XH} og \gls{XL}.\@
-Desse inngangane styrer ein utgang Y, som sender opne/stenge-kommando (høg/låg) til ventilaktivatoren.
-Alternativt kan dei pulsmodulerte utgangane \gls{YH} og \gls{YL} kan også nyttast.
+%Funksjonsblokka styrer ventilen ved hjelp av dei binære inngangane \gls{XH} og \gls{XL}.\@
+%Desse inngangane styrer ein utgang Y, som sender opne/stenge-kommando (høg/låg) til ventilaktivatoren.
+%Alternativt kan dei pulsmodulerte utgangane \gls{YH} og \gls{YL} kan også nyttast.
 
-Funksjonsblokka har også inngangar \gls{XGH} og \gls{XGL} som gjer tilbakemelding om ventilen er heilt open eller stengd
-som bekrefter ventilen sin posisjon.
-
-%\textbf{Kontrollfunksjonane i funksjonsblokka inkluderar:}
-%\begin{itemize}
-    %\item Generering av feilstatus (YF) om det oppstår ein intern eller ekstern feil.
-    %\item Blokka set utgangen Y i samsvar med parameter når feil blir oppdaga.
-    %\item Blokka set utgangen Y basert på tilbakemelding i ``outside mode'' når ingen eksterne inngangar blir brukte (XOH/XOL).
-%\end{itemize}
+%Funksjonsblokka har også inngangar \gls{XGH} og \gls{XGL} som gjer tilbakemelding om ventilen er heilt open eller stengd
+%som bekrefter ventilen sin posisjon.
 
 Funksjonsblokka inkluderar alarm ``suppression'', ``blocking'', ``safeguarding'' og ``transition'' funksjonalitet.
 
