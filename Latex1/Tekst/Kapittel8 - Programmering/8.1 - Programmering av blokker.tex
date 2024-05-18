@@ -7,21 +7,32 @@ Sjølv om funksjonsblokktemplata kunne verke overkvalifiserte, valde vi likevel 
 og at det gav oss ein klar retning å arbeide mot.
 
 \gls{IEC} har sentrale begrep som vi ønskjer å utdjupe nærmare. Grunna mangel på gode norske begrep
-og for å forhindre forvirring velger vi å beskrive begrepa slik dei er skildra i normen.
+og for å forhindre forvirring velger vi å beskrive begrepa slik dei er skildra i normen. \newline
+Merk også forkorting i klammeparantes.
 
 \begin{itemize}
-    \item \textbf{Lock:} Action overruling any other signal while being true
-    \item \textbf{Force:} Action overruling any other signal
-    \item \textbf{Disable transition:} Transistion high/low function not avaliable
-    \item \textbf{Blocking:} Prevention of certain functions or operations 
-    \item \textbf{Suppression:} Disable alarm annunciation as well as any associated automatic actions
+    \item \textbf{Lock:} Action overruling any other signal while being true        \textbf{[L]}
+    \item \textbf{Force:} Action overruling any other signal                        \textbf{[F]}
+    \item \textbf{Disable transition:} Transistion high/low function not avaliable  \textbf{[D]}
+    \item \textbf{Blocking:} Prevention of certain functions or operations          \textbf{[B]}
+    \item \textbf{Suppression:} Disable alarm annunciation as well as any associated automatic actions \textbf{[U]}
+    \item \textbf{Safeguarding:} \textbf{[S]}
 \end{itemize}
 
-Alle funksjonsblokktemplat som er basert på \gls{IEC} \gls{PAS} 63131 har moglegheit for handtering og varsling av feil. 
-Desse funksjonane er viktige i vidare arbeid mot feilhandtering.
+Det er også andre genrelle forkortingar som er viktige i skildring av desse blokkene
 
-%Ved feil blir ein boolsk variabel \gls{YF} sett høg, 
-%samt at ein heiltalsverdi \gls{YFI} indikera kva type feil som har oppstått.
+\begin{itemize}
+    \item \textbf{X:}   Inngangsvariabel
+    \item \textbf{Y:}   Utgangsvariabel
+    \item \textbf{B:}   Status
+    \item \textbf{HH:}  Høg-høg
+    \item \textbf{H:}   Høg
+    \item \textbf{LL:}  Lav-lav
+    \item \textbf{L:}   Lav
+\end{itemize}
+
+%Alle funksjonsblokktemplat som er basert på \gls{IEC} \gls{PAS} 63131 har moglegheit for handtering av varsling og feil. 
+%Desse funksjonane er viktige i vidare arbeid mot feilhandtering.
 
 \newpage
 
@@ -49,12 +60,24 @@ Funksjonsblokka er brukt i programmet for å overvake alle digitale inngangar t.
     \caption{Monitor Binary}\label{fig:Monitor Binary}
 \end{figure}
 
-\subsection{Monitor Analogue}
-\gls{MA} funksjonsblokka (Vedlegg C.2) er brukt for skalering, overvaking og alarmhandtering av \newline
-analoge inngangsvariablar i ein prosess.
-Funksjonsblokka inneheld ``suppression'' og ``blocking'' funksjonalitet.
+\newpage
 
-Funksjonsblokka er brukt i programmet for å overvake analoge trykknivågivarar samt å skalere og vise desse som ein fyllingsgrad i prosent.
+\subsection{Monitor Analogue}
+\gls{MA} er brukt for skalering, visning, overvaking og alarmhandtering av
+analoge prosess og kontrollvariablar \citep{IEC-63131}
+Funksjonsblokka er brukt for å overvake analoge trykknivågivarar 
+og å skalere og vise desse som ein fyllingsgrad i prosent. (Vedlegg C.2)
+
+MA hentar rå verdi på X og gir tilbake verdi på Y.
+Denne utgangsverdien blir skalert basert på parameter og har hysterese og dødband tilgjengeleg.
+
+Funksjonsblokka har to forvarsel (WH og WL) og to hendingar med alarm (AHH og ALL).
+Det er moglegheit for tidsforsinking, ``blocking'' og ``suppression'' av desse via inngangsvariablar og parameter.
+
+Blokka har fem statusvariablar som indikerer modus og område (BU, BB, BHH, BLL, BBLL, BBHH), ein utgang for indikasjon av feil (YF)
+og fire hendingar (HH, H, LL, L) utan ``blocking'' og ``suppression'' som nyttast for styring.
+
+Grenser på varsling og hendigar er justerbare via parameter
 
 \begin{figure}[htbp]
     \centering
