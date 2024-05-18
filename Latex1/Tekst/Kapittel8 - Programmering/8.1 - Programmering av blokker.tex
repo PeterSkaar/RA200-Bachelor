@@ -2,7 +2,7 @@
 \thispagestyle{fancy}
 
 Vi gjorde eit utval av moglege funksjonsblokktemplat basert på dei komponentane vi identifiserte i reinseanlegget.
-For å lage eit robust program valde vi å fokusere på: \gls{MA}, \gls{MB}, \gls{SBE} og \gls{SBV}.
+For å lage eit robust program valde vi å fokusere på to inputfunksjonar, \gls{MA}, \gls{MB}, og to outputfunksjonar \gls{SBE}, \gls{SBV}.
 Sjølv om funksjonsblokktemplata kunne verke overkvalifiserte, valde vi likevel inkludere dei, då nokon av tilleggsfunksjonane eventuelt kunne nyttast seinare
 og at det gav oss ein klar retning å arbeide mot.
 
@@ -16,20 +16,23 @@ Merk også forkorting i klammeparantes.
     \item \textbf{Disable transition:} Transistion high/low function not avaliable  \textbf{[D]}
     \item \textbf{Blocking:} Prevention of certain functions or operations          \textbf{[B]}
     \item \textbf{Suppression:} Disable alarm annunciation as well as any associated automatic actions \textbf{[U]}
-    \item \textbf{Safeguarding:} \textbf{[S]}
+
 \end{itemize}
 
-Det er også andre genrelle forkortingar som er viktige i skildring av desse blokkene
+Det er også andre genrelle forkortingar som er viktige i skildring av desse blokkene.
 
 \begin{itemize}
     \item \textbf{X:}   Inngangsvariabel
     \item \textbf{Y:}   Utgangsvariabel
-    \item \textbf{B:}   Status
-    \item \textbf{HH:}  Høg-høg
+    \item \textbf{B:}   Binær status
+    \item \textbf{P:}   Parameter
+    \item \textbf{A:}   Alarm handling 
+    \item \textbf{W:}   Forvarsel
     \item \textbf{H:}   Høg
-    \item \textbf{LL:}  Lav-lav
     \item \textbf{L:}   Lav
 \end{itemize}
+
+For full forståelse av forkortingar og betydning kan ein finne bokstavmatrise i normen.
 
 %Alle funksjonsblokktemplat som er basert på \gls{IEC} \gls{PAS} 63131 har moglegheit for handtering av varsling og feil. 
 %Desse funksjonane er viktige i vidare arbeid mot feilhandtering.
@@ -63,7 +66,7 @@ Funksjonsblokka er brukt i programmet for å overvake alle digitale inngangar t.
 \newpage
 
 \subsection{Monitor Analogue}
-\gls{MA} er brukt for skalering, visning, overvaking og alarmhandtering av
+Inputfunksjon \gls{MA} er brukt for skalering, visning, overvaking og alarmhandtering av
 analoge prosess og kontrollvariablar \citep{IEC-63131}
 Funksjonsblokka er brukt for å overvake analoge trykknivågivarar 
 og å skalere og vise desse som ein fyllingsgrad i prosent. (Vedlegg C.2)
@@ -71,13 +74,13 @@ og å skalere og vise desse som ein fyllingsgrad i prosent. (Vedlegg C.2)
 MA hentar rå verdi på X og gir tilbake verdi på Y.
 Denne utgangsverdien blir skalert basert på parameter og har hysterese og dødband tilgjengeleg.
 
-Funksjonsblokka har to forvarsel (WH og WL) og to hendingar med alarm (AHH og ALL).
+Funksjonsblokka har to forvarsel (WH og WL) og to handlingar med alarm (AHH og ALL).
 Det er moglegheit for tidsforsinking, ``blocking'' og ``suppression'' av desse via inngangsvariablar og parameter.
 
 Blokka har fem statusvariablar som indikerer modus og område (BU, BB, BHH, BLL, BBLL, BBHH), ein utgang for indikasjon av feil (YF)
-og fire hendingar (HH, H, LL, L) utan ``blocking'' og ``suppression'' som nyttast for styring.
+og fire hendingar (BXHH, BXH, BXLL, BXL) utan ``blocking'' og ``suppression'' som nyttast for styring.
 
-Grenser på varsling og hendigar er justerbare via parameter
+Grenser på varsling og hendigar er justerbare via parameter.
 
 \begin{figure}[htbp]
     \centering
