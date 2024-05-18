@@ -2,42 +2,29 @@
 \thispagestyle{fancy}
 
 \subsection{Blokker}
-Enkelte komponentar skulle nyttast i fleire tilstandar og vi opplevde utfordringar med å ha fleire blokker som styrer den same komponenten.
-Blokkene var knytt mot ein felles utgangsvariabel som skulle styre komponenten.
-Denne variabelen kan då bli satt frå fleire plassar i programmet, noko som gjer at 
-variablenen sin tilstand vil vere tilfeldig basert på korleis kompilatoren til \gls{Codesys} las koden.
+Nokre komponentar skulle nyttast i fleire tilstandar og vi opplevde 
+utfordringar med å ha fleire blokker for ein komponent.
+Enkelte tilstandslogikkblokker gav lav signaler endå dei ikkje var i bruk og 
+overskreiv høg signalar programmet prøvde å sende.
 
-Vi møtte denne utfordringa fleire plassar i programmet, t.d. i pumpestyringa,
+Vi møtte denne utfordringa fleire plassar, t.d. i pumpestyringa,
 der kvar reaktor skulle kunne styre den same pumpa.
-Dette kunne vi løyse ved å bruke ein unik global variabel for kvar blokk, 
-og deretter skrive til ei funksjonsblokk som styrer den globale utgangsvariabelen som går til komponenten.\newline
-For pumpestyringa laga vi ei blokk som tok inngangen frå begge pumpene og satt utgangen til riktig tilstand.  
+Dette løyste vi ved å bruke ein unik utgangsvariabel for kvar blokk, 
+og deretter skrive til ei blokk som samla signala til komponenten og satt utgangen til riktig verdi.
 
 \subsection{Mangel på sensorikk}
 
-Anlegget har ei avgremsa mengd med sensorikk, 
-noko som har ført til at vi må berekne, estimere og programmere rundt mangelen på sensorar.
+Anlegget har begrensa mengde sensorikk. 
+Dette har ført til at vi må berekne, estimere og programmere rundt denne mangelen.
 
 Som døme har anlegget ein funksjon for å aktivere
-høgbelastningsmodus ved høg tilstrøyming av vatn, 
+høgbelastningsmodus ved høg tilstrøyming, 
 men anlegget har ingen form for strøymningsmålar.\newline
-Difor har vi vore nøydde til å kalkulere ein teoretisk tilstrøymingsverdi basert på auken av volumet i mottakstanken.
+Grunna dette har vi vore nøydd til å kalkulere ein teoretisk tilstrøyming basert på endringa av volumet i mottakstanken.
 
 Sjølv om slike løysningar kan fungere, er det ikkje optimalt for anleggets drift.
-Estimering av prosessverdiar vil redusere nøyaktigheita i styresystemet og fører til at
-mykje unødvendig prosessorkraft vil bli brukt på berekningar som enkelt kunne vore erstatta av ein sensor.\newline
-Vidare har det også krevd mykje ekstra tid å programmere desse funksjonane.
-
-
-
-% Trenger dette stå her?
-%Anlegget har ikkje nokon form for gjennomstrøymingsmålar 
-%og har difor ein teoretisk utrekna strøymingsverdiar. 
-%Verdiane er utrekna frå tankvolum, og det gjelder for mottakstank og reaktortank. 
-%Dette kan vere noko uheldig da dette gir oss noko manglande nøyaktigheit i målingane våra, 
-%som forplantar seg vidare til databehandlinga.
-%Vi har tatt utgangspunkt i planteikningane for å få så nøyaktige mål som mogleg, 
-%i tillegg til at vi har fått verifisert tank (mottakstank) 
-%innvending med video for å konstatere at våra mål og utrekningar er korrekte.
+Estimering av prosessverdiar vil redusere nøyaktigheit i styresystemet og
+unødvendig prosessorkraft vil bli brukt på berekningar som enkelt kunne vore erstatta av ein sensor.\newline
+Det det også krevd ekstra tid å programmere desse funksjonane.
 
 
