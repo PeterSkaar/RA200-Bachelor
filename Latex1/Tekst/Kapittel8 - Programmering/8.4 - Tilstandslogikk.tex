@@ -2,14 +2,14 @@
 \section{Tilstandslogikk}
 \thispagestyle{fancy}
 
-Styring og logikk som skulle skje i kvar tilstand, valde vi å samle i ei funksjonsblokk som vart kalla tilstandslogikk og fikk navn etter tilstanden
-den skulle styre t.d. Reaksjon. % Desse funksjonsblokkene er skrevet og løyst spesefikt for deira arbeidsoppgåver i programet.
+Styring av logikk som skulle skje i kvar tilstand, valde vi å samle i ei funksjonsblokk som vart definert som tilstandslogikk, og fikk navn etter tilstanden
+den skulle styre t.d. reaksjon.
 
 Kvar tilstandslogikkblokk får inn ``external enable'' (\gls{XE}) frå tilstandsmaskina som startar tilstandslogikken. Når sekvensen er ferdig sender
-funksjonsblokka høg på utgang Y som returerast til tilstandsmaskina som avanserer til neste tilstand og tilstandslogikkblokk.
+funksjonsblokka høg på utgang Y som returnerast til tilstandsmaskina som avanserer til neste tilstand og tilstandslogikkblokk.
 
-Det er tilstandslogikken som har ansvar for å samarbeide med \gls{IEC}-blokkene som handterar
-start/stopp av elektrisk utstyr, kontrollerer tilbakemeldingar, feilmeldingar og skriv akutelle parameter. \newline \newline \newline
+Det er tilstandslogikken som har ansvar for å samarbeide med \gls{IEC}-blokkene som handterar inngangssignaler
+start/stopp av elektrisk utstyr og kontrollerer feil og tilbakemeldingar. \newline \newline \newline
 
 \begin{figure}[htbp]
     \centering
@@ -24,7 +24,7 @@ start/stopp av elektrisk utstyr, kontrollerer tilbakemeldingar, feilmeldingar og
         \includegraphics[width=1\textwidth]{Bilder/fbReaksjon.png}
         \caption{Reaksjon}\label{fig:fbReaksjon}
     \end{subfigure}
-    \caption{Tilstandslogikkblokker implmentert i programmet}\label{fig:ReaksjonsFasen}
+    \caption{Tilstandslogikkblokker implementert i programmet}\label{fig:ReaksjonsFasen}
 \end{figure}
 
 

@@ -1,12 +1,12 @@
 \section{Tilstandsmaskin}
 \thispagestyle{fancy}
 
-Etter at \gls{IEC} blokkene var ferdige, byrja vi på tilstandsmaskina som skulle styre sjølve \gls{SBR}-prosessen. 
-Vi hadde allereie danna oss eit bilete, men kunne no byrja å bruke kunnskapen frå verkemåten til anlegget
-til å grovt fylle inn dei hendelsane og aksjonane som foregikk mellom tilstandsendringar. 
-Tilstandsmaskina er bygd opp av dei fem reaktortilstandane som eksisterar i eit \gls{SBR}-anlegg.
+Då \gls{IEC} blokkene var ferdige, byrja vi på tilstandsmaskina som skulle styre sjølve \gls{SBR}-prosessen. 
+Vi hadde allereie danna oss eit bilete, men kunne no byrje å bruke kunnskapen frå anleggets verkemåte
+til å grovt fylle inn dei hendelsane og aksjonane som foregikk mellom tilstandane. 
+Tilstandsmaskina er bygd opp av dei fem reaktorsekvensane som eksisterar i eit \gls{SBR}-anlegg.
 
-Dette er ein enkel modell av korleis tilstandsmaskina er programmert men gir eit godt innblikk i systemet.
+Dette er ein enkel modell av korleis tilstandsmaskina er programmert, men gir eit godt innblikk i funksjonaliteten. \newline \newline \newline \newline \newline
 
 \begin{figure}[htbp]
     \centering
@@ -14,22 +14,19 @@ Dette er ein enkel modell av korleis tilstandsmaskina er programmert men gir eit
     \caption{Enkel model av tilstandsmaskin}\label{fig:SimpelTilstandsmaskin}
 \end{figure}
 
-Utifrå det vi allereie hadde lært om anlegget visste vi kva inngangssignal og logikk som ville gi
-``Mottakstank nivå OK'' og la tilstandsmaskina avansere ifrå pause til innpumping. Denne jobben utførte vi ved å lage ei
-funksjonsblokk for kvar tilstand (tilstandslogikk) der aktuell inngang, utgang og logikk skulle samlast.
 
 \newpage
 
-I sjølve programmeringa av tilstandsmaskina blei den oppretta som ei eiga funksjonsblokk, noko som gav oss moglegheita å bruke den for begge reaktorane.
+I sjølve programmeringa av tilstandsmaskina blei den oppretta som ei eiga funksjonsblokk, noko som gav oss moglegheita å bruke blokka for begge reaktorane.
 Tilstandsmaskina er laga med fem inngangar og seks utgangar, og baserer seg på ``switch/case'' logikk.
 
 Tilstandsmaskina sender ut høg på den respektive utgangen som samsvarer med reaktortilstanden den er i. Dersom tilstandsmaskina får tilbake
-OK signal på den respektive tilstandsinngangen avanserer tilstandsmaskina.
-Det er også mogleg å hente ut kva aktiv tilstand ved hjelp av ein integer verdi (1-5)
+høg på den respektive tilstandsinngangen avanserer tilstandsmaskina.
+Det er også mogleg å hente ut aktiv tilstand ved hjelp av ein heiltallsverdi (1-5) \newline \newline \newline \newline
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.4\textwidth]{Bilder/Tilstandsmaskin.png}
+    \includegraphics[width=0.6\textwidth]{Bilder/Tilstandsmaskin.png}
     \caption{Tilstandsmaskin implementert i programmet}\label{fig:TilstandsmaskinIProgram}
 \end{figure}
 

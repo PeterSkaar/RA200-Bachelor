@@ -2,10 +2,10 @@
 \thispagestyle{fancy}
 
 \subsection{Blokker}
-Vi opplevde noko utfordringar rundt det å ha fleire blokker som styrer den same komponenten, samt det å  
-skriva til ein felles global variabel.
-Denne variabelen kan då bli skriven ``true'' eller ``false'' i frå fleire plassar i programmet, noko som gjer at 
-variablenen sin tilstand vil vere tilfeldig basert på korleis kompilatoren til \gls{Codesys} les koden.
+Enkelte komponentar skulle nyttast i fleire tilstandar og vi opplevde utfordringar med å ha fleire blokker som styrer den same komponenten.
+Blokkene var knytt mot ein felles utgangsvariabel som skulle styre komponenten.
+Denne variabelen kan då bli satt frå fleire plassar i programmet, noko som gjer at 
+variablenen sin tilstand vil vere tilfeldig basert på korleis kompilatoren til \gls{Codesys} las koden.
 
 Vi møtte denne utfordringa fleire plassar i programmet, t.d. i pumpestyringa,
 der kvar reaktor skulle kunne styre den same pumpa.

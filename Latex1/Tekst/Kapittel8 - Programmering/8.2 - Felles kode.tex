@@ -1,55 +1,55 @@
 \section{Generelle funksjonsblokker}
 \thispagestyle{fancy}
 
-Undervegs i programmeringa av \gls{IEC}-blokkene såg vi også nødvendigheita av nokre generelle funksjonsblokker
+Undervegs i programmering av \gls{IEC}-blokkene såg vi det naudsynt av nokre generelle funksjonsblokker
 som kunne gjenbrukast fleire gonger i programmet. Dette er hensiktsmessig sidan ein då slepp å skrive lik 
 funksjonalitet fleire gonger, men heller kan kalle ei funksjonsblokk som kan utføre den same jobben.
 
-Sjå vedlegg B for meir dokumentasjon av funksjonsblokkene.
+Sjå vedlegg for meir dokumentasjon av funksjonsblokkene. (Vedlegg B)
 
 \subsection{fbTimer}
-Denne funksjonsblokka kan brukast når ein treng ei tidsforsinking i programmet.
-Her kan ein nytte tidsforsinka inn, tidsforsinka ut, eller ein kombinasjon av begge.
+Denne funksjonsblokka gir moglegheit for tidsforsinking.
+Her kan ein nytte tidsforsinking på, tidsforsinking av, eller ein kombinasjon av begge.
 
 \subsection{fbAnalougeAlarm}
-Denne funksjonsblokka blir brukt til å overvake, tidsforsinke, behandle grenseverdiar, 
+Denne funksjonsblokka nyttast til å overvake, behandle grenseverdiar, 
 gi alarmar og legge til hysteresar på ferdig skalerte analoge inngangsverdiar.
+Funksjonsblokka nyttast fleire gonger i MA blokka.
 
 \subsection{fbDigitalAlarm}
-Denne funksjonsblokka kan overvake, tidsforsinke og gi alarmar. Det er valbart om blokka skal aktiverast på høg eller låg
-inngang basert på ein parameter.
+Denne funksjonsblokka nyttast til å overvake og gi alarmar på digitale inngangsverdiar. 
+Det er valbart om blokka skal aktiverast på høg eller låg inngang basert på ein parameter.
 
 \subsection{fbSwap}\label{sec:1}
-Denne funksjonsblokka mottar ein inngangsverdi og byter sekvensielt mellom å bruke to utgangsverdiar. Det vil seie at blokka hugsar på kva utgang som vart brukt sist,
+Denne funksjonsblokka mottar ein inngangsverdi og rullerar mellom å nytte to utgangsverdiar. Blokka hugsar på kva utgang som vart brukt sist,
 og vil bruke den andre utgangen ved neste kall. Blokka har også moglegheit for feilhandtering.
 
 \subsection{fbCalculations}
-Denne funksjonsblokka utfører nokre rekneoppgåver som ligg i bakgrunnen og køyrer kontinuerleg. 
+Denne funksjonsblokka utfører nokre rekneoppgåver. 
 Det er hovudsakleg utrekningar av volum i reaktorane, mottakstank og drenert volum i frå reaktortankane.
 
 \subsection{fbTimeMeter}
-Denne funksjonsblokka er ei blokk som tel tida så lenge den er kalla på, og lagrar verdien i forskjellige tidsformat for seinare bruk.
-Den blir brukt i programmet til å telle gangtid for forskjellige elektriske komponentar.
+Denne funksjonsblokka tel tida så lenge den er kalla på, og lagrar verdien i forskjellige tidsformat for driftsdata.
+Den blir brukt til å telle gangtid for forskjellige elektriske komponentar.
 
 \newpage
 
 \subsection{fbHighLoad}
-Denne funksjonsblokka blir brukt til å overvake den antatte innstraumningen i mottakstanken, basert på nivåendringar.
+Denne funksjonsblokka blir nyttast til å overvake den antatte tilstraumningen på anlegget basert på nivåendringar i mottakstank.
 Blokka bereknar gjennomsnittleg tilstraumning ved å måle tanknivået kvart minutt over totalt 30 minutt.
 Denne berekninga blir samanlikna med eit parameter for å sette anlegget i høgbelastningsmodus.
 
 \subsection{fbSivbedRotation}
-Anlegget har fire ventilar til sivebedet som det er viktig å oppretthalde rotasjon mellom. Anlegget tappar frå ein reaktor om gongen, 
-og denne funksjonsblokka vel kva ventil som skal aktiverast.
-Rotasjonen blir angitt av ein parameter som fastset kor mange syklusar kvar ventil skal nytte. 
-Det er også mogleg å ta eit sivbed ut av rotasjonen, slik at ventilen ikkje blir inkludert i syklusen.
+Denne funksjonsblokka nyttast for å styre og rotere mellom anleggets fire sivebedetventilar under uttapping av slam. 
+Parameter angir antall uttappingar per sivbed/ventil.
+Det er mogleg å ta eit sivbed ut av drift, slik at ventil ikkje blir inkludert i rotasjonen.
 
 \subsection{fbDataprocessing}
 Denne funksjonsblokka blir brukt i samband med innsamlinga av driftsdata. 
 
 \subsection{fbProcessedWater}
-Denne funksjonsblokka er ei eiga blokk for å halde oversikt over driftsdata som gjeld vatn som har blitt behandla av reaktorane. 
-Denne blokka gir informasjon om totalt behandla vatn i forskjellige tidsformat.
+Denne funksjonsblokka nyttast for oversikt over driftsdata for behandla vatn. 
+Blokka gir informasjon i forskjellige tidsformat.
 
 \newpage
 

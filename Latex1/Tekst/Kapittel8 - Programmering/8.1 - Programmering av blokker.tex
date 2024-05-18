@@ -20,6 +20,9 @@ og for å forhindre forvirring velger vi å beskrive begrepa slik dei er skildra
 Alle funksjonsblokktemplat som er basert på \gls{IEC} \gls{PAS} 63131 har moglegheit for handtering og varsling av feil. 
 Desse funksjonane er viktige i vidare arbeid mot feilhandtering.
 
+%Ved feil blir ein boolsk variabel \gls{YF} sett høg, 
+%samt at ein heiltalsverdi \gls{YFI} indikera kva type feil som har oppstått.
+
 \newpage
 
 \subsection{Monitor Binary}
@@ -112,7 +115,7 @@ Funksjonsblokka er i dette programmet brukt til å styre ventilar.
 %Desse inngangane styrer ein utgang Y, som sender opne/stenge-kommando (høg/låg) til ventilaktivatoren.
 %Alternativt kan dei pulsmodulerte utgangane \gls{YH} og \gls{YL} kan også nyttast.
 
-%Funksjonsblokka har også inngangar \gls{XGH} og \gls{XGL} som gjer tilbakemelding om ventilen er heilt open eller stengd
+Funksjonsblokka har også inngangar \gls{XGH} og \gls{XGL} som gjer tilbakemelding om ventilen er heilt open eller stengd
 %som bekrefter ventilen sin posisjon.
 
 Funksjonsblokka inkluderar alarm ``suppression'', ``blocking'', ``safeguarding'' og ``transition'' funksjonalitet.
