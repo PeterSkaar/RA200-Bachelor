@@ -1,0 +1,33 @@
+
+IEC Opplegg og skriblerier
+1. Finn anna ord for "får tibake verdi på y"
+2. Forklar hysterese og dødband
+3. Fiks setning aktivering via XE
+4. Punktum etter modus lokal
+5. XE ofte brukt for startskuffer og termiskerele.
+6. Lock må stå endre modus til manuell
+7. Skrive litt fks eit eksempel på korleis vi kunne brukt IEC blokkene betre
+8. sjå forrigling IEC
+9. Kanskje kunne det komt litt beire at vi hadde gjort ting annaleis med IEC blokkene
+
+Generelle Greier
+1. Eit plass står det sivebed
+2. Ler god av etterklokspaens lys, del det ihvertfall opp i 2 ord
+3. Viktige forriglingar kunne være løyst hardware messig visst det va KRISE. 8.7.1
+4. kunne beskreve litt betre kva som eigenleg var utfordringa, jo det at blokka var kalla fleire gongar
+5. Side 9 Godts
+6. Skrive i vegen vidare at vi uansett har gitt bra dokumentasjon
+7. Reject med C
+
+Funksjonsblokker
+1. Ka gjer forriglinga i fbSwap visst eg startar matepumpe 2 med Outside eller manual
+
+
+NOTE: 
+Rapportteknisk kanskje litt mindre dagboktekst usikker på kva dei vektlegger på sånt
+
+OPPSUMMERT
+1. Få fram kor mykje arbeid det var i IEC blokkene, 
+få fram at vi hadde ingen underlag og at vi leverer frå oss noko som faktisk er nytting i ekstremt mange sammenhengar uansett kva som skjer på Sande
+2. Begynn avsnitta litt mindre dagbok og historie format
+3. Bruk litt til og skriv meir om dei problema vi møtte og korleis vi kunne ha gjort det annaleis og kva vi har lært
