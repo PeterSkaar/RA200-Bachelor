@@ -1,24 +1,23 @@
 \section{Simuleringsblokker}
 \thispagestyle{fancy}
 
-For å skape eit meir realistisk miljø for testinga lagde vi nokre simuleringsblokker.
-Desse blokkene etterliknar driftssituasjonar og gjer simuleringa enklare og meir effektiv.
-Vi lagde hovudsakleg to slike blokker; ei simulerer fylling av ein tank
+For å skape eit realistisk miljø for testing, lagde vi nokre simuleringsblokker.
+Desse blokkene etterliknar driftssituasjonar og gjer simulering enklare og meir effektivt.
+Vi lagde hovudsakleg to slike blokker, ei simulerer fylling av tank
 og ei for tilbakemelding frå ventilar.
 
-Blokk for tanksimulering er enkel og skriven spesifikt for Sande reinseanlegg, som omfattar ein mottakstank
-og to reaktorar.
+Blokk for tanksimulering er enkel og programmert spesifikt reinseanlegget, 
+som har ein mottakstank og to reaktorar.
 Det er lite truleg at desse simuleringsblokkene vil bli brukt vidare, men dei gav
 oss den realismen vi trengte.
 
 Desse blokkene forenkla også sjølve arbeidet med simuleringa.
 Før vi utvikla blokka for tilbakemelding på ventilar, 
-gav vi manuelt kvar ventil \gls{XGH} eller \gls{XGL} basert på den faktiske stillinga (open/stengd).
-Dette fungerer greit dersom ein testar ei ventilblokk, men
-når simuleringa omfattar større delar av programmet blir denne jobben tungvindt og tidkrevjande.
+gav vi manuelt kvar ventil \gls{XGH} eller \gls{XGL} basert på den tiltenkte stillinga (open/stengd). \newline
+Dette fungerer greitt dersom ein testar ei ventilblokk, men
+når simuleringa omfattar større delar av programmet blir denne jobben tidkrevjande.
 
-På desse blokkene har vi tatt oss meir friheit i namngiving, feilhandtering osv.,
-fordi blokkene ikkje skal brukast når programmet er ferdigstilt.
+På desse blokkene har vi tatt oss meir friheit i namngiving og feilhandtering, sidan blokkene ikkje skal brukast når programmet er ferdigstilt.
 
 
 \begin{figure}[htbp]
