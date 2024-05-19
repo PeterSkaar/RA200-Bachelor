@@ -1,17 +1,17 @@
 
 IEC Opplegg og skriblerier
 1. Finn anna ord for "får tibake verdi på y"
-2. Forklar hysterese og dødband
-3. Fiks setning aktivering via XE
-4. Punktum etter modus lokal
+OK 2. Forklar hysterese og dødband
+OK 3. Fiks setning aktivering via XE
+OK 4. Punktum etter modus lokal
 5. XE ofte brukt for startskuffer og termiskerele.
-6. Lock må stå endre modus til manuell
+OK 6. Lock må stå endre modus til manuell
 7. Skrive litt fks eit eksempel på korleis vi kunne brukt IEC blokkene betre
 8. sjå forrigling IEC
 9. Kanskje kunne det komt litt beire at vi hadde gjort ting annaleis med IEC blokkene
 
 Generelle Greier
-1. Eit plass står det sivebed
+OK 1. Eit plass står det sivebed
 2. Ler god av etterklokspaens lys, del det ihvertfall opp i 2 ord
 3. Viktige forriglingar kunne være løyst hardware messig visst det va KRISE. 8.7.1
 4. kunne beskreve litt betre kva som eigenleg var utfordringa, jo det at blokka var kalla fleire gongar

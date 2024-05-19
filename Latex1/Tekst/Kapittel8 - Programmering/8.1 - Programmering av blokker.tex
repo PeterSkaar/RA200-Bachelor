@@ -64,13 +64,17 @@ og å skalere og vise desse som ein fyllingsgrad i prosent.
 \gls{MA} hentar rå verdi på X og gir tilbake verdi på Y.
 Denne utgangsverdien blir skalert basert på parameter og har hysterese og dødband tilgjengeleg.
 
+Hysterese og dødband definerer områder rundt eit gitt setpunkt der systemet 
+ikkje endrar tilstand eller reagerer på små variasjonar.
+Dette gjer at systemet unngår hyppige vekslingar og unødvendige justeringar.
+
 Funksjonsblokka har to forvarsel (WH og WL) og to handlingar med alarm (AHH og ALL).
 Det er moglegheit for tidsforsinking, ``blocking'' og ``suppression'' av desse via ``force'' inngangsvariablar og parameter.
 
 Blokka har fem statusvariablar som indikerer modus og område (BU, BB, BHH, BLL, BBLL, BBHH), ein utgang for indikasjon av feil (YF)
 og fire hendingar (BXHH, BXH, BXLL, BXL) utan ``blocking'' og ``suppression'' som nyttast for styring.
 
-Grenser på varsling og hendigar er justerbare via parameter. \newline \newline \newline
+Grenser på varsling og hendigar er justerbare via parameter.
 
 \begin{figure}[htbp]
     \centering
@@ -98,14 +102,14 @@ Utgangsfunksjon \gls{SBE} blir nytta for binærkontroll (av/på) av straumningse
 Den kontrollerte komponenten kan vere t.d. motor, pumpe, varmeelement, vifte \citep{IEC-63131}. \newline
 Funksjonsblokka er nytta til å styre motorar, pumper og blåserar. (Vedlegg C.3)
 
-Funksjonsblokka har tre modus, auto, manuell og lokal, der lokal betyr lokal HMI eller direktekøyring.
+Funksjonsblokka har tre modus, auto, manuell og lokal. Lokal betyr lokal HMI eller direktekøyring.
 \gls{SBE} hentar start/stopp signal på
 \begin{enumerate}
     \item \textbf{Auto:}        XH og XL  
     \item \textbf{Manuell:}     HMI
     \item \textbf{Lokal:}       XOH og XOL
 \end{enumerate}
-Og aktiveringssignal via XE. \newline
+Aktiveringssignal er tilgjengeleg via inngang XE. \newline
 Blokka gir tilbake køyrsignal på Y og via pulsmodulerte utgangar YH og YL.
 
 \gls{SBE} inneheld ei tilstatandsmaskin med fire funksjonstilstandar. 
