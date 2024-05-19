@@ -2,7 +2,7 @@
 \thispagestyle{fancy}
 
 Vi gjorde eit utval av moglege funksjonsblokktemplat basert på dei komponentane vi identifiserte i reinseanlegget.
-For å lage eit robust program valde vi å fokusere på to inputfunksjonar, \gls{MA}, \gls{MB}, og to outputfunksjonar \gls{SBE}, \gls{SBV}.
+For å lage eit robust program valde vi å fokusere på to inngangsfunksjonar, \gls{MA}, \gls{MB}, og to utgangsfunksjonar \gls{SBE}, \gls{SBV}.
 Sjølv om funksjonsblokktemplata kunne verke overkvalifiserte, valde vi likevel inkludere dei, då nokon av tilleggsfunksjonane eventuelt kunne nyttast seinare
 og at det gav oss ein klar retning å arbeide mot.
 
@@ -11,12 +11,11 @@ og for å forhindre forvirring velger vi å beskrive begrepa slik dei er skildra
 Merk også forkorting i klammeparantes.
 
 \begin{itemize}
-    \item \textbf{Lock:} Action overruling any other signal while being true        \textbf{[L]}
-    \item \textbf{Force:} Action overruling any other signal                        \textbf{[F]}
-    \item \textbf{Disable transition:} Transistion high/low function not avaliable  \textbf{[D]}
-    \item \textbf{Blocking:} Prevention of certain functions or operations          \textbf{[B]}
-    \item \textbf{Suppression:} Disable alarm annunciation as well as any associated automatic actions \textbf{[U]}
-
+    \item \textbf{Lock:} Action overruling any other signal while being true        
+    \item \textbf{Force:} Action overruling any other signal                        
+    \item \textbf{Disable transition:} Transistion high/low function not avaliable  
+    \item \textbf{Blocking:} Prevention of certain functions or operations          
+    \item \textbf{Suppression:} Disable alarm annunciation as well as any associated automatic actions
 \end{itemize}
 
 Det er også andre genrelle forkortingar som er viktige i skildring av desse blokkene.
@@ -40,16 +39,14 @@ For full forståelse av forkortingar og betydning kan ein finne bokstavmatrise i
 \newpage
 
 \subsection{Monitor Binary}
-Inputfunksjon \gls{MB} blir brukt til automatisk overvaking, alarmhandtering, framvising og låsing av binære prosessvariablar. \citep{IEC-63131}
-
-\gls{MB} hentar verdi på X og gir tilbake verdi på Y.
-Denne utgangsverdien har moglegheit for tidsforseinking, invertering og 
-
-Funksjonsblokka inkluderer alarm ``suppression'' og ``blocking'' funksjonalitet. Den har moglegheit for invertering av 
-inngangssignal og moglegheit for tidsforseinking av utgangssignal via parameter. (Vedlegg C.1)
-
+Inngangsfunksjon \gls{MB} blir brukt til automatisk overvaking, alarmhandtering, framvising og låsing av binære prosessvariablar \citep{IEC-63131}.
 Funksjonsblokka er brukt i programmet for å overvake alle digitale inngangar t.d. pressostat og nivåvipper.
 
+\gls{MB} hentar verdi på X og gir tilbake verdi på Y. \newline
+Denne utgangsverdien har moglegheit for tidsforseinking, invertering, låsning, ``blocking'' og ``suppression'' via ``force'' inngangsvariablar og parameter.
+
+Blokka har tre statusvariablar som indikerer modus og område (BU, BB, BX), ein utgang for indikasjon av feil (YF) med moglegheit for ``suppression''
+og ein inngang (RX) for reset av eventuell låst verdi. \newline (Vedlegg C.1)
 
 \begin{figure}[htbp]
     \centering
@@ -61,25 +58,27 @@ Funksjonsblokka er brukt i programmet for å overvake alle digitale inngangar t.
     \hfill
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=0.7\textwidth]{Bilder/MBBlokkIProgrammet.png}
+        \includegraphics[width=0.8\textwidth]{Bilder/MBBlokkIProgrammet.png}
         \caption{Bruk i programmet}\label{fig:Monitor Binary blokk i programmet}
     \end{subfigure}
     \caption{Monitor Binary}\label{fig:Monitor Binary}
 \end{figure}
 
+Meir informasjon om blokka, inngangar, utgangar, og parameter er tilgjengeleg i vedlegg. (Vedlegg C.1)
+
 \newpage
 
 \subsection{Monitor Analogue}
-Inputfunksjon \gls{MA} er brukt for skalering, visning, overvaking og alarmhandtering av
+Inngangsfunksjon \gls{MA} er brukt for skalering, visning, overvaking og alarmhandtering av
 analoge prosess og kontrollvariablar \citep{IEC-63131}
 Funksjonsblokka er brukt for å overvake analoge trykknivågivarar 
-og å skalere og vise desse som ein fyllingsgrad i prosent. (Vedlegg C.2)
+og å skalere og vise desse som ein fyllingsgrad i prosent.
 
 \gls{MA} hentar rå verdi på X og gir tilbake verdi på Y.
 Denne utgangsverdien blir skalert basert på parameter og har hysterese og dødband tilgjengeleg.
 
 Funksjonsblokka har to forvarsel (WH og WL) og to handlingar med alarm (AHH og ALL).
-Det er moglegheit for tidsforsinking, ``blocking'' og ``suppression'' av desse via inngangsvariablar og parameter.
+Det er moglegheit for tidsforsinking, ``blocking'' og ``suppression'' av desse via ``force'' inngangsvariablar og parameter.
 
 Blokka har fem statusvariablar som indikerer modus og område (BU, BB, BHH, BLL, BBLL, BBHH), ein utgang for indikasjon av feil (YF)
 og fire hendingar (BXHH, BXH, BXLL, BXL) utan ``blocking'' og ``suppression'' som nyttast for styring.
@@ -102,75 +101,133 @@ Grenser på varsling og hendigar er justerbare via parameter.
     \caption{Monitor Analogue}\label{fig:Monitor Analogue}
 \end{figure}
 
+Meir informasjon om blokka, inngangar, utgangar, og parameter er tilgjengeleg i vedlegg. (Vedlegg C.2)
+
 \newpage
 
 \subsection{Switch Binary Eletrical} 
 
-\gls{SBE} funksjonsblokka (Vedlegg C.3) blir brukt for binærkontroll (av/på) av straumningselement for elektrisitet, varme eller væske. 
-Den kontrollerte komponenten kan vere t.d. motor, pumpe, varmeelement, vifte.
-Funksjonsblokka er i dette programmet brukt til å styre motorar, pumper og blåserar.
+Utgangsfunksjon \gls{SBE} blir brukt for binærkontroll (av/på) av straumningselement for elektrisitet, varme eller væske. 
+Den kontrollerte komponenten kan vere t.d. motor, pumpe, varmeelement, vifte \citep{IEC-63131}. \newline
+Funksjonsblokka er brukt til å styre motorar, pumper og blåserar. (Vedlegg C.3)
 
-%Funksjonsblokka beskriver korleis ein styrer ein komponent.
-%Det er utgangen Y, som sender ein opne/stenge kommando (høg/lav) til komponenten. 
+Funksjonsblokka har tre modus, auto, manuell og lokal, der lokal betyr lokal HMI eller direktekøyring.
+\gls{SBE} hentar start/stopp signal på
+\begin{enumerate}
+    \item \textbf{Auto:}        XH og XL  
+    \item \textbf{Manuell:}     HMI
+    \item \textbf{Lokal:}       XOH og XOL
+\end{enumerate}
+Og aktiveringssignal via XE. \newline
+Blokka gir tilbake køyrsignal på Y og via pulsmodulerte utgangar YH og YL.
 
-%Blokka har fleire funksjonar t.d. samalikning med tilbakemelding \gls{XGH} som gjer korrekt \gls{BCL}/\gls{BCH} status. 
+\gls{SBE} inneheld ei tilstatandsmaskin med fire funksjonstilstandar. 
+\begin{enumerate}
+    \item \textbf{Høg:}                 Komponent kjøyrar
+    \item \textbf{Lav:}                 Komponent stoppa
+    \item \textbf{Transisjon mot lav:}  Fått stoppsignal
+    \item \textbf{Transisjon mot høg:}  Fått kjøresignal.
+\end{enumerate}
 
-Funksjonsblokka inkluderar alarm ``suppression'', ``blocking'', ``safeguarding'' og ``transition'' funksjonalitet.
+I transisjonstilstand ventar blokka på eksternt tilbakemelding (XGH) 
+og sett tilstanden til høg/lav etter at korrekt tilbakemelding er mottatt.
+Dette vises også via to statusvariablar (BCL, BCH)
+
+Blokka har sju andre statusvariablar som indikerer modus og område (BA, BO, BS, BB, BU, BXH, BXL) og
+ein utgang for indikasjon av feil (YF) med tilhøyrande heiltallsverdi (YFI) som indikerer feiltype. \newline
+Feilstatus har moglegheit for ``suppression''.
+
+Blokka har fire signal for høg/lav tvangskøyring, der ``lock'' endrar modus (LSH, LSL) og ``force'' gjer ikkje (FSL, FSH)
+og to signal for høg/ lav ``force disable transition'' (FDH, FDL).
+Desse signala har moglegheit for ``blocking''.
+
+\newpage
 
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{Bilder/SBEBlokkIEC.png}
-        \caption{IEC}\label{fig:Switch Binary Eletrical blokk IEC}
+        \caption{IEC}\label{fig:Switch Binary Electrical blokk IEC}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=0.5\textwidth]{Bilder/SBEBlokkIProgrammet.png}
-        \caption{Bruk i programmet}\label{fig:Switch Binary Eletrical blokk i programmet}
+        \caption{Bruk i programmet}\label{fig:Switch Binary Electrical blokk i programmet}
     \end{subfigure}
-    \caption{Switch Binary Eletrical}\label{fig:Switch Binary Eletrical}
+    \caption{Switch Binary Electrical}\label{fig:Switch Binary Electrical}
+\end{figure} 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.45]{Figurar/SBE.drawio.png}
+    \caption{Prinsippskisse SBE tilstandsmaskin standard parameteroppsett}\label{fig:SBE tilstandsmaskin}
 \end{figure}
-
+Meir informasjon om blokka, inngangar, utgangar, og parameter er tilgjengeleg i vedlegg. (Vedlegg C.3)
 \newpage
-
 \subsection{Switch Binary Valve}
 
-\gls{SBV} funksjonsblokka (Vedlegg C.4) skal brukast til binær av/på kontroll av eit straumningselement ved å endra straumen av medium (varme eller væske). 
-Typisk komponentar som styrast er bl.a.\ ventilar og spjeld.
-Funksjonsblokka er i dette programmet brukt til å styre ventilar.
+Utgangsfunksjon \gls{SBV} skal brukast til binær (av/på) kontroll av eit straumningselement ved å endra straumen av medium (varme eller væske). 
+Typisk komponentar som styrast er bl.a. ventilar og spjeld \citep{IEC-63131}.
+Funksjonsblokka er i brukt til å styre ventilar.
 
-%Funksjonsblokka styrer ventilen ved hjelp av dei binære inngangane \gls{XH} og \gls{XL}.\@
-%Desse inngangane styrer ein utgang Y, som sender opne/stenge-kommando (høg/låg) til ventilaktivatoren.
-%Alternativt kan dei pulsmodulerte utgangane \gls{YH} og \gls{YL} kan også nyttast.
+Samenlika med \gls{SBE} har \gls{SBV} har tre modus, auto, manuell og lokal som nyttar inngagnar med same namn.
+\gls{SBV} hentar opne/stenge signal på
+\begin{enumerate}
+    \item \textbf{Auto:}        XH og XL  
+    \item \textbf{Manuell:}     HMI
+    \item \textbf{Lokal:}       XOH og XOL
+\end{enumerate}
+Blokka gir tilbake signal på Y og via pulsmodulerte utgangar YH og YL.
 
-Funksjonsblokka har også inngangar \gls{XGH} og \gls{XGL} som gjer tilbakemelding om ventilen er heilt open eller stengd
-%som bekrefter ventilen sin posisjon.
+\gls{SBV} inneheld ei tilstatandsmaskin med fire funksjonstilstandar. 
+\begin{enumerate}
+    \item \textbf{Høg:}                 Komponent open
+    \item \textbf{Lav:}                 Komponent stengd
+    \item \textbf{Transisjon mot lav:}  Fått stenge signal
+    \item \textbf{Transisjon mot høg:}  Fått opne signal.
+\end{enumerate}
 
-Funksjonsblokka inkluderar alarm ``suppression'', ``blocking'', ``safeguarding'' og ``transition'' funksjonalitet.
+I transisjonstilstand ventar blokka på eksternt tilbakemelding (XGH, XGL) 
+og sett tilstanden til høg/lav etter at korrekt tilbakemelding er mottatt.
+Dette vises også via to statusvariablar (BCL, BCH)
+
+Blokka har fem andre statusvariablar som indikerer modus og område (BA, BO, BS, BB, BU) og
+ein utgang for indikasjon av feil (YF) med tilhøyrande heiltallsverdi (YFI) som indikerer feiltype. \newline
+Feilstatus har moglegheit for ``suppression''.
+
+Blokka har fire signal for høg/lav tvangskøyring, der ``lock'' endrar modus (LSH, LSL) og ``force'' gjer ikkje (FSL, FSH)
+og to signal for høg/ lav ``force disable transition'' (FDH, FDL).
+Desse signala har moglegheit for ``blocking''.
+
+\newpage
 
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{Bilder/SBVBlokkIEC.png}
-        \caption{IEC}\label{fig:Switch Binary Value blokk IEC}
+        \caption{IEC}\label{fig:Switch Binary Valve blokk IEC}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=0.5\textwidth]{Bilder/SBVBlokkIProgrammet.png}
-        \caption{Bruk i programmet}\label{fig:Switch Binary Value blokk i programmet}
+        \caption{Bruk i programmet}\label{fig:Switch Binary Valve blokk i programmet}
     \end{subfigure}
-    \caption{Switch Binary Value}\label{fig:Switch Binary Value}
+    \caption{Switch Binary Valve}\label{fig:Switch Binary Valve}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.47]{Figurar/SBE.drawio.png}
+    \caption{Prinsippskisse SBV tilstandsmaskin standard parameteroppsett}\label{fig:SBV tilstandsmaskin}
 \end{figure}
 
+
+Meir informasjon om blokka, inngangar, utgangar, og parameter er tilgjengeleg i vedlegg. (Vedlegg C.4)
+
 \newpage
 
-
-
-\newpage
 
 %\begin{figure}[htbp]
 %    \centering
