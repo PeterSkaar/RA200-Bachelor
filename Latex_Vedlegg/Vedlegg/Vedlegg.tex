@@ -4,9 +4,35 @@
 % ------------ Nytt Kapittel
 
 \thispagestyle{fancy}
+\chapter{Framdriftsplan og Timeforbruk}
+
+% Timeliste
+\section{Timeforbruk}
+\begin{figure}[htbp]
+    \thispagestyle{fancy}
+    \centering
+    \includegraphics[width=0.8\textwidth]{Vedlegg/TimelisteKort.png}
+    %\caption{Illustrasjon sivbed}\label{fig:Sivbed}
+\end{figure}
+
+\newpage
+\section{Timeforbruk Graf}
+\begin{figure}[htbp]
+    \thispagestyle{fancy}
+    \centering
+    \includegraphics[width=\textwidth]{Vedlegg/TimelisteGraf.png}
+    %\caption{Illustrasjon sivbed}\label{fig:Sivbed}
+\end{figure}
+
 % GANT
-% Include only the first page
-\includepdf[pages=1, angle=90,scale=0.8, pagecommand={\chapter{Gant}\thispagestyle{fancy}},fitpaper=true]{Vedlegg/Gant2.pdf}
+\includepdf[pages=1, angle=90,scale=0.8, pagecommand={\section{Gant}\thispagestyle{fancy}},fitpaper=true]{Vedlegg/Gant2.pdf}
+
+
+
+
+
+
+
 % Sekvens Blokker 
 % FB Pause
 \includepdf[pages=1, scale=0.7, pagecommand={\chapter{Funksjons Blokker}, \section{FB Pause Sekvens}\thispagestyle{fancy}}, fitpaper=true ]{Vedlegg/Funksjons Blokker/fbPause.pdf}
