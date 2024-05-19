@@ -40,9 +40,13 @@ For full forståelse av forkortingar og betydning kan ein finne bokstavmatrise i
 \newpage
 
 \subsection{Monitor Binary}
-\gls{MB} funksjonsblokka (Vedlegg C.1) blir brukt til automatisk overvaking, alarmhandtering, framvising og låsing av binære prosessvariablar.
+Inputfunksjon \gls{MB} blir brukt til automatisk overvaking, alarmhandtering, framvising og låsing av binære prosessvariablar. \citep{IEC-63131}
+
+\gls{MB} hentar verdi på X og gir tilbake verdi på Y.
+Denne utgangsverdien har moglegheit for tidsforseinking, invertering og 
+
 Funksjonsblokka inkluderer alarm ``suppression'' og ``blocking'' funksjonalitet. Den har moglegheit for invertering av 
-inngangssignal og moglegheit for tidsforseinking av utgangssignal via parameter.
+inngangssignal og moglegheit for tidsforseinking av utgangssignal via parameter. (Vedlegg C.1)
 
 Funksjonsblokka er brukt i programmet for å overvake alle digitale inngangar t.d. pressostat og nivåvipper.
 
@@ -71,7 +75,7 @@ analoge prosess og kontrollvariablar \citep{IEC-63131}
 Funksjonsblokka er brukt for å overvake analoge trykknivågivarar 
 og å skalere og vise desse som ein fyllingsgrad i prosent. (Vedlegg C.2)
 
-MA hentar rå verdi på X og gir tilbake verdi på Y.
+\gls{MA} hentar rå verdi på X og gir tilbake verdi på Y.
 Denne utgangsverdien blir skalert basert på parameter og har hysterese og dødband tilgjengeleg.
 
 Funksjonsblokka har to forvarsel (WH og WL) og to handlingar med alarm (AHH og ALL).
