@@ -1,11 +1,12 @@
 \section{Utfordringar}
 \thispagestyle{fancy}
 
-\subsection{Blokker}
+\subsection{Utgangsblokker med signalkonflikt}
 Nokre komponentar skulle nyttast i fleire tilstandar og vi opplevde 
-utfordringar med å ha fleire blokker for ein komponent.
-Enkelte tilstandslogikkblokker gav lav signaler endå dei ikkje var i bruk og 
-overskreiv høg signalar programmet prøvde å sende.
+utfordringar med å ha fleire utgangsblokker for ein komponent.
+Orginalt var dette løyst med fleire kall av ei utgangsblokk i forskjellige \gls{CFC} vindauge.
+Kalla av dei ulike blokkene skreiv forskjellige signal til komponenten og
+sendte høg signal blei kontinuerleg overskreve.
 
 Vi møtte denne utfordringa fleire plassar, t.d. i pumpestyringa,
 der kvar reaktor skulle kunne styre den same pumpa.
