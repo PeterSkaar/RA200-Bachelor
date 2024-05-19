@@ -7,7 +7,7 @@ Sjølv om funksjonsblokktemplata kunne verke overkvalifiserte, valde vi likevel 
 og at det gav oss ein klar retning å arbeide mot.
 
 \gls{IEC} har sentrale begrep som vi ønskjer å utdjupe nærmare. Grunna mangel på gode norske begrep
-og for å forhindre forvirring velger vi å beskrive begrepa slik dei er skildra i normen. \newline
+og for å forhindre forvirring velger vi å beskrive begrepa slik dei er skildra i normen.
 
 \begin{itemize}
     \item \textbf{Lock:} Action overruling any other signal while being true
@@ -16,27 +16,18 @@ og for å forhindre forvirring velger vi å beskrive begrepa slik dei er skildra
     \item \textbf{Blocking:} Prevention of certain functions or operations          
     \item \textbf{Suppression:} Disable alarm annunciation as well as any associated automatic actions
 \end{itemize}
-
 Det er også andre genrelle forkortingar som er viktige i skildring av desse blokkene.
-
-\begin{itemize}
-    \item \textbf{X:}   Inngangsvariabel
-    \item \textbf{Y:}   Utgangsvariabel
-    \item \textbf{B:}   Binær status
-    \item \textbf{P:}   Parameter
-    \item \textbf{A:}   Alarm handling 
-    \item \textbf{W:}   Forvarsel
-    \item \textbf{H:}   Høg
-    \item \textbf{L:}   Lav
-\end{itemize}
-
-For full forståelse av forkortingar og betydning kan ein finne bokstavmatrise i normen.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.35]{Figurar/IEC bokstavmatrise.png}
+    \caption{Bokstavmatrise basert på Table A.1 i \gls{IEC} \gls{PAS} 63131:2017 \citep{A1}}\label{fig:SBE tilstandsmaskin}
+\end{figure}
 
 \newpage
 
 \subsection{Monitor Binary}
-Inngangsfunksjon \gls{MB} blir brukt til automatisk overvaking, alarmhandtering, framvising og låsing av binære prosessvariablar \citep{IEC-63131}.
-Funksjonsblokka er brukt i programmet for å overvake alle digitale inngangar t.d. pressostat og nivåvipper.
+Inngangsfunksjon \gls{MB} blir nytta til automatisk overvaking, alarmhandtering, framvising og låsing av binære prosessvariablar \citep{IEC-63131}.
+Funksjonsblokka er nytta i programmet for å overvake alle digitale inngangar t.d. pressostat og nivåvipper.
 
 \gls{MB} hentar verdi på X og gir tilbake verdi på Y. \newline
 Denne utgangsverdien har moglegheit for tidsforseinking, invertering, låsning, ``blocking'' og ``suppression'' via ``force'' inngangsvariablar og parameter.
@@ -46,15 +37,15 @@ og ein inngang (RX) for reset av eventuell låst verdi. \newline
 
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{Bilder/MBBlokkIEC.png}
-        \caption{IEC}\label{fig:Monitor Binary blokk IEC}
+        \caption{\gls{IEC} \gls{PAS} 63131:2017 \citep{MB}}\label{fig:Monitor Binary blokk IEC}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
         \centering
-        \includegraphics[width=0.8\textwidth]{Bilder/MBBlokkIProgrammet.png}
+        \includegraphics[width=1\textwidth]{Bilder/MBBlokkIProgrammet.png}
         \caption{Bruk i programmet}\label{fig:Monitor Binary blokk i programmet}
     \end{subfigure}
     \caption{Monitor Binary}\label{fig:Monitor Binary}
@@ -65,9 +56,9 @@ Meir informasjon om blokka, inngangar, utgangar, og parameter er tilgjengeleg i 
 \newpage
 
 \subsection{Monitor Analogue}
-Inngangsfunksjon \gls{MA} er brukt for skalering, visning, overvaking og alarmhandtering av
+Inngangsfunksjon \gls{MA} er nytta for skalering, visning, overvaking og alarmhandtering av
 analoge prosess og kontrollvariablar \citep{IEC-63131}.
-Funksjonsblokka er brukt for å overvake analoge trykknivågivarar 
+Funksjonsblokka er nytta for å overvake analoge trykknivågivarar 
 og å skalere og vise desse som ein fyllingsgrad i prosent.
 
 \gls{MA} hentar rå verdi på X og gir tilbake verdi på Y.
@@ -86,7 +77,7 @@ Grenser på varsling og hendigar er justerbare via parameter.
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{Bilder/MABlokkIEC.png}
-        \caption{IEC}\label{fig:Monitor Analogue blokk IEC}
+        \caption{\gls{IEC} \gls{PAS} 63131:2017 \citep{MA}}\label{fig:Monitor Analogue blokk IEC}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.45\textwidth}
@@ -103,9 +94,9 @@ Meir informasjon om blokka, inngangar, utgangar, og parameter er tilgjengeleg i 
 
 \subsection{Switch Binary Eletrical} 
 
-Utgangsfunksjon \gls{SBE} blir brukt for binærkontroll (av/på) av straumningselement for elektrisitet, varme eller væske. 
+Utgangsfunksjon \gls{SBE} blir nytta for binærkontroll (av/på) av straumningselement for elektrisitet, varme eller væske. 
 Den kontrollerte komponenten kan vere t.d. motor, pumpe, varmeelement, vifte \citep{IEC-63131}. \newline
-Funksjonsblokka er brukt til å styre motorar, pumper og blåserar. (Vedlegg C.3)
+Funksjonsblokka er nytta til å styre motorar, pumper og blåserar. (Vedlegg C.3)
 
 Funksjonsblokka har tre modus, auto, manuell og lokal, der lokal betyr lokal HMI eller direktekøyring.
 \gls{SBE} hentar start/stopp signal på
@@ -144,7 +135,7 @@ Desse signala har moglegheit for ``blocking''.
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{Bilder/SBEBlokkIEC.png}
-        \caption{IEC}\label{fig:Switch Binary Electrical blokk IEC}
+        \caption{\gls{IEC} \gls{PAS} 63131:2017 \citep{SBE}}\label{fig:Switch Binary Electrical blokk IEC}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
@@ -163,9 +154,9 @@ Meir informasjon om blokka, inngangar, utgangar, og parameter er tilgjengeleg i 
 \newpage
 \subsection{Switch Binary Valve}
 
-Utgangsfunksjon \gls{SBV} skal brukast til binær (av/på) kontroll av eit straumningselement ved å endra straumen av medium (varme eller væske). 
+Utgangsfunksjon \gls{SBV} skal nyttast til binær (av/på) kontroll av eit straumningselement ved å endra straumen av medium (varme eller væske). 
 Typisk komponentar som styrast er bl.a. ventilar og spjeld \citep{IEC-63131}.
-Funksjonsblokka er i brukt til å styre ventilar.
+Funksjonsblokka er i nytta til å styre ventilar.
 
 Samenlika med \gls{SBE} har \gls{SBV} har tre modus, auto, manuell og lokal som nyttar inngagnar med same namn.
 \gls{SBV} hentar opne/stenge signal på
@@ -203,7 +194,7 @@ Desse signala har moglegheit for ``blocking''.
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{Bilder/SBVBlokkIEC.png}
-        \caption{IEC}\label{fig:Switch Binary Valve blokk IEC}
+        \caption{\gls{IEC} \gls{PAS} 63131:2017 \citep{SBV}}\label{fig:Switch Binary Valve blokk IEC}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.45\textwidth}
