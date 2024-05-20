@@ -100,7 +100,7 @@ Meir informasjon om blokka, inngangar, utgangar, og parameter er tilgjengeleg i 
 
 \newpage
 
-\subsection{Switch Binary Eletrical} 
+\subsection{Switch Binary Electrical} 
 
 Utgangsfunksjon \gls{SBE} blir nytta for binærkontroll (av/på) av strøymingselement for elektrisitet, varme eller væske. 
 Den kontrollerte komponenten kan vere t.d. motor, pumpe, varmeelement, vifte \citep{IEC-63131}. \newline
@@ -114,14 +114,14 @@ Funksjonsblokka har tre modus, auto, manuell og lokal. Lokal betyr lokal HMI ell
     \item \textbf{Lokal:}       XOH og XOL
 \end{enumerate}
 Aktiveringssignal er tilgjengeleg via inngang XE. \newline
-Blokka gir tilbake køyrsignal på Y og via pulsmodulerte utgangar YH og YL.
+Blokka sender køyrsignal på Y og via pulsmodulerte utgangar YH og YL.
 
-\gls{SBE} inneheld ei tilstatandsmaskin med fire funksjonstilstandar. 
+\gls{SBE} inneheld ei tilstandsmaskin med fire funksjonstilstandar. 
 \begin{enumerate}
     \item \textbf{Høg:}                 Komponent køyrer
     \item \textbf{Lav:}                 Komponent stoppa
     \item \textbf{Transisjon mot lav:}  Fått stoppsignal
-    \item \textbf{Transisjon mot høg:}  Fått køyreesignal.
+    \item \textbf{Transisjon mot høg:}  Fått køyrsignal.
 \end{enumerate}
 
 I transisjonstilstand ventar blokka på eksternt tilbakemelding (XGH) 
@@ -173,9 +173,9 @@ Samenlika med \gls{SBE} har \gls{SBV} har tre modus, auto, manuell og lokal som 
     \item \textbf{Manuell:}     HMI
     \item \textbf{Lokal:}       XOH og XOL
 \end{enumerate}
-Blokka gir tilbake signal på Y og via pulsmodulerte utgangar YH og YL.
+Blokka sender signal på Y og via pulsmodulerte utgangar YH og YL.
 
-\gls{SBV} inneheld ei tilstatandsmaskin med fire funksjonstilstandar. 
+\gls{SBV} inneheld ei tilstandsmaskin med fire funksjonstilstandar. 
 \begin{enumerate}
     \item \textbf{Høg:}                 Komponent open
     \item \textbf{Lav:}                 Komponent stengd
