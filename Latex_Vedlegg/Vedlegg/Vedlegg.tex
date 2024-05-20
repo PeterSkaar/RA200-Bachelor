@@ -25,7 +25,8 @@
 \end{figure}
 
 % GANT
-\includepdf[pages=1, angle=90,scale=0.8, pagecommand={\section{Gant}\thispagestyle{fancy}},fitpaper=true]{Vedlegg/Gant2.pdf}
+%\includepdf[pages=1, angle=90,scale=0.8, pagecommand={\section{Gant}\thispagestyle{fancy}},fitpaper=true]{Vedlegg/Gant2.pdf}
+\includepdf[pages=1, angle=90,scale=0.8, pagecommand={\section{Gant}\thispagestyle{fancy}\fancyfoot[C]{\thepage}}]{Vedlegg/Gant2.pdf}
 
 
 
@@ -119,8 +120,10 @@
 \includepdf[pages=2-, scale=0.8, pagecommand={\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/Funksjoner/Volume_Cylinder.pdf}
 
 % Alarmlister
-\includepdf[pages=1, scale=0.8, angle=-90, pagecommand={\chapter{Varslingslister} \section{Alarm liste}\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/AlarmLister/AlarmListe.pdf}
-\includepdf[pages=1, scale=0.8, angle=-90, pagecommand={\section{Warning liste}\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/AlarmLister/WarningListe.pdf}
+\includepdf[pages=1, scale=0.8, angle=-90, pagecommand={\chapter{Varslingslister} \section{Alarm liste}\thispagestyle{fancy}\fancyfoot[C]{\thepage}}]{Vedlegg/AlarmLister/AlarmListe.pdf}
+% Warning liste
+\includepdf[pages=1, angle=-90, scale=1, pagecommand={\section{Warning liste}\thispagestyle{fancy}\fancyfoot[C]{\thepage}}]{Vedlegg/AlarmLister/WarningListe.pdf}
+% Errorliste
 \includepdf[pages=1, scale=0.8, angle=-90, pagecommand={\section{Error liste}\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/AlarmLister/ErrorListe.pdf}
 \includepdf[pages=2-, scale=0.8, angle=-90, pagecommand={\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/AlarmLister/ErrorListe.pdf}
 
@@ -214,11 +217,11 @@
 \includepdf[pages=2-, scale=0.8, pagecommand={\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/Komponentvedlegg/Pumpe/flygt-n-pump-brochure-896876.pdf}
 
 % Transmitter
-\includepdf[pages=1, scale=0.8, pagecommand={\section{Transmitter MJK}\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/Komponentvedlegg/Transmitter/Hydrostatisk Pressure/Expert.pdf}
-\includepdf[pages=2-, scale=0.8, pagecommand={\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/Komponentvedlegg/Transmitter/Hydrostatisk Pressure/Expert.pdf}
+\includepdf[pages=1, scale=0.8, pagecommand={\section{Transmitter MJK}\thispagestyle{fancy}\fancyfoot[C]{\thepage}}]{Vedlegg/Komponentvedlegg/Transmitter/Hydrostatisk Pressure/Expert.pdf}
+\includepdf[pages=2-, scale=0.8, pagecommand={\thispagestyle{fancy}\fancyfoot[C]{\thepage}}]{Vedlegg/Komponentvedlegg/Transmitter/Hydrostatisk Pressure/Expert.pdf}
 
-\includepdf[pages=1, scale=0.75, pagecommand={\section{Transmitter Vegabar}\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/Komponentvedlegg/Transmitter/Hydrostatisk Pressure/Vegabar.pdf}
-\includepdf[pages=2-, scale=0.8, pagecommand={\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/Komponentvedlegg/Transmitter/Hydrostatisk Pressure/Vegabar.pdf}
+\includepdf[pages=1, scale=0.75, pagecommand={\section{Transmitter Vegabar}\thispagestyle{fancy}\fancyfoot[C]{\thepage}}]{Vedlegg/Komponentvedlegg/Transmitter/Hydrostatisk Pressure/Vegabar.pdf}
+\includepdf[pages=2-, scale=0.8, pagecommand={\thispagestyle{fancy}\fancyfoot[C]{\thepage}}]{Vedlegg/Komponentvedlegg/Transmitter/Hydrostatisk Pressure/Vegabar.pdf}
 
 % VentilBlokk Pneumatikk
 \includepdf[pages=1, scale=0.8, pagecommand={\section{Ventilblokk}\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/Komponentvedlegg/Ventilblokk Pneumatisk/en_5_1_250_VS18.pdf}
@@ -232,9 +235,9 @@
 \includepdf[pages=2-, scale=0.8, pagecommand={\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/Komponentvedlegg/Ventiler/Lohse CNA valves.pdf}
 
 % PLS
-\includepdf[pages=1, scale=0.8, pagecommand={\section{FX-4AD SPECIAL FUNCTION BLOCK}\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/Komponentvedlegg/FX4AD.pdf}
-\includepdf[pages=2-, scale=0.8, pagecommand={\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/Komponentvedlegg/FX4AD.pdf}
+\includepdf[pages=1, scale=0.8, pagecommand={\section{FX-4AD SPECIAL FUNCTION BLOCK}\thispagestyle{fancy}\fancyfoot[C]{\thepage}}]{Vedlegg/Komponentvedlegg/FX4AD.pdf}
+\includepdf[pages=2-, scale=0.8, pagecommand={\thispagestyle{fancy}\fancyfoot[C]{\thepage}}]{Vedlegg/Komponentvedlegg/FX4AD.pdf}
 
 % I/O liste
-\includepdf[pages=1, scale=0.8, pagecommand={\chapter{I/O liste}\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/IOliste.pdf}
-\includepdf[pages=2-, scale=0.8, pagecommand={\thispagestyle{fancy}}, fitpaper=true]{Vedlegg/IOliste.pdf}
+\includepdf[pages=1, scale=0.8, pagecommand={\chapter{I/O liste}\thispagestyle{fancy}\fancyfoot[C]{\thepage}}]{Vedlegg/IOliste.pdf}
+\includepdf[pages=2-, scale=0.8, pagecommand={\thispagestyle{fancy}\fancyfoot[C]{\thepage}}]{Vedlegg/IOliste.pdf}
